@@ -1,0 +1,9 @@
+# Opcode extraction for malware analysis
+# APT Group: 09 G0044 (WINNTI GROUP)
+# Malware Hash: 452d08d420a8d564ff5df6f6a91521887f8b9141d96c77a423ac7fc9c28e07e4
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Sun Nov 03 22:34:05 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+00403b56 | ff 25 00 20 40 00 | JMP | JMP qword ptr [0x00805b5c]

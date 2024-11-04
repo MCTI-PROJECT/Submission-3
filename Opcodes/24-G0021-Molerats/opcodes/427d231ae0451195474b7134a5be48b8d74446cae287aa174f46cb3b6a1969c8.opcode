@@ -1,0 +1,9 @@
+# Opcode extraction for malware analysis
+# APT Group: 24-G0021-Molerats
+# Malware Hash: 427d231ae0451195474b7134a5be48b8d74446cae287aa174f46cb3b6a1969c8
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Mon Nov 04 02:39:30 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+0043d97e | ff 25 00 20 40 00 | JMP | JMP qword ptr [0x0083f984]

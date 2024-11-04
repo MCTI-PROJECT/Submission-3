@@ -1,0 +1,1848 @@
+# Opcode extraction for malware analysis
+# APT Group: 16-G0079-DarkHydrus-2
+# Malware Hash: dd2625388bb2d2b02b6c10d4ee78f68a918b25ddd712a0862bcf92fa64284ffa
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Mon Nov 04 01:40:32 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+6bac1000 | 53 | PUSH | PUSH RBX
+6bac1001 | 48 83 ec 20 | SUB | SUB RSP,0x20
+6bac1005 | b9 00 01 00 00 | MOV | MOV ECX,0x100
+6bac100a | e8 41 1c 00 00 | CALL | CALL 0x6bac2c50
+6bac100f | 48 89 c3 | MOV | MOV RBX,RAX
+6bac1012 | 48 89 c1 | MOV | MOV RCX,RAX
+6bac1015 | e8 86 08 00 00 | CALL | CALL 0x6bac18a0
+6bac101a | 48 85 db | TEST | TEST RBX,RBX
+6bac101d | 48 89 05 dc 68 00 00 | MOV | MOV qword ptr [0x6bac7900],RAX
+6bac1024 | 48 89 05 dd 68 00 00 | MOV | MOV qword ptr [0x6bac7908],RAX
+6bac102b | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac1030 | 74 09 | JZ | JZ 0x6bac103b
+6bac1032 | 48 c7 03 00 00 00 00 | MOV | MOV qword ptr [RBX],0x0
+6bac1039 | 30 c0 | XOR | XOR AL,AL
+6bac103b | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac103f | 5b | POP | POP RBX
+6bac1040 | c3 | RET | RET
+6bac1041 | 66 66 66 66 66 66 2e 0f 1f 84 00 00 00 00 00 | NOP | NOP dword ptr CS:[RAX + RAX*0x1]
+6bac1050 | 41 54 | PUSH | PUSH R12
+6bac1052 | 55 | PUSH | PUSH RBP
+6bac1053 | 57 | PUSH | PUSH RDI
+6bac1054 | 56 | PUSH | PUSH RSI
+6bac1055 | 53 | PUSH | PUSH RBX
+6bac1056 | 48 83 ec 20 | SUB | SUB RSP,0x20
+6bac105a | 85 d2 | TEST | TEST EDX,EDX
+6bac105c | 48 89 cb | MOV | MOV RBX,RCX
+6bac105f | 4c 89 c6 | MOV | MOV RSI,R8
+6bac1062 | 75 7d | JNZ | JNZ 0x6bac10e1
+6bac1064 | 8b 15 96 5f 00 00 | MOV | MOV EDX,dword ptr [0x6bac7000]
+6bac106a | 31 c0 | XOR | XOR EAX,EAX
+6bac106c | 85 d2 | TEST | TEST EDX,EDX
+6bac106e | 7e 66 | JLE | JLE 0x6bac10d6
+6bac1070 | 83 ea 01 | SUB | SUB EDX,0x1
+6bac1073 | 31 c0 | XOR | XOR EAX,EAX
+6bac1075 | 89 15 85 5f 00 00 | MOV | MOV dword ptr [0x6bac7000],EDX
+6bac107b | ba 01 00 00 00 | MOV | MOV EDX,0x1
+6bac1080 | f0 48 0f b1 15 8f 68 00 00 | CMPXCHG.LOCK | CMPXCHG.LOCK qword ptr [0x6bac7918],RDX
+6bac1089 | 31 db | XOR | XOR EBX,EBX
+6bac108b | 48 85 c0 | TEST | TEST RAX,RAX
+6bac108e | 48 8b 3d ff 81 00 00 | MOV | MOV RDI,qword ptr [0x6bac9294]
+6bac1095 | be 01 00 00 00 | MOV | MOV ESI,0x1
+6bac109a | 74 1c | JZ | JZ 0x6bac10b8
+6bac109c | 0f 1f 40 00 | NOP | NOP dword ptr [RAX]
+6bac10a0 | b9 e8 03 00 00 | MOV | MOV ECX,0x3e8
+6bac10a5 | ff d7 | CALL | CALL RDI
+6bac10a7 | 48 89 d8 | MOV | MOV RAX,RBX
+6bac10aa | f0 48 0f b1 35 65 68 00 00 | CMPXCHG.LOCK | CMPXCHG.LOCK qword ptr [0x6bac7918],RSI
+6bac10b3 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac10b6 | 75 e8 | JNZ | JNZ 0x6bac10a0
+6bac10b8 | 8b 05 52 68 00 00 | MOV | MOV EAX,dword ptr [0x6bac7910]
+6bac10be | 83 f8 02 | CMP | CMP EAX,0x2
+6bac10c1 | 0f 84 09 01 00 00 | JZ | JZ 0x6bac11d0
+6bac10c7 | b9 1f 00 00 00 | MOV | MOV ECX,0x1f
+6bac10cc | e8 87 1b 00 00 | CALL | CALL 0x6bac2c58
+6bac10d1 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac10d6 | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac10da | 5b | POP | POP RBX
+6bac10db | 5e | POP | POP RSI
+6bac10dc | 5f | POP | POP RDI
+6bac10dd | 5d | POP | POP RBP
+6bac10de | 41 5c | POP | POP R12
+6bac10e0 | c3 | RET | RET
+6bac10e1 | 83 fa 01 | CMP | CMP EDX,0x1
+6bac10e4 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac10e9 | 75 eb | JNZ | JNZ 0x6bac10d6
+6bac10eb | 65 48 8b 04 25 30 00 00 00 | MOV | MOV RAX,qword ptr GS:[0x30]
+6bac10f4 | 48 8b 68 08 | MOV | MOV RBP,qword ptr [RAX + 0x8]
+6bac10f8 | 31 c0 | XOR | XOR EAX,EAX
+6bac10fa | f0 48 0f b1 2d 15 68 00 00 | CMPXCHG.LOCK | CMPXCHG.LOCK qword ptr [0x6bac7918],RBP
+6bac1103 | 31 ff | XOR | XOR EDI,EDI
+6bac1105 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac1108 | 74 39 | JZ | JZ 0x6bac1143
+6bac110a | 48 39 c5 | CMP | CMP RBP,RAX
+6bac110d | 40 b7 01 | MOV | MOV DIL,0x1
+6bac1110 | 74 31 | JZ | JZ 0x6bac1143
+6bac1112 | 48 8b 3d 7b 81 00 00 | MOV | MOV RDI,qword ptr [0x6bac9294]
+6bac1119 | 45 31 e4 | XOR | XOR R12D,R12D
+6bac111c | eb 0b | JMP | JMP 0x6bac1129
+6bac1120 | 48 39 c5 | CMP | CMP RBP,RAX
+6bac1123 | 0f 84 28 01 00 00 | JZ | JZ 0x6bac1251
+6bac1129 | b9 e8 03 00 00 | MOV | MOV ECX,0x3e8
+6bac112e | ff d7 | CALL | CALL RDI
+6bac1130 | 4c 89 e0 | MOV | MOV RAX,R12
+6bac1133 | f0 48 0f b1 2d dc 67 00 00 | CMPXCHG.LOCK | CMPXCHG.LOCK qword ptr [0x6bac7918],RBP
+6bac113c | 48 85 c0 | TEST | TEST RAX,RAX
+6bac113f | 75 df | JNZ | JNZ 0x6bac1120
+6bac1141 | 31 ff | XOR | XOR EDI,EDI
+6bac1143 | 8b 05 c7 67 00 00 | MOV | MOV EAX,dword ptr [0x6bac7910]
+6bac1149 | 83 f8 01 | CMP | CMP EAX,0x1
+6bac114c | 0f 84 2b 01 00 00 | JZ | JZ 0x6bac127d
+6bac1152 | 8b 05 b8 67 00 00 | MOV | MOV EAX,dword ptr [0x6bac7910]
+6bac1158 | 85 c0 | TEST | TEST EAX,EAX
+6bac115a | 74 54 | JZ | JZ 0x6bac11b0
+6bac115c | 8b 05 ae 67 00 00 | MOV | MOV EAX,dword ptr [0x6bac7910]
+6bac1162 | 83 f8 01 | CMP | CMP EAX,0x1
+6bac1165 | 0f 84 f0 00 00 00 | JZ | JZ 0x6bac125b
+6bac116b | 85 ff | TEST | TEST EDI,EDI
+6bac116d | 75 0a | JNZ | JNZ 0x6bac1179
+6bac116f | 31 c0 | XOR | XOR EAX,EAX
+6bac1171 | f0 48 87 05 9f 67 00 00 | XCHG.LOCK | XCHG.LOCK qword ptr [0x6bac7918],RAX
+6bac1179 | 48 8b 05 90 22 00 00 | MOV | MOV RAX,qword ptr [0x6bac3410]
+6bac1180 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac1183 | 74 0d | JZ | JZ 0x6bac1192
+6bac1185 | 49 89 f0 | MOV | MOV R8,RSI
+6bac1188 | ba 02 00 00 00 | MOV | MOV EDX,0x2
+6bac118d | 48 89 d9 | MOV | MOV RCX,RBX
+6bac1190 | ff d0 | CALL | CALL RAX
+6bac1192 | 83 05 67 5e 00 00 01 | ADD | ADD dword ptr [0x6bac7000],0x1
+6bac1199 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac119e | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac11a2 | 5b | POP | POP RBX
+6bac11a3 | 5e | POP | POP RSI
+6bac11a4 | 5f | POP | POP RDI
+6bac11a5 | 5d | POP | POP RBP
+6bac11a6 | 41 5c | POP | POP R12
+6bac11a8 | c3 | RET | RET
+6bac11b0 | 48 8d 15 69 8e 00 00 | LEA | LEA RDX,[0x6baca020]
+6bac11b7 | 48 8d 0d 52 8e 00 00 | LEA | LEA RCX,[0x6baca010]
+6bac11be | c7 05 48 67 00 00 01 00 00 00 | MOV | MOV dword ptr [0x6bac7910],0x1
+6bac11c8 | e8 93 1a 00 00 | CALL | CALL 0x6bac2c60
+6bac11cd | eb 8d | JMP | JMP 0x6bac115c
+6bac11d0 | 48 8b 0d 29 67 00 00 | MOV | MOV RCX,qword ptr [0x6bac7900]
+6bac11d7 | e8 b4 06 00 00 | CALL | CALL 0x6bac1890
+6bac11dc | 48 85 c0 | TEST | TEST RAX,RAX
+6bac11df | 48 89 c3 | MOV | MOV RBX,RAX
+6bac11e2 | 74 49 | JZ | JZ 0x6bac122d
+6bac11e4 | 48 8b 0d 1d 67 00 00 | MOV | MOV RCX,qword ptr [0x6bac7908]
+6bac11eb | e8 a0 06 00 00 | CALL | CALL 0x6bac1890
+6bac11f0 | 48 89 c6 | MOV | MOV RSI,RAX
+6bac11f3 | 48 83 ee 08 | SUB | SUB RSI,0x8
+6bac11f7 | 48 39 f3 | CMP | CMP RBX,RSI
+6bac11fa | 77 13 | JA | JA 0x6bac120f
+6bac11fc | 48 8b 06 | MOV | MOV RAX,qword ptr [RSI]
+6bac11ff | 48 85 c0 | TEST | TEST RAX,RAX
+6bac1202 | 74 ef | JZ | JZ 0x6bac11f3
+6bac1204 | 48 83 ee 08 | SUB | SUB RSI,0x8
+6bac1208 | ff d0 | CALL | CALL RAX
+6bac120a | 48 39 f3 | CMP | CMP RBX,RSI
+6bac120d | 76 ed | JBE | JBE 0x6bac11fc
+6bac120f | 48 89 d9 | MOV | MOV RCX,RBX
+6bac1212 | e8 51 1a 00 00 | CALL | CALL 0x6bac2c68
+6bac1217 | 48 c7 05 e6 66 00 00 00 00 00 00 | MOV | MOV qword ptr [0x6bac7908],0x0
+6bac1222 | 48 c7 05 d3 66 00 00 00 00 00 00 | MOV | MOV qword ptr [0x6bac7900],0x0
+6bac122d | c7 05 d9 66 00 00 00 00 00 00 | MOV | MOV dword ptr [0x6bac7910],0x0
+6bac1237 | 31 c0 | XOR | XOR EAX,EAX
+6bac1239 | f0 48 87 05 d7 66 00 00 | XCHG.LOCK | XCHG.LOCK qword ptr [0x6bac7918],RAX
+6bac1241 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac1246 | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac124a | 5b | POP | POP RBX
+6bac124b | 5e | POP | POP RSI
+6bac124c | 5f | POP | POP RDI
+6bac124d | 5d | POP | POP RBP
+6bac124e | 41 5c | POP | POP R12
+6bac1250 | c3 | RET | RET
+6bac1251 | bf 01 00 00 00 | MOV | MOV EDI,0x1
+6bac1256 | e9 e8 fe ff ff | JMP | JMP 0x6bac1143
+6bac125b | 48 8d 15 a6 8d 00 00 | LEA | LEA RDX,[0x6baca008]
+6bac1262 | 48 8d 0d 97 8d 00 00 | LEA | LEA RCX,[0x6baca000]
+6bac1269 | e8 f2 19 00 00 | CALL | CALL 0x6bac2c60
+6bac126e | c7 05 98 66 00 00 02 00 00 00 | MOV | MOV dword ptr [0x6bac7910],0x2
+6bac1278 | e9 ee fe ff ff | JMP | JMP 0x6bac116b
+6bac127d | b9 1f 00 00 00 | MOV | MOV ECX,0x1f
+6bac1282 | e8 d1 19 00 00 | CALL | CALL 0x6bac2c58
+6bac1287 | e9 d0 fe ff ff | JMP | JMP 0x6bac115c
+6bac128c | 0f 1f 40 00 | NOP | NOP dword ptr [RAX]
+6bac1290 | 55 | PUSH | PUSH RBP
+6bac1291 | 57 | PUSH | PUSH RDI
+6bac1292 | 56 | PUSH | PUSH RSI
+6bac1293 | 53 | PUSH | PUSH RBX
+6bac1294 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac1298 | 85 d2 | TEST | TEST EDX,EDX
+6bac129a | 48 89 cf | MOV | MOV RDI,RCX
+6bac129d | 89 d3 | MOV | MOV EBX,EDX
+6bac129f | 4c 89 c5 | MOV | MOV RBP,R8
+6bac12a2 | 89 15 5c 21 00 00 | MOV | MOV dword ptr [0x6bac3404],EDX
+6bac12a8 | 75 76 | JNZ | JNZ 0x6bac1320
+6bac12aa | 8b 05 50 5d 00 00 | MOV | MOV EAX,dword ptr [0x6bac7000]
+6bac12b0 | 31 f6 | XOR | XOR ESI,ESI
+6bac12b2 | 85 c0 | TEST | TEST EAX,EAX
+6bac12b4 | 74 1d | JZ | JZ 0x6bac12d3
+6bac12b6 | e8 b5 08 00 00 | CALL | CALL 0x6bac1b70
+6bac12bb | 49 89 e8 | MOV | MOV R8,RBP
+6bac12be | 31 d2 | XOR | XOR EDX,EDX
+6bac12c0 | 48 89 f9 | MOV | MOV RCX,RDI
+6bac12c3 | e8 dc 01 00 00 | CALL | CALL 0x6bac14a4
+6bac12c8 | 89 c6 | MOV | MOV ESI,EAX
+6bac12ca | 83 fb 03 | CMP | CMP EBX,0x3
+6bac12cd | 74 21 | JZ | JZ 0x6bac12f0
+6bac12cf | 85 db | TEST | TEST EBX,EBX
+6bac12d1 | 74 1d | JZ | JZ 0x6bac12f0
+6bac12d3 | 89 f0 | MOV | MOV EAX,ESI
+6bac12d5 | c7 05 25 21 00 00 ff ff ff ff | MOV | MOV dword ptr [0x6bac3404],0xffffffff
+6bac12df | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac12e3 | 5b | POP | POP RBX
+6bac12e4 | 5e | POP | POP RSI
+6bac12e5 | 5f | POP | POP RDI
+6bac12e6 | 5d | POP | POP RBP
+6bac12e7 | c3 | RET | RET
+6bac12f0 | 49 89 e8 | MOV | MOV R8,RBP
+6bac12f3 | 89 da | MOV | MOV EDX,EBX
+6bac12f5 | 48 89 f9 | MOV | MOV RCX,RDI
+6bac12f8 | e8 43 19 00 00 | CALL | CALL 0x6bac2c40
+6bac12fd | 49 89 e8 | MOV | MOV R8,RBP
+6bac1300 | 89 da | MOV | MOV EDX,EBX
+6bac1302 | 48 89 f9 | MOV | MOV RCX,RDI
+6bac1305 | 89 c6 | MOV | MOV ESI,EAX
+6bac1307 | e8 44 fd ff ff | CALL | CALL 0x6bac1050
+6bac130c | 85 c0 | TEST | TEST EAX,EAX
+6bac130e | b8 00 00 00 00 | MOV | MOV EAX,0x0
+6bac1313 | 0f 44 f0 | CMOVZ | CMOVZ ESI,EAX
+6bac1316 | eb bb | JMP | JMP 0x6bac12d3
+6bac1320 | e8 4b 08 00 00 | CALL | CALL 0x6bac1b70
+6bac1325 | 8d 43 ff | LEA | LEA EAX,[RBX + -0x1]
+6bac1328 | 83 f8 01 | CMP | CMP EAX,0x1
+6bac132b | 76 44 | JBE | JBE 0x6bac1371
+6bac132d | 49 89 e8 | MOV | MOV R8,RBP
+6bac1330 | 89 da | MOV | MOV EDX,EBX
+6bac1332 | 48 89 f9 | MOV | MOV RCX,RDI
+6bac1335 | e8 6a 01 00 00 | CALL | CALL 0x6bac14a4
+6bac133a | 85 c0 | TEST | TEST EAX,EAX
+6bac133c | 89 c6 | MOV | MOV ESI,EAX
+6bac133e | 75 8a | JNZ | JNZ 0x6bac12ca
+6bac1340 | 83 fb 01 | CMP | CMP EBX,0x1
+6bac1343 | 75 85 | JNZ | JNZ 0x6bac12ca
+6bac1345 | 49 89 e8 | MOV | MOV R8,RBP
+6bac1348 | 31 d2 | XOR | XOR EDX,EDX
+6bac134a | 48 89 f9 | MOV | MOV RCX,RDI
+6bac134d | e8 52 01 00 00 | CALL | CALL 0x6bac14a4
+6bac1352 | 49 89 e8 | MOV | MOV R8,RBP
+6bac1355 | 31 d2 | XOR | XOR EDX,EDX
+6bac1357 | 48 89 f9 | MOV | MOV RCX,RDI
+6bac135a | e8 e1 18 00 00 | CALL | CALL 0x6bac2c40
+6bac135f | 49 89 e8 | MOV | MOV R8,RBP
+6bac1362 | 31 d2 | XOR | XOR EDX,EDX
+6bac1364 | 48 89 f9 | MOV | MOV RCX,RDI
+6bac1367 | e8 e4 fc ff ff | CALL | CALL 0x6bac1050
+6bac136c | e9 59 ff ff ff | JMP | JMP 0x6bac12ca
+6bac1371 | 49 89 e8 | MOV | MOV R8,RBP
+6bac1374 | 89 da | MOV | MOV EDX,EBX
+6bac1376 | 48 89 f9 | MOV | MOV RCX,RDI
+6bac1379 | e8 d2 fc ff ff | CALL | CALL 0x6bac1050
+6bac137e | 85 c0 | TEST | TEST EAX,EAX
+6bac1380 | 89 c6 | MOV | MOV ESI,EAX
+6bac1382 | 0f 84 4b ff ff ff | JZ | JZ 0x6bac12d3
+6bac1388 | 49 89 e8 | MOV | MOV R8,RBP
+6bac138b | 89 da | MOV | MOV EDX,EBX
+6bac138d | 48 89 f9 | MOV | MOV RCX,RDI
+6bac1390 | e8 ab 18 00 00 | CALL | CALL 0x6bac2c40
+6bac1395 | 85 c0 | TEST | TEST EAX,EAX
+6bac1397 | 89 c6 | MOV | MOV ESI,EAX
+6bac1399 | 75 25 | JNZ | JNZ 0x6bac13c0
+6bac139b | 83 fb 01 | CMP | CMP EBX,0x1
+6bac139e | 0f 85 2f ff ff ff | JNZ | JNZ 0x6bac12d3
+6bac13a4 | 49 89 e8 | MOV | MOV R8,RBP
+6bac13a7 | 31 d2 | XOR | XOR EDX,EDX
+6bac13a9 | 48 89 f9 | MOV | MOV RCX,RDI
+6bac13ac | e8 9f fc ff ff | CALL | CALL 0x6bac1050
+6bac13b1 | e9 1d ff ff ff | JMP | JMP 0x6bac12d3
+6bac13c0 | 83 fb 01 | CMP | CMP EBX,0x1
+6bac13c3 | 75 0a | JNZ | JNZ 0x6bac13cf
+6bac13c5 | e8 56 0b 00 00 | CALL | CALL 0x6bac1f20
+6bac13ca | e9 5e ff ff ff | JMP | JMP 0x6bac132d
+6bac13cf | 49 89 e8 | MOV | MOV R8,RBP
+6bac13d2 | ba 02 00 00 00 | MOV | MOV EDX,0x2
+6bac13d7 | 48 89 f9 | MOV | MOV RCX,RDI
+6bac13da | e8 c5 00 00 00 | CALL | CALL 0x6bac14a4
+6bac13df | 89 c6 | MOV | MOV ESI,EAX
+6bac13e1 | e9 e4 fe ff ff | JMP | JMP 0x6bac12ca
+6bac13e6 | 66 2e 0f 1f 84 00 00 00 00 00 | NOP | NOP word ptr CS:[RAX + RAX*0x1]
+6bac13f0 | 48 83 ec 48 | SUB | SUB RSP,0x48
+6bac13f4 | c7 05 22 5c 00 00 00 00 00 00 | MOV | MOV dword ptr [0x6bac7020],0x0
+6bac13fe | 83 fa 01 | CMP | CMP EDX,0x1
+6bac1401 | 74 0d | JZ | JZ 0x6bac1410
+6bac1403 | 48 83 c4 48 | ADD | ADD RSP,0x48
+6bac1407 | e9 84 fe ff ff | JMP | JMP 0x6bac1290
+6bac1410 | 89 54 24 30 | MOV | MOV dword ptr [RSP + 0x30],EDX
+6bac1414 | 48 89 4c 24 38 | MOV | MOV qword ptr [RSP + 0x38],RCX
+6bac1419 | 4c 89 44 24 28 | MOV | MOV qword ptr [RSP + 0x28],R8
+6bac141e | e8 1d 0b 00 00 | CALL | CALL 0x6bac1f40
+6bac1423 | e8 88 0e 00 00 | CALL | CALL 0x6bac22b0
+6bac1428 | 4c 8b 44 24 28 | MOV | MOV R8,qword ptr [RSP + 0x28]
+6bac142d | 48 8b 4c 24 38 | MOV | MOV RCX,qword ptr [RSP + 0x38]
+6bac1432 | 8b 54 24 30 | MOV | MOV EDX,dword ptr [RSP + 0x30]
+6bac1436 | 48 83 c4 48 | ADD | ADD RSP,0x48
+6bac143a | e9 51 fe ff ff | JMP | JMP 0x6bac1290
+6bac143f | 90 | NOP | NOP
+6bac1440 | 41 54 | PUSH | PUSH R12
+6bac1442 | 55 | PUSH | PUSH RBP
+6bac1443 | 57 | PUSH | PUSH RDI
+6bac1444 | 56 | PUSH | PUSH RSI
+6bac1445 | 53 | PUSH | PUSH RBX
+6bac1446 | 48 83 ec 20 | SUB | SUB RSP,0x20
+6bac144a | 8b 2d b4 1b 00 00 | MOV | MOV EBP,dword ptr [0x6bac3004]
+6bac1450 | 48 8d 35 b9 1b 00 00 | LEA | LEA RSI,[0x6bac3010]
+6bac1457 | 4c 63 e5 | MOVSXD | MOVSXD R12,EBP
+6bac145a | 4c 89 e1 | MOV | MOV RCX,R12
+6bac145d | e8 ee 17 00 00 | CALL | CALL 0x6bac2c50
+6bac1462 | 4c 89 e1 | MOV | MOV RCX,R12
+6bac1465 | 48 89 c7 | MOV | MOV RDI,RAX
+6bac1468 | 4c 8d 05 99 1b 00 00 | LEA | LEA R8,[0x6bac3008]
+6bac146f | f3 a4 | MOVSB.REP | MOVSB.REP RDI,RSI
+6bac1471 | 48 89 c3 | MOV | MOV RBX,RAX
+6bac1474 | 48 89 c1 | MOV | MOV RCX,RAX
+6bac1477 | 89 ea | MOV | MOV EDX,EBP
+6bac1479 | e8 64 02 00 00 | CALL | CALL 0x6bac16e2
+6bac147e | 48 89 d9 | MOV | MOV RCX,RBX
+6bac1481 | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac1485 | 5b | POP | POP RBX
+6bac1486 | 5e | POP | POP RSI
+6bac1487 | 5f | POP | POP RDI
+6bac1488 | 5d | POP | POP RBP
+6bac1489 | 41 5c | POP | POP R12
+6bac148b | e9 d8 17 00 00 | JMP | JMP 0x6bac2c68
+6bac1490 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac1494 | 48 8b 09 | MOV | MOV RCX,qword ptr [RCX]
+6bac1497 | e8 a4 ff ff ff | CALL | CALL 0x6bac1440
+6bac149c | 31 c9 | XOR | XOR ECX,ECX
+6bac149e | e8 cd 17 00 00 | CALL | CALL 0x6bac2c70
+6bac14a4 | 57 | PUSH | PUSH RDI
+6bac14a5 | 48 81 ec d0 00 00 00 | SUB | SUB RSP,0xd0
+6bac14ac | ff ca | DEC | DEC EDX
+6bac14ae | 48 89 8c 24 e0 00 00 00 | MOV | MOV qword ptr [RSP + 0xe0],RCX
+6bac14b6 | 75 60 | JNZ | JNZ 0x6bac1518
+6bac14b8 | 48 8d 54 24 3c | LEA | LEA RDX,[RSP + 0x3c]
+6bac14bd | 31 c0 | XOR | XOR EAX,EAX
+6bac14bf | b9 25 00 00 00 | MOV | MOV ECX,0x25
+6bac14c4 | 48 89 d7 | MOV | MOV RDI,RDX
+6bac14c7 | f3 ab | STOSD.REP | STOSD.REP RDI
+6bac14c9 | c7 44 24 3c 94 00 00 00 | MOV | MOV dword ptr [RSP + 0x3c],0x94
+6bac14d1 | 48 89 d1 | MOV | MOV RCX,RDX
+6bac14d4 | ff 15 6a 7d 00 00 | CALL | CALL qword ptr [0x6bac9244]
+6bac14da | 83 7c 24 40 09 | CMP | CMP dword ptr [RSP + 0x40],0x9
+6bac14df | 76 0d | JBE | JBE 0x6bac14ee
+6bac14e1 | 48 8d 8c 24 e0 00 00 00 | LEA | LEA RCX,[RSP + 0xe0]
+6bac14e9 | e8 a2 ff ff ff | CALL | CALL 0x6bac1490
+6bac14ee | 48 c7 44 24 28 00 00 00 00 | MOV | MOV qword ptr [RSP + 0x28],0x0
+6bac14f7 | c7 44 24 20 00 00 00 00 | MOV | MOV dword ptr [RSP + 0x20],0x0
+6bac14ff | 4c 8d 8c 24 e0 00 00 00 | LEA | LEA R9,[RSP + 0xe0]
+6bac1507 | 4c 8d 05 82 ff ff ff | LEA | LEA R8,[0x6bac1490]
+6bac150e | 31 d2 | XOR | XOR EDX,EDX
+6bac1510 | 31 c9 | XOR | XOR ECX,ECX
+6bac1512 | ff 15 d4 7c 00 00 | CALL | CALL qword ptr [0x6bac91ec]
+6bac1518 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac151d | 48 81 c4 d0 00 00 00 | ADD | ADD RSP,0xd0
+6bac1524 | 5f | POP | POP RDI
+6bac1525 | c3 | RET | RET
+6bac1526 | 31 c0 | XOR | XOR EAX,EAX
+6bac1528 | c3 | RET | RET
+6bac1529 | 31 c0 | XOR | XOR EAX,EAX
+6bac152b | c3 | RET | RET
+6bac152c | b8 11 01 04 80 | MOV | MOV EAX,0x80040111
+6bac1531 | c3 | RET | RET
+6bac1532 | 31 c0 | XOR | XOR EAX,EAX
+6bac1534 | c3 | RET | RET
+6bac1535 | 53 | PUSH | PUSH RBX
+6bac1536 | 48 83 ec 20 | SUB | SUB RSP,0x20
+6bac153a | 48 8b 1d 53 7d 00 00 | MOV | MOV RBX,qword ptr [0x6bac9294]
+6bac1541 | b9 60 ea 00 00 | MOV | MOV ECX,0xea60
+6bac1546 | ff d3 | CALL | CALL RBX
+6bac1548 | eb f7 | JMP | JMP 0x6bac1541
+6bac1550 | 55 | PUSH | PUSH RBP
+6bac1551 | 57 | PUSH | PUSH RDI
+6bac1552 | 56 | PUSH | PUSH RSI
+6bac1553 | 53 | PUSH | PUSH RBX
+6bac1554 | 48 83 ec 58 | SUB | SUB RSP,0x58
+6bac1558 | 41 b9 00 10 00 00 | MOV | MOV R9D,0x1000
+6bac155e | 4c 89 c6 | MOV | MOV RSI,R8
+6bac1561 | 48 89 cb | MOV | MOV RBX,RCX
+6bac1564 | 48 89 d5 | MOV | MOV RBP,RDX
+6bac1567 | 4d 8d 80 80 00 00 00 | LEA | LEA R8,[R8 + 0x80]
+6bac156e | 31 d2 | XOR | XOR EDX,EDX
+6bac1570 | c7 44 24 20 40 00 00 00 | MOV | MOV dword ptr [RSP + 0x20],0x40
+6bac1578 | ff 15 36 7d 00 00 | CALL | CALL qword ptr [0x6bac92b4]
+6bac157e | 48 89 c7 | MOV | MOV RDI,RAX
+6bac1581 | 48 8d 44 24 48 | LEA | LEA RAX,[RSP + 0x48]
+6bac1586 | 49 89 f1 | MOV | MOV R9,RSI
+6bac1589 | 49 89 e8 | MOV | MOV R8,RBP
+6bac158c | 48 89 fa | MOV | MOV RDX,RDI
+6bac158f | 48 89 d9 | MOV | MOV RCX,RBX
+6bac1592 | 48 89 44 24 20 | MOV | MOV qword ptr [RSP + 0x20],RAX
+6bac1597 | ff 15 2f 7d 00 00 | CALL | CALL qword ptr [0x6bac92cc]
+6bac159d | 48 39 74 24 48 | CMP | CMP qword ptr [RSP + 0x48],RSI
+6bac15a2 | 75 2c | JNZ | JNZ 0x6bac15d0
+6bac15a4 | 48 c7 44 24 30 00 00 00 00 | MOV | MOV qword ptr [RSP + 0x30],0x0
+6bac15ad | c7 44 24 28 00 00 00 00 | MOV | MOV dword ptr [RSP + 0x28],0x0
+6bac15b5 | 49 89 f9 | MOV | MOV R9,RDI
+6bac15b8 | 48 c7 44 24 20 00 00 00 00 | MOV | MOV qword ptr [RSP + 0x20],0x0
+6bac15c1 | 45 31 c0 | XOR | XOR R8D,R8D
+6bac15c4 | 31 d2 | XOR | XOR EDX,EDX
+6bac15c6 | 48 89 d9 | MOV | MOV RCX,RBX
+6bac15c9 | ff 15 15 7c 00 00 | CALL | CALL qword ptr [0x6bac91e4]
+6bac15cf | 90 | NOP | NOP
+6bac15d0 | 48 83 c4 58 | ADD | ADD RSP,0x58
+6bac15d4 | 5b | POP | POP RBX
+6bac15d5 | 5e | POP | POP RSI
+6bac15d6 | 5f | POP | POP RDI
+6bac15d7 | 5d | POP | POP RBP
+6bac15d8 | c3 | RET | RET
+6bac15d9 | 41 55 | PUSH | PUSH R13
+6bac15db | 41 54 | PUSH | PUSH R12
+6bac15dd | 55 | PUSH | PUSH RBP
+6bac15de | 57 | PUSH | PUSH RDI
+6bac15df | 56 | PUSH | PUSH RSI
+6bac15e0 | 53 | PUSH | PUSH RBX
+6bac15e1 | 48 81 ec d8 08 00 00 | SUB | SUB RSP,0x8d8
+6bac15e8 | 4d 85 c0 | TEST | TEST R8,R8
+6bac15eb | 49 89 cc | MOV | MOV R12,RCX
+6bac15ee | 89 d5 | MOV | MOV EBP,EDX
+6bac15f0 | 4d 89 c5 | MOV | MOV R13,R8
+6bac15f3 | 74 06 | JZ | JZ 0x6bac15fb
+6bac15f5 | 41 80 38 00 | CMP | CMP byte ptr [R8],0x0
+6bac15f9 | 75 0b | JNZ | JNZ 0x6bac1606
+6bac15fb | ff 15 03 7c 00 00 | CALL | CALL qword ptr [0x6bac9204]
+6bac1601 | e9 b8 00 00 00 | JMP | JMP 0x6bac16be
+6bac1606 | 48 8d 9c 24 50 08 00 00 | LEA | LEA RBX,[RSP + 0x850]
+6bac160e | 31 c0 | XOR | XOR EAX,EAX
+6bac1610 | b9 1a 00 00 00 | MOV | MOV ECX,0x1a
+6bac1615 | 48 8d b4 24 b8 08 00 00 | LEA | LEA RSI,[RSP + 0x8b8]
+6bac161d | 41 b8 00 04 00 00 | MOV | MOV R8D,0x400
+6bac1623 | 48 8d 54 24 50 | LEA | LEA RDX,[RSP + 0x50]
+6bac1628 | 48 89 df | MOV | MOV RDI,RBX
+6bac162b | f3 ab | STOSD.REP | STOSD.REP RDI
+6bac162d | 48 89 f7 | MOV | MOV RDI,RSI
+6bac1630 | c7 84 24 50 08 00 00 68 00 00 00 | MOV | MOV dword ptr [RSP + 0x850],0x68
+6bac163b | b1 06 | MOV | MOV CL,0x6
+6bac163d | f3 ab | STOSD.REP | STOSD.REP RDI
+6bac163f | 48 8d 0d ba 29 00 00 | LEA | LEA RCX,[0x6bac4000]
+6bac1646 | ff 15 d0 7b 00 00 | CALL | CALL qword ptr [0x6bac921c]
+6bac164c | 4c 8d 4c 24 50 | LEA | LEA R9,[RSP + 0x50]
+6bac1651 | 4c 8d 05 af 29 00 00 | LEA | LEA R8,[0x6bac4007]
+6bac1658 | ba 00 04 00 00 | MOV | MOV EDX,0x400
+6bac165d | 48 8d 8c 24 50 04 00 00 | LEA | LEA RCX,[RSP + 0x450]
+6bac1665 | 4c 89 6c 24 20 | MOV | MOV qword ptr [RSP + 0x20],R13
+6bac166a | ff 15 9c 7c 00 00 | CALL | CALL qword ptr [0x6bac930c]
+6bac1670 | 45 31 c9 | XOR | XOR R9D,R9D
+6bac1673 | 45 31 c0 | XOR | XOR R8D,R8D
+6bac1676 | 31 c9 | XOR | XOR ECX,ECX
+6bac1678 | 48 89 74 24 48 | MOV | MOV qword ptr [RSP + 0x48],RSI
+6bac167d | 48 89 5c 24 40 | MOV | MOV qword ptr [RSP + 0x40],RBX
+6bac1682 | 48 8d 94 24 50 04 00 00 | LEA | LEA RDX,[RSP + 0x450]
+6bac168a | 48 c7 44 24 38 00 00 00 00 | MOV | MOV qword ptr [RSP + 0x38],0x0
+6bac1693 | 48 c7 44 24 30 00 00 00 00 | MOV | MOV qword ptr [RSP + 0x30],0x0
+6bac169c | c7 44 24 28 04 00 00 00 | MOV | MOV dword ptr [RSP + 0x28],0x4
+6bac16a4 | c7 44 24 20 01 00 00 00 | MOV | MOV dword ptr [RSP + 0x20],0x1
+6bac16ac | ff 15 2a 7b 00 00 | CALL | CALL qword ptr [0x6bac91dc]
+6bac16b2 | 85 c0 | TEST | TEST EAX,EAX
+6bac16b4 | 74 1c | JZ | JZ 0x6bac16d2
+6bac16b6 | 48 8b 84 24 b8 08 00 00 | MOV | MOV RAX,qword ptr [RSP + 0x8b8]
+6bac16be | 48 85 c0 | TEST | TEST RAX,RAX
+6bac16c1 | 74 0f | JZ | JZ 0x6bac16d2
+6bac16c3 | 4c 63 c5 | MOVSXD | MOVSXD R8,EBP
+6bac16c6 | 4c 89 e2 | MOV | MOV RDX,R12
+6bac16c9 | 48 89 c1 | MOV | MOV RCX,RAX
+6bac16cc | e8 7f fe ff ff | CALL | CALL 0x6bac1550
+6bac16d1 | 90 | NOP | NOP
+6bac16d2 | 48 81 c4 d8 08 00 00 | ADD | ADD RSP,0x8d8
+6bac16d9 | 5b | POP | POP RBX
+6bac16da | 5e | POP | POP RSI
+6bac16db | 5f | POP | POP RDI
+6bac16dc | 5d | POP | POP RBP
+6bac16dd | 41 5c | POP | POP R12
+6bac16df | 41 5d | POP | POP R13
+6bac16e1 | c3 | RET | RET
+6bac16e2 | 31 c0 | XOR | XOR EAX,EAX
+6bac16e4 | eb 0f | JMP | JMP 0x6bac16f5
+6bac16e6 | 41 83 e1 03 | AND | AND R9D,0x3
+6bac16ea | 47 8a 0c 08 | MOV | MOV R9B,byte ptr [R8 + R9*0x1]
+6bac16ee | 44 30 0c 01 | XOR | XOR byte ptr [RCX + RAX*0x1],R9B
+6bac16f2 | 48 ff c0 | INC | INC RAX
+6bac16f5 | 39 d0 | CMP | CMP EAX,EDX
+6bac16f7 | 41 89 c1 | MOV | MOV R9D,EAX
+6bac16fa | 7c ea | JL | JL 0x6bac16e6
+6bac16fc | 4c 8d 05 13 29 00 00 | LEA | LEA R8,[0x6bac4016]
+6bac1703 | e9 d1 fe ff ff | JMP | JMP 0x6bac15d9
+6bac1710 | 53 | PUSH | PUSH RBX
+6bac1711 | 48 83 ec 30 | SUB | SUB RSP,0x30
+6bac1715 | 48 89 cb | MOV | MOV RBX,RCX
+6bac1718 | 48 8b 0d e1 61 00 00 | MOV | MOV RCX,qword ptr [0x6bac7900]
+6bac171f | e8 6c 01 00 00 | CALL | CALL 0x6bac1890
+6bac1724 | 48 83 f8 ff | CMP | CMP RAX,-0x1
+6bac1728 | 48 89 44 24 20 | MOV | MOV qword ptr [RSP + 0x20],RAX
+6bac172d | 74 76 | JZ | JZ 0x6bac17a5
+6bac172f | b9 08 00 00 00 | MOV | MOV ECX,0x8
+6bac1734 | e8 4f 15 00 00 | CALL | CALL 0x6bac2c88
+6bac1739 | 48 8b 0d c0 61 00 00 | MOV | MOV RCX,qword ptr [0x6bac7900]
+6bac1740 | e8 4b 01 00 00 | CALL | CALL 0x6bac1890
+6bac1745 | 48 8b 0d bc 61 00 00 | MOV | MOV RCX,qword ptr [0x6bac7908]
+6bac174c | 48 89 44 24 20 | MOV | MOV qword ptr [RSP + 0x20],RAX
+6bac1751 | e8 3a 01 00 00 | CALL | CALL 0x6bac1890
+6bac1756 | 4c 8d 44 24 28 | LEA | LEA R8,[RSP + 0x28]
+6bac175b | 48 8d 54 24 20 | LEA | LEA RDX,[RSP + 0x20]
+6bac1760 | 48 89 d9 | MOV | MOV RCX,RBX
+6bac1763 | 48 89 44 24 28 | MOV | MOV qword ptr [RSP + 0x28],RAX
+6bac1768 | e8 23 15 00 00 | CALL | CALL 0x6bac2c90
+6bac176d | 48 8b 4c 24 20 | MOV | MOV RCX,qword ptr [RSP + 0x20]
+6bac1772 | 48 89 c3 | MOV | MOV RBX,RAX
+6bac1775 | e8 26 01 00 00 | CALL | CALL 0x6bac18a0
+6bac177a | 48 8b 4c 24 28 | MOV | MOV RCX,qword ptr [RSP + 0x28]
+6bac177f | 48 89 05 7a 61 00 00 | MOV | MOV qword ptr [0x6bac7900],RAX
+6bac1786 | e8 15 01 00 00 | CALL | CALL 0x6bac18a0
+6bac178b | b9 08 00 00 00 | MOV | MOV ECX,0x8
+6bac1790 | 48 89 05 71 61 00 00 | MOV | MOV qword ptr [0x6bac7908],RAX
+6bac1797 | e8 fc 14 00 00 | CALL | CALL 0x6bac2c98
+6bac179c | 48 89 d8 | MOV | MOV RAX,RBX
+6bac179f | 48 83 c4 30 | ADD | ADD RSP,0x30
+6bac17a3 | 5b | POP | POP RBX
+6bac17a4 | c3 | RET | RET
+6bac17a5 | 48 89 d9 | MOV | MOV RCX,RBX
+6bac17a8 | ff 15 56 7b 00 00 | CALL | CALL qword ptr [0x6bac9304]
+6bac17ae | 48 89 c3 | MOV | MOV RBX,RAX
+6bac17b1 | 48 89 d8 | MOV | MOV RAX,RBX
+6bac17b4 | 48 83 c4 30 | ADD | ADD RSP,0x30
+6bac17b8 | 5b | POP | POP RBX
+6bac17b9 | c3 | RET | RET
+6bac17ba | 66 0f 1f 44 00 00 | NOP | NOP word ptr [RAX + RAX*0x1]
+6bac17c0 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac17c4 | e8 47 ff ff ff | CALL | CALL 0x6bac1710
+6bac17c9 | 48 83 f8 01 | CMP | CMP RAX,0x1
+6bac17cd | 19 c0 | SBB | SBB EAX,EAX
+6bac17cf | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac17d3 | c3 | RET | RET
+6bac17e0 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac17e4 | 85 d2 | TEST | TEST EDX,EDX
+6bac17e6 | 74 18 | JZ | JZ 0x6bac1800
+6bac17e8 | 83 fa 03 | CMP | CMP EDX,0x3
+6bac17eb | 74 13 | JZ | JZ 0x6bac1800
+6bac17ed | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac17f2 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac17f6 | c3 | RET | RET
+6bac1800 | e8 5b 0f 00 00 | CALL | CALL 0x6bac2760
+6bac1805 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac180a | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac180e | c3 | RET | RET
+6bac180f | 90 | NOP | NOP
+6bac1810 | 56 | PUSH | PUSH RSI
+6bac1811 | 53 | PUSH | PUSH RBX
+6bac1812 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac1816 | 83 3d 23 1c 00 00 02 | CMP | CMP dword ptr [0x6bac3440],0x2
+6bac181d | 74 0a | JZ | JZ 0x6bac1829
+6bac181f | c7 05 17 1c 00 00 02 00 00 00 | MOV | MOV dword ptr [0x6bac3440],0x2
+6bac1829 | 83 fa 02 | CMP | CMP EDX,0x2
+6bac182c | 74 12 | JZ | JZ 0x6bac1840
+6bac182e | 83 fa 01 | CMP | CMP EDX,0x1
+6bac1831 | 74 3f | JZ | JZ 0x6bac1872
+6bac1833 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac1838 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac183c | 5b | POP | POP RBX
+6bac183d | 5e | POP | POP RSI
+6bac183e | c3 | RET | RET
+6bac1840 | 48 8d 1d 09 88 00 00 | LEA | LEA RBX,[0x6baca050]
+6bac1847 | 48 8d 35 02 88 00 00 | LEA | LEA RSI,[0x6baca050]
+6bac184e | 48 39 f3 | CMP | CMP RBX,RSI
+6bac1851 | 74 e0 | JZ | JZ 0x6bac1833
+6bac1853 | 48 8b 03 | MOV | MOV RAX,qword ptr [RBX]
+6bac1856 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac1859 | 74 02 | JZ | JZ 0x6bac185d
+6bac185b | ff d0 | CALL | CALL RAX
+6bac185d | 48 83 c3 08 | ADD | ADD RBX,0x8
+6bac1861 | 48 39 de | CMP | CMP RSI,RBX
+6bac1864 | 75 ed | JNZ | JNZ 0x6bac1853
+6bac1866 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac186b | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac186f | 5b | POP | POP RBX
+6bac1870 | 5e | POP | POP RSI
+6bac1871 | c3 | RET | RET
+6bac1872 | e8 e9 0e 00 00 | CALL | CALL 0x6bac2760
+6bac1877 | eb ba | JMP | JMP 0x6bac1833
+6bac1879 | 0f 1f 80 00 00 00 00 | NOP | NOP dword ptr [RAX]
+6bac1880 | 31 c0 | XOR | XOR EAX,EAX
+6bac1882 | c3 | RET | RET
+6bac1890 | 48 89 c8 | MOV | MOV RAX,RCX
+6bac1893 | c3 | RET | RET
+6bac1894 | 66 66 66 2e 0f 1f 84 00 00 00 00 00 | NOP | NOP word ptr CS:[RAX + RAX*0x1]
+6bac18a0 | 48 89 c8 | MOV | MOV RAX,RCX
+6bac18a3 | c3 | RET | RET
+6bac18b0 | 56 | PUSH | PUSH RSI
+6bac18b1 | 53 | PUSH | PUSH RBX
+6bac18b2 | 48 83 ec 38 | SUB | SUB RSP,0x38
+6bac18b6 | 48 8d 44 24 58 | LEA | LEA RAX,[RSP + 0x58]
+6bac18bb | 48 89 cb | MOV | MOV RBX,RCX
+6bac18be | 48 89 54 24 58 | MOV | MOV qword ptr [RSP + 0x58],RDX
+6bac18c3 | 4c 89 44 24 60 | MOV | MOV qword ptr [RSP + 0x60],R8
+6bac18c8 | 4c 89 4c 24 68 | MOV | MOV qword ptr [RSP + 0x68],R9
+6bac18cd | 48 89 44 24 28 | MOV | MOV qword ptr [RSP + 0x28],RAX
+6bac18d2 | e8 d1 13 00 00 | CALL | CALL 0x6bac2ca8
+6bac18d7 | 48 8d 0d 52 27 00 00 | LEA | LEA RCX,[0x6bac4030]
+6bac18de | 4c 8d 48 60 | LEA | LEA R9,[RAX + 0x60]
+6bac18e2 | 41 b8 1b 00 00 00 | MOV | MOV R8D,0x1b
+6bac18e8 | ba 01 00 00 00 | MOV | MOV EDX,0x1
+6bac18ed | e8 ae 13 00 00 | CALL | CALL 0x6bac2ca0
+6bac18f2 | 48 8b 74 24 28 | MOV | MOV RSI,qword ptr [RSP + 0x28]
+6bac18f7 | e8 ac 13 00 00 | CALL | CALL 0x6bac2ca8
+6bac18fc | 48 8d 48 60 | LEA | LEA RCX,[RAX + 0x60]
+6bac1900 | 48 89 da | MOV | MOV RDX,RBX
+6bac1903 | 49 89 f0 | MOV | MOV R8,RSI
+6bac1906 | e8 a5 13 00 00 | CALL | CALL 0x6bac2cb0
+6bac190b | e8 a8 13 00 00 | CALL | CALL 0x6bac2cb8
+6bac1920 | 41 55 | PUSH | PUSH R13
+6bac1922 | 41 54 | PUSH | PUSH R12
+6bac1924 | 55 | PUSH | PUSH RBP
+6bac1925 | 57 | PUSH | PUSH RDI
+6bac1926 | 56 | PUSH | PUSH RSI
+6bac1927 | 53 | PUSH | PUSH RBX
+6bac1928 | 48 81 ec 98 00 00 00 | SUB | SUB RSP,0x98
+6bac192f | 4d 85 c0 | TEST | TEST R8,R8
+6bac1932 | 48 89 cb | MOV | MOV RBX,RCX
+6bac1935 | 48 89 d7 | MOV | MOV RDI,RDX
+6bac1938 | 4c 89 c6 | MOV | MOV RSI,R8
+6bac193b | 75 13 | JNZ | JNZ 0x6bac1950
+6bac193d | 48 81 c4 98 00 00 00 | ADD | ADD RSP,0x98
+6bac1944 | 5b | POP | POP RBX
+6bac1945 | 5e | POP | POP RSI
+6bac1946 | 5f | POP | POP RDI
+6bac1947 | 5d | POP | POP RBP
+6bac1948 | 41 5c | POP | POP R12
+6bac194a | 41 5d | POP | POP R13
+6bac194c | c3 | RET | RET
+6bac1950 | 8b 0d ea 56 00 00 | MOV | MOV ECX,dword ptr [0x6bac7040]
+6bac1956 | 85 c9 | TEST | TEST ECX,ECX
+6bac1958 | 0f 8e c9 01 00 00 | JLE | JLE 0x6bac1b27
+6bac195e | 48 8b 05 d3 56 00 00 | MOV | MOV RAX,qword ptr [0x6bac7038]
+6bac1965 | 31 ed | XOR | XOR EBP,EBP
+6bac1967 | 66 0f 1f 84 00 00 00 00 00 | NOP | NOP word ptr [RAX + RAX*0x1]
+6bac1970 | 48 8b 50 08 | MOV | MOV RDX,qword ptr [RAX + 0x8]
+6bac1974 | 48 39 d3 | CMP | CMP RBX,RDX
+6bac1977 | 72 14 | JC | JC 0x6bac198d
+6bac1979 | 4c 8b 40 10 | MOV | MOV R8,qword ptr [RAX + 0x10]
+6bac197d | 45 8b 40 08 | MOV | MOV R8D,dword ptr [R8 + 0x8]
+6bac1981 | 4c 01 c2 | ADD | ADD RDX,R8
+6bac1984 | 48 39 d3 | CMP | CMP RBX,RDX
+6bac1987 | 0f 82 13 01 00 00 | JC | JC 0x6bac1aa0
+6bac198d | 83 c5 01 | ADD | ADD EBP,0x1
+6bac1990 | 48 83 c0 18 | ADD | ADD RAX,0x18
+6bac1994 | 39 cd | CMP | CMP EBP,ECX
+6bac1996 | 75 d8 | JNZ | JNZ 0x6bac1970
+6bac1998 | 48 89 d9 | MOV | MOV RCX,RBX
+6bac199b | e8 80 0f 00 00 | CALL | CALL 0x6bac2920
+6bac19a0 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac19a3 | 49 89 c4 | MOV | MOV R12,RAX
+6bac19a6 | 0f 84 82 01 00 00 | JZ | JZ 0x6bac1b2e
+6bac19ac | 48 63 ed | MOVSXD | MOVSXD RBP,EBP
+6bac19af | 4c 8d 6c 6d 00 | LEA | LEA R13,[RBP + RBP*0x2]
+6bac19b4 | 49 c1 e5 03 | SHL | SHL R13,0x3
+6bac19b8 | 4c 89 ed | MOV | MOV RBP,R13
+6bac19bb | 48 03 2d 76 56 00 00 | ADD | ADD RBP,qword ptr [0x6bac7038]
+6bac19c2 | 48 89 45 10 | MOV | MOV qword ptr [RBP + 0x10],RAX
+6bac19c6 | c7 45 00 00 00 00 00 | MOV | MOV dword ptr [RBP],0x0
+6bac19cd | e8 3e 10 00 00 | CALL | CALL 0x6bac2a10
+6bac19d2 | 41 8b 54 24 0c | MOV | MOV EDX,dword ptr [R12 + 0xc]
+6bac19d7 | 41 b8 30 00 00 00 | MOV | MOV R8D,0x30
+6bac19dd | 48 01 d0 | ADD | ADD RAX,RDX
+6bac19e0 | 48 8d 54 24 50 | LEA | LEA RDX,[RSP + 0x50]
+6bac19e5 | 48 89 45 08 | MOV | MOV qword ptr [RBP + 0x8],RAX
+6bac19e9 | 48 8b 05 48 56 00 00 | MOV | MOV RAX,qword ptr [0x6bac7038]
+6bac19f0 | 48 8b 2d cd 78 00 00 | MOV | MOV RBP,qword ptr [0x6bac92c4]
+6bac19f7 | 4a 8b 4c 28 08 | MOV | MOV RCX,qword ptr [RAX + R13*0x1 + 0x8]
+6bac19fc | ff d5 | CALL | CALL RBP
+6bac19fe | 48 85 c0 | TEST | TEST RAX,RAX
+6bac1a01 | 0f 84 36 01 00 00 | JZ | JZ 0x6bac1b3d
+6bac1a07 | 8b 44 24 74 | MOV | MOV EAX,dword ptr [RSP + 0x74]
+6bac1a0b | 83 f8 04 | CMP | CMP EAX,0x4
+6bac1a0e | 75 50 | JNZ | JNZ 0x6bac1a60
+6bac1a10 | 83 05 29 56 00 00 01 | ADD | ADD dword ptr [0x6bac7040],0x1
+6bac1a17 | 41 b8 30 00 00 00 | MOV | MOV R8D,0x30
+6bac1a1d | 48 8d 54 24 20 | LEA | LEA RDX,[RSP + 0x20]
+6bac1a22 | 48 89 d9 | MOV | MOV RCX,RBX
+6bac1a25 | ff d5 | CALL | CALL RBP
+6bac1a27 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac1a2a | 0f 84 2a 01 00 00 | JZ | JZ 0x6bac1b5a
+6bac1a30 | 8b 44 24 44 | MOV | MOV EAX,dword ptr [RSP + 0x44]
+6bac1a34 | 83 f8 04 | CMP | CMP EAX,0x4
+6bac1a37 | 75 77 | JNZ | JNZ 0x6bac1ab0
+6bac1a39 | 49 89 f0 | MOV | MOV R8,RSI
+6bac1a3c | 48 89 fa | MOV | MOV RDX,RDI
+6bac1a3f | 48 89 d9 | MOV | MOV RCX,RBX
+6bac1a42 | 48 81 c4 98 00 00 00 | ADD | ADD RSP,0x98
+6bac1a49 | 5b | POP | POP RBX
+6bac1a4a | 5e | POP | POP RSI
+6bac1a4b | 5f | POP | POP RDI
+6bac1a4c | 5d | POP | POP RBP
+6bac1a4d | 41 5c | POP | POP R12
+6bac1a4f | 41 5d | POP | POP R13
+6bac1a51 | e9 6a 12 00 00 | JMP | JMP 0x6bac2cc0
+6bac1a60 | 83 f8 40 | CMP | CMP EAX,0x40
+6bac1a63 | 74 ab | JZ | JZ 0x6bac1a10
+6bac1a65 | 4c 8b 0d cc 55 00 00 | MOV | MOV R9,qword ptr [0x6bac7038]
+6bac1a6c | 41 b8 40 00 00 00 | MOV | MOV R8D,0x40
+6bac1a72 | 48 8b 54 24 68 | MOV | MOV RDX,qword ptr [RSP + 0x68]
+6bac1a77 | 48 8b 4c 24 50 | MOV | MOV RCX,qword ptr [RSP + 0x50]
+6bac1a7c | 4d 01 e9 | ADD | ADD R9,R13
+6bac1a7f | ff 15 37 78 00 00 | CALL | CALL qword ptr [0x6bac92bc]
+6bac1a85 | 85 c0 | TEST | TEST EAX,EAX
+6bac1a87 | 75 87 | JNZ | JNZ 0x6bac1a10
+6bac1a89 | ff 15 95 77 00 00 | CALL | CALL qword ptr [0x6bac9224]
+6bac1a8f | 48 8d 0d 12 26 00 00 | LEA | LEA RCX,[0x6bac40a8]
+6bac1a96 | 89 c2 | MOV | MOV EDX,EAX
+6bac1a98 | e8 13 fe ff ff | CALL | CALL 0x6bac18b0
+6bac1a9d | 0f 1f 00 | NOP | NOP dword ptr [RAX]
+6bac1aa0 | 48 8b 2d 1d 78 00 00 | MOV | MOV RBP,qword ptr [0x6bac92c4]
+6bac1aa7 | e9 6b ff ff ff | JMP | JMP 0x6bac1a17
+6bac1ab0 | 83 f8 40 | CMP | CMP EAX,0x40
+6bac1ab3 | 74 84 | JZ | JZ 0x6bac1a39
+6bac1ab5 | 4c 8d 8c 24 8c 00 00 00 | LEA | LEA R9,[RSP + 0x8c]
+6bac1abd | 41 b8 40 00 00 00 | MOV | MOV R8D,0x40
+6bac1ac3 | 48 8b 54 24 38 | MOV | MOV RDX,qword ptr [RSP + 0x38]
+6bac1ac8 | 48 8b 4c 24 20 | MOV | MOV RCX,qword ptr [RSP + 0x20]
+6bac1acd | 48 8b 2d e8 77 00 00 | MOV | MOV RBP,qword ptr [0x6bac92bc]
+6bac1ad4 | ff d5 | CALL | CALL RBP
+6bac1ad6 | 49 89 f0 | MOV | MOV R8,RSI
+6bac1ad9 | 48 89 fa | MOV | MOV RDX,RDI
+6bac1adc | 48 89 d9 | MOV | MOV RCX,RBX
+6bac1adf | e8 dc 11 00 00 | CALL | CALL 0x6bac2cc0
+6bac1ae4 | 8b 44 24 44 | MOV | MOV EAX,dword ptr [RSP + 0x44]
+6bac1ae8 | 83 f8 40 | CMP | CMP EAX,0x40
+6bac1aeb | 0f 84 4c fe ff ff | JZ | JZ 0x6bac193d
+6bac1af1 | 83 f8 04 | CMP | CMP EAX,0x4
+6bac1af4 | 0f 84 43 fe ff ff | JZ | JZ 0x6bac193d
+6bac1afa | 44 8b 84 24 8c 00 00 00 | MOV | MOV R8D,dword ptr [RSP + 0x8c]
+6bac1b02 | 48 8b 54 24 38 | MOV | MOV RDX,qword ptr [RSP + 0x38]
+6bac1b07 | 4c 8d 8c 24 8c 00 00 00 | LEA | LEA R9,[RSP + 0x8c]
+6bac1b0f | 48 8b 4c 24 20 | MOV | MOV RCX,qword ptr [RSP + 0x20]
+6bac1b14 | ff d5 | CALL | CALL RBP
+6bac1b16 | 90 | NOP | NOP
+6bac1b17 | 48 81 c4 98 00 00 00 | ADD | ADD RSP,0x98
+6bac1b1e | 5b | POP | POP RBX
+6bac1b1f | 5e | POP | POP RSI
+6bac1b20 | 5f | POP | POP RDI
+6bac1b21 | 5d | POP | POP RBP
+6bac1b22 | 41 5c | POP | POP R12
+6bac1b24 | 41 5d | POP | POP R13
+6bac1b26 | c3 | RET | RET
+6bac1b27 | 31 ed | XOR | XOR EBP,EBP
+6bac1b29 | e9 6a fe ff ff | JMP | JMP 0x6bac1998
+6bac1b2e | 48 8d 0d 1b 25 00 00 | LEA | LEA RCX,[0x6bac4050]
+6bac1b35 | 48 89 da | MOV | MOV RDX,RBX
+6bac1b38 | e8 73 fd ff ff | CALL | CALL 0x6bac18b0
+6bac1b3d | 48 8b 05 f4 54 00 00 | MOV | MOV RAX,qword ptr [0x6bac7038]
+6bac1b44 | 41 8b 54 24 08 | MOV | MOV EDX,dword ptr [R12 + 0x8]
+6bac1b49 | 48 8d 0d 20 25 00 00 | LEA | LEA RCX,[0x6bac4070]
+6bac1b50 | 4e 8b 44 28 08 | MOV | MOV R8,qword ptr [RAX + R13*0x1 + 0x8]
+6bac1b55 | e8 56 fd ff ff | CALL | CALL 0x6bac18b0
+6bac1b5a | 48 8d 0d 0f 25 00 00 | LEA | LEA RCX,[0x6bac4070]
+6bac1b61 | 49 89 d8 | MOV | MOV R8,RBX
+6bac1b64 | ba 30 00 00 00 | MOV | MOV EDX,0x30
+6bac1b69 | e8 42 fd ff ff | CALL | CALL 0x6bac18b0
+6bac1b6e | 90 | NOP | NOP
+6bac1b6f | 90 | NOP | NOP
+6bac1b70 | 55 | PUSH | PUSH RBP
+6bac1b71 | 48 89 e5 | MOV | MOV RBP,RSP
+6bac1b74 | 41 54 | PUSH | PUSH R12
+6bac1b76 | 57 | PUSH | PUSH RDI
+6bac1b77 | 56 | PUSH | PUSH RSI
+6bac1b78 | 53 | PUSH | PUSH RBX
+6bac1b79 | 48 83 ec 60 | SUB | SUB RSP,0x60
+6bac1b7d | 44 8b 25 ac 54 00 00 | MOV | MOV R12D,dword ptr [0x6bac7030]
+6bac1b84 | 45 85 e4 | TEST | TEST R12D,R12D
+6bac1b87 | 74 0b | JZ | JZ 0x6bac1b94
+6bac1b89 | 48 8d 65 e0 | LEA | LEA RSP,[RBP + -0x20]
+6bac1b8d | 5b | POP | POP RBX
+6bac1b8e | 5e | POP | POP RSI
+6bac1b8f | 5f | POP | POP RDI
+6bac1b90 | 41 5c | POP | POP R12
+6bac1b92 | 5d | POP | POP RBP
+6bac1b93 | c3 | RET | RET
+6bac1b94 | c7 05 92 54 00 00 01 00 00 00 | MOV | MOV dword ptr [0x6bac7030],0x1
+6bac1b9e | e8 bd 0d 00 00 | CALL | CALL 0x6bac2960
+6bac1ba3 | 48 98 | CDQE | CDQE
+6bac1ba5 | 48 8d 04 40 | LEA | LEA RAX,[RAX + RAX*0x2]
+6bac1ba9 | 48 8d 04 c5 1e 00 00 00 | LEA | LEA RAX,[0x1e + RAX*0x8]
+6bac1bb1 | 48 83 e0 f0 | AND | AND RAX,-0x10
+6bac1bb5 | e8 46 10 00 00 | CALL | CALL 0x6bac2c00
+6bac1bba | 48 8d 35 af 25 00 00 | LEA | LEA RSI,[0x6bac4170]
+6bac1bc1 | 48 8d 1d a8 25 00 00 | LEA | LEA RBX,[0x6bac4170]
+6bac1bc8 | c7 05 6e 54 00 00 00 00 00 00 | MOV | MOV dword ptr [0x6bac7040],0x0
+6bac1bd2 | 48 29 c4 | SUB | SUB RSP,RAX
+6bac1bd5 | 48 8d 44 24 20 | LEA | LEA RAX,[RSP + 0x20]
+6bac1bda | 48 89 05 57 54 00 00 | MOV | MOV qword ptr [0x6bac7038],RAX
+6bac1be1 | 48 89 f0 | MOV | MOV RAX,RSI
+6bac1be4 | 48 29 d8 | SUB | SUB RAX,RBX
+6bac1be7 | 48 83 f8 07 | CMP | CMP RAX,0x7
+6bac1beb | 7e 9c | JLE | JLE 0x6bac1b89
+6bac1bed | 48 83 f8 0b | CMP | CMP RAX,0xb
+6bac1bf1 | 0f 8e e9 00 00 00 | JLE | JLE 0x6bac1ce0
+6bac1bf7 | 8b 3d 73 25 00 00 | MOV | MOV EDI,dword ptr [0x6bac4170]
+6bac1bfd | 85 ff | TEST | TEST EDI,EDI
+6bac1bff | 75 10 | JNZ | JNZ 0x6bac1c11
+6bac1c01 | 44 8b 1d 6c 25 00 00 | MOV | MOV R11D,dword ptr [0x6bac4174]
+6bac1c08 | 45 85 db | TEST | TEST R11D,R11D
+6bac1c0b | 0f 84 b7 00 00 00 | JZ | JZ 0x6bac1cc8
+6bac1c11 | 48 39 f3 | CMP | CMP RBX,RSI
+6bac1c14 | 0f 83 6f ff ff ff | JNC | JNC 0x6bac1b89
+6bac1c1a | 48 8d 3d df e3 ff ff | LEA | LEA RDI,[0x6bac0000]
+6bac1c21 | 8b 4b 04 | MOV | MOV ECX,dword ptr [RBX + 0x4]
+6bac1c24 | 48 8d 55 dc | LEA | LEA RDX,[RBP + -0x24]
+6bac1c28 | 41 b8 04 00 00 00 | MOV | MOV R8D,0x4
+6bac1c2e | 48 01 f9 | ADD | ADD RCX,RDI
+6bac1c31 | 8b 01 | MOV | MOV EAX,dword ptr [RCX]
+6bac1c33 | 03 03 | ADD | ADD EAX,dword ptr [RBX]
+6bac1c35 | 48 83 c3 08 | ADD | ADD RBX,0x8
+6bac1c39 | 89 45 dc | MOV | MOV dword ptr [RBP + -0x24],EAX
+6bac1c3c | e8 df fc ff ff | CALL | CALL 0x6bac1920
+6bac1c41 | 48 39 f3 | CMP | CMP RBX,RSI
+6bac1c44 | 72 db | JC | JC 0x6bac1c21
+6bac1c46 | 8b 0d f4 53 00 00 | MOV | MOV ECX,dword ptr [0x6bac7040]
+6bac1c4c | 85 c9 | TEST | TEST ECX,ECX
+6bac1c4e | 0f 8e 35 ff ff ff | JLE | JLE 0x6bac1b89
+6bac1c54 | 31 db | XOR | XOR EBX,EBX
+6bac1c56 | 31 f6 | XOR | XOR ESI,ESI
+6bac1c58 | 4c 8b 25 65 76 00 00 | MOV | MOV R12,qword ptr [0x6bac92c4]
+6bac1c5f | 48 8b 3d 56 76 00 00 | MOV | MOV RDI,qword ptr [0x6bac92bc]
+6bac1c66 | eb 1b | JMP | JMP 0x6bac1c83
+6bac1c70 | 83 c6 01 | ADD | ADD ESI,0x1
+6bac1c73 | 48 83 c3 18 | ADD | ADD RBX,0x18
+6bac1c77 | 3b 35 c3 53 00 00 | CMP | CMP ESI,dword ptr [0x6bac7040]
+6bac1c7d | 0f 8d 06 ff ff ff | JGE | JGE 0x6bac1b89
+6bac1c83 | 48 89 d8 | MOV | MOV RAX,RBX
+6bac1c86 | 48 03 05 ab 53 00 00 | ADD | ADD RAX,qword ptr [0x6bac7038]
+6bac1c8d | 8b 10 | MOV | MOV EDX,dword ptr [RAX]
+6bac1c8f | 85 d2 | TEST | TEST EDX,EDX
+6bac1c91 | 74 dd | JZ | JZ 0x6bac1c70
+6bac1c93 | 48 8b 48 08 | MOV | MOV RCX,qword ptr [RAX + 0x8]
+6bac1c97 | 41 b8 30 00 00 00 | MOV | MOV R8D,0x30
+6bac1c9d | 48 8d 55 a0 | LEA | LEA RDX,[RBP + -0x60]
+6bac1ca1 | 41 ff d4 | CALL | CALL R12
+6bac1ca4 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac1ca7 | 0f 84 9c 01 00 00 | JZ | JZ 0x6bac1e49
+6bac1cad | 48 8b 05 84 53 00 00 | MOV | MOV RAX,qword ptr [0x6bac7038]
+6bac1cb4 | 4c 8d 4d dc | LEA | LEA R9,[RBP + -0x24]
+6bac1cb8 | 48 8b 55 b8 | MOV | MOV RDX,qword ptr [RBP + -0x48]
+6bac1cbc | 48 8b 4d a0 | MOV | MOV RCX,qword ptr [RBP + -0x60]
+6bac1cc0 | 44 8b 04 18 | MOV | MOV R8D,dword ptr [RAX + RBX*0x1]
+6bac1cc4 | ff d7 | CALL | CALL RDI
+6bac1cc6 | eb a8 | JMP | JMP 0x6bac1c70
+6bac1cc8 | 44 8b 15 a9 24 00 00 | MOV | MOV R10D,dword ptr [0x6bac4178]
+6bac1ccf | 45 85 d2 | TEST | TEST R10D,R10D
+6bac1cd2 | 75 25 | JNZ | JNZ 0x6bac1cf9
+6bac1cd4 | 48 8d 1d a1 24 00 00 | LEA | LEA RBX,[0x6bac417c]
+6bac1cdb | 0f 1f 44 00 00 | NOP | NOP dword ptr [RAX + RAX*0x1]
+6bac1ce0 | 44 8b 0b | MOV | MOV R9D,dword ptr [RBX]
+6bac1ce3 | 45 85 c9 | TEST | TEST R9D,R9D
+6bac1ce6 | 0f 85 25 ff ff ff | JNZ | JNZ 0x6bac1c11
+6bac1cec | 44 8b 43 04 | MOV | MOV R8D,dword ptr [RBX + 0x4]
+6bac1cf0 | 45 85 c0 | TEST | TEST R8D,R8D
+6bac1cf3 | 0f 85 18 ff ff ff | JNZ | JNZ 0x6bac1c11
+6bac1cf9 | 8b 53 08 | MOV | MOV EDX,dword ptr [RBX + 0x8]
+6bac1cfc | 83 fa 01 | CMP | CMP EDX,0x1
+6bac1cff | 0f 85 62 01 00 00 | JNZ | JNZ 0x6bac1e67
+6bac1d05 | 48 83 c3 0c | ADD | ADD RBX,0xc
+6bac1d09 | 48 39 f3 | CMP | CMP RBX,RSI
+6bac1d0c | 0f 83 77 fe ff ff | JNC | JNC 0x6bac1b89
+6bac1d12 | 48 8d 3d e7 e2 ff ff | LEA | LEA RDI,[0x6bac0000]
+6bac1d19 | 49 bc 00 00 00 00 ff ff ff ff | MOV | MOV R12,-0x100000000
+6bac1d23 | 8b 4b 04 | MOV | MOV ECX,dword ptr [RBX + 0x4]
+6bac1d26 | 8b 13 | MOV | MOV EDX,dword ptr [RBX]
+6bac1d28 | 44 8b 43 08 | MOV | MOV R8D,dword ptr [RBX + 0x8]
+6bac1d2c | 41 0f b6 c0 | MOVZX | MOVZX EAX,R8B
+6bac1d30 | 48 01 fa | ADD | ADD RDX,RDI
+6bac1d33 | 48 01 f9 | ADD | ADD RCX,RDI
+6bac1d36 | 83 f8 10 | CMP | CMP EAX,0x10
+6bac1d39 | 4c 8b 0a | MOV | MOV R9,qword ptr [RDX]
+6bac1d3c | 74 58 | JZ | JZ 0x6bac1d96
+6bac1d3e | 77 21 | JA | JA 0x6bac1d61
+6bac1d40 | 83 f8 08 | CMP | CMP EAX,0x8
+6bac1d43 | 0f 84 d0 00 00 00 | JZ | JZ 0x6bac1e19
+6bac1d49 | 48 8d 0d b8 23 00 00 | LEA | LEA RCX,[0x6bac4108]
+6bac1d50 | 41 0f b6 d0 | MOVZX | MOVZX EDX,R8B
+6bac1d54 | 48 c7 45 d0 00 00 00 00 | MOV | MOV qword ptr [RBP + -0x30],0x0
+6bac1d5c | e8 4f fb ff ff | CALL | CALL 0x6bac18b0
+6bac1d61 | 83 f8 20 | CMP | CMP EAX,0x20
+6bac1d64 | 0f 84 82 00 00 00 | JZ | JZ 0x6bac1dec
+6bac1d6a | 83 f8 40 | CMP | CMP EAX,0x40
+6bac1d6d | 75 da | JNZ | JNZ 0x6bac1d49
+6bac1d6f | 49 29 d1 | SUB | SUB R9,RDX
+6bac1d72 | 4c 03 09 | ADD | ADD R9,qword ptr [RCX]
+6bac1d75 | 4c 89 4d d0 | MOV | MOV qword ptr [RBP + -0x30],R9
+6bac1d79 | 48 8d 55 d0 | LEA | LEA RDX,[RBP + -0x30]
+6bac1d7d | 41 b8 08 00 00 00 | MOV | MOV R8D,0x8
+6bac1d83 | e8 98 fb ff ff | CALL | CALL 0x6bac1920
+6bac1d88 | 48 83 c3 0c | ADD | ADD RBX,0xc
+6bac1d8c | 48 39 f3 | CMP | CMP RBX,RSI
+6bac1d8f | 72 92 | JC | JC 0x6bac1d23
+6bac1d91 | e9 b0 fe ff ff | JMP | JMP 0x6bac1c46
+6bac1d96 | 44 0f b7 01 | MOVZX | MOVZX R8D,word ptr [RCX]
+6bac1d9a | 41 f7 c0 00 80 00 00 | TEST | TEST R8D,0x8000
+6bac1da1 | 74 22 | JZ | JZ 0x6bac1dc5
+6bac1da3 | 49 81 c8 00 00 ff ff | OR | OR R8,-0x10000
+6bac1daa | 49 29 d0 | SUB | SUB R8,RDX
+6bac1dad | 4d 01 c8 | ADD | ADD R8,R9
+6bac1db0 | 4c 89 45 d0 | MOV | MOV qword ptr [RBP + -0x30],R8
+6bac1db4 | 48 8d 55 d0 | LEA | LEA RDX,[RBP + -0x30]
+6bac1db8 | 41 b8 02 00 00 00 | MOV | MOV R8D,0x2
+6bac1dbe | e8 5d fb ff ff | CALL | CALL 0x6bac1920
+6bac1dc3 | eb c3 | JMP | JMP 0x6bac1d88
+6bac1dc5 | 49 29 d0 | SUB | SUB R8,RDX
+6bac1dc8 | 4d 01 c1 | ADD | ADD R9,R8
+6bac1dcb | 83 f8 10 | CMP | CMP EAX,0x10
+6bac1dce | 4c 89 4d d0 | MOV | MOV qword ptr [RBP + -0x30],R9
+6bac1dd2 | 74 e0 | JZ | JZ 0x6bac1db4
+6bac1dd4 | 77 60 | JA | JA 0x6bac1e36
+6bac1dd6 | 83 f8 08 | CMP | CMP EAX,0x8
+6bac1dd9 | 75 ad | JNZ | JNZ 0x6bac1d88
+6bac1ddb | 48 8d 55 d0 | LEA | LEA RDX,[RBP + -0x30]
+6bac1ddf | 41 b8 01 00 00 00 | MOV | MOV R8D,0x1
+6bac1de5 | e8 36 fb ff ff | CALL | CALL 0x6bac1920
+6bac1dea | eb 9c | JMP | JMP 0x6bac1d88
+6bac1dec | 44 8b 01 | MOV | MOV R8D,dword ptr [RCX]
+6bac1def | 41 f7 c0 00 00 00 80 | TEST | TEST R8D,0x80000000
+6bac1df6 | 74 cd | JZ | JZ 0x6bac1dc5
+6bac1df8 | 4d 09 e0 | OR | OR R8,R12
+6bac1dfb | 49 29 d0 | SUB | SUB R8,RDX
+6bac1dfe | 4d 01 c8 | ADD | ADD R8,R9
+6bac1e01 | 4c 89 45 d0 | MOV | MOV qword ptr [RBP + -0x30],R8
+6bac1e05 | 48 8d 55 d0 | LEA | LEA RDX,[RBP + -0x30]
+6bac1e09 | 41 b8 04 00 00 00 | MOV | MOV R8D,0x4
+6bac1e0f | e8 0c fb ff ff | CALL | CALL 0x6bac1920
+6bac1e14 | e9 6f ff ff ff | JMP | JMP 0x6bac1d88
+6bac1e19 | 44 0f b6 01 | MOVZX | MOVZX R8D,byte ptr [RCX]
+6bac1e1d | 41 f6 c0 80 | TEST | TEST R8B,0x80
+6bac1e21 | 74 a2 | JZ | JZ 0x6bac1dc5
+6bac1e23 | 49 81 c8 00 ff ff ff | OR | OR R8,-0x100
+6bac1e2a | 49 29 d0 | SUB | SUB R8,RDX
+6bac1e2d | 4d 01 c8 | ADD | ADD R8,R9
+6bac1e30 | 4c 89 45 d0 | MOV | MOV qword ptr [RBP + -0x30],R8
+6bac1e34 | eb a5 | JMP | JMP 0x6bac1ddb
+6bac1e36 | 83 f8 20 | CMP | CMP EAX,0x20
+6bac1e39 | 74 ca | JZ | JZ 0x6bac1e05
+6bac1e3b | 83 f8 40 | CMP | CMP EAX,0x40
+6bac1e3e | 0f 85 44 ff ff ff | JNZ | JNZ 0x6bac1d88
+6bac1e44 | e9 30 ff ff ff | JMP | JMP 0x6bac1d79
+6bac1e49 | 48 03 1d e8 51 00 00 | ADD | ADD RBX,qword ptr [0x6bac7038]
+6bac1e50 | 48 8d 0d 19 22 00 00 | LEA | LEA RCX,[0x6bac4070]
+6bac1e57 | 48 8b 43 10 | MOV | MOV RAX,qword ptr [RBX + 0x10]
+6bac1e5b | 4c 8b 43 08 | MOV | MOV R8,qword ptr [RBX + 0x8]
+6bac1e5f | 8b 50 08 | MOV | MOV EDX,dword ptr [RAX + 0x8]
+6bac1e62 | e8 49 fa ff ff | CALL | CALL 0x6bac18b0
+6bac1e67 | 48 8d 0d 62 22 00 00 | LEA | LEA RCX,[0x6bac40d0]
+6bac1e6e | e8 3d fa ff ff | CALL | CALL 0x6bac18b0
+6bac1e73 | 90 | NOP | NOP
+6bac1e74 | 90 | NOP | NOP
+6bac1e75 | 90 | NOP | NOP
+6bac1e76 | 90 | NOP | NOP
+6bac1e77 | 90 | NOP | NOP
+6bac1e78 | 90 | NOP | NOP
+6bac1e79 | 90 | NOP | NOP
+6bac1e7a | 90 | NOP | NOP
+6bac1e7b | 90 | NOP | NOP
+6bac1e7c | 90 | NOP | NOP
+6bac1e7d | 90 | NOP | NOP
+6bac1e7e | 90 | NOP | NOP
+6bac1e7f | 90 | NOP | NOP
+6bac1e80 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac1e84 | 48 8b 05 95 15 00 00 | MOV | MOV RAX,qword ptr [0x6bac3420]
+6bac1e8b | 48 8b 00 | MOV | MOV RAX,qword ptr [RAX]
+6bac1e8e | 48 85 c0 | TEST | TEST RAX,RAX
+6bac1e91 | 74 1d | JZ | JZ 0x6bac1eb0
+6bac1e93 | ff d0 | CALL | CALL RAX
+6bac1e95 | 48 8b 05 84 15 00 00 | MOV | MOV RAX,qword ptr [0x6bac3420]
+6bac1e9c | 48 8d 50 08 | LEA | LEA RDX,[RAX + 0x8]
+6bac1ea0 | 48 8b 40 08 | MOV | MOV RAX,qword ptr [RAX + 0x8]
+6bac1ea4 | 48 89 15 75 15 00 00 | MOV | MOV qword ptr [0x6bac3420],RDX
+6bac1eab | 48 85 c0 | TEST | TEST RAX,RAX
+6bac1eae | 75 e3 | JNZ | JNZ 0x6bac1e93
+6bac1eb0 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac1eb4 | c3 | RET | RET
+6bac1eb5 | 66 66 2e 0f 1f 84 00 00 00 00 00 | NOP | NOP dword ptr CS:[RAX + RAX*0x1]
+6bac1ec0 | 56 | PUSH | PUSH RSI
+6bac1ec1 | 53 | PUSH | PUSH RBX
+6bac1ec2 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac1ec6 | 48 8b 05 23 0f 00 00 | MOV | MOV RAX,qword ptr [0x6bac2df0]
+6bac1ecd | 83 f8 ff | CMP | CMP EAX,-0x1
+6bac1ed0 | 89 c3 | MOV | MOV EBX,EAX
+6bac1ed2 | 74 2c | JZ | JZ 0x6bac1f00
+6bac1ed4 | 85 db | TEST | TEST EBX,EBX
+6bac1ed6 | 74 12 | JZ | JZ 0x6bac1eea
+6bac1ed8 | 48 8d 35 11 0f 00 00 | LEA | LEA RSI,[0x6bac2df0]
+6bac1edf | 90 | NOP | NOP
+6bac1ee0 | 89 d8 | MOV | MOV EAX,EBX
+6bac1ee2 | ff 14 c6 | CALL | CALL qword ptr [RSI + RAX*0x8]
+6bac1ee5 | 83 eb 01 | SUB | SUB EBX,0x1
+6bac1ee8 | 75 f6 | JNZ | JNZ 0x6bac1ee0
+6bac1eea | 48 8d 0d 8f ff ff ff | LEA | LEA RCX,[0x6bac1e80]
+6bac1ef1 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac1ef5 | 5b | POP | POP RBX
+6bac1ef6 | 5e | POP | POP RSI
+6bac1ef7 | e9 c4 f8 ff ff | JMP | JMP 0x6bac17c0
+6bac1f00 | 31 db | XOR | XOR EBX,EBX
+6bac1f02 | 48 8d 35 e7 0e 00 00 | LEA | LEA RSI,[0x6bac2df0]
+6bac1f09 | eb 07 | JMP | JMP 0x6bac1f12
+6bac1f10 | 89 c3 | MOV | MOV EBX,EAX
+6bac1f12 | 8d 43 01 | LEA | LEA EAX,[RBX + 0x1]
+6bac1f15 | 89 c2 | MOV | MOV EDX,EAX
+6bac1f17 | 48 83 3c d6 00 | CMP | CMP qword ptr [RSI + RDX*0x8],0x0
+6bac1f1c | 75 f2 | JNZ | JNZ 0x6bac1f10
+6bac1f1e | eb b4 | JMP | JMP 0x6bac1ed4
+6bac1f20 | 8b 05 2a 51 00 00 | MOV | MOV EAX,dword ptr [0x6bac7050]
+6bac1f26 | 85 c0 | TEST | TEST EAX,EAX
+6bac1f28 | 74 06 | JZ | JZ 0x6bac1f30
+6bac1f2a | f3 c3 | RET | RET
+6bac1f30 | c7 05 16 51 00 00 01 00 00 00 | MOV | MOV dword ptr [0x6bac7050],0x1
+6bac1f3a | eb 84 | JMP | JMP 0x6bac1ec0
+6bac1f40 | 41 54 | PUSH | PUSH R12
+6bac1f42 | 55 | PUSH | PUSH RBP
+6bac1f43 | 57 | PUSH | PUSH RDI
+6bac1f44 | 56 | PUSH | PUSH RSI
+6bac1f45 | 53 | PUSH | PUSH RBX
+6bac1f46 | 48 83 ec 40 | SUB | SUB RSP,0x40
+6bac1f4a | 48 8b 1d ff 14 00 00 | MOV | MOV RBX,qword ptr [0x6bac3450]
+6bac1f51 | 48 b8 32 a2 df 2d 99 2b 00 00 | MOV | MOV RAX,0x2b992ddfa232
+6bac1f5b | 48 c7 44 24 20 00 00 00 00 | MOV | MOV qword ptr [RSP + 0x20],0x0
+6bac1f64 | 48 39 c3 | CMP | CMP RBX,RAX
+6bac1f67 | 74 17 | JZ | JZ 0x6bac1f80
+6bac1f69 | 48 f7 d3 | NOT | NOT RBX
+6bac1f6c | 48 89 1d ed 14 00 00 | MOV | MOV qword ptr [0x6bac3460],RBX
+6bac1f73 | 48 83 c4 40 | ADD | ADD RSP,0x40
+6bac1f77 | 5b | POP | POP RBX
+6bac1f78 | 5e | POP | POP RSI
+6bac1f79 | 5f | POP | POP RDI
+6bac1f7a | 5d | POP | POP RBP
+6bac1f7b | 41 5c | POP | POP R12
+6bac1f7d | c3 | RET | RET
+6bac1f80 | 48 8d 4c 24 20 | LEA | LEA RCX,[RSP + 0x20]
+6bac1f85 | ff 15 a9 72 00 00 | CALL | CALL qword ptr [0x6bac9234]
+6bac1f8b | 4c 8b 64 24 20 | MOV | MOV R12,qword ptr [RSP + 0x20]
+6bac1f90 | ff 15 76 72 00 00 | CALL | CALL qword ptr [0x6bac920c]
+6bac1f96 | 89 c5 | MOV | MOV EBP,EAX
+6bac1f98 | ff 15 76 72 00 00 | CALL | CALL qword ptr [0x6bac9214]
+6bac1f9e | 89 c7 | MOV | MOV EDI,EAX
+6bac1fa0 | ff 15 96 72 00 00 | CALL | CALL qword ptr [0x6bac923c]
+6bac1fa6 | 48 8d 4c 24 30 | LEA | LEA RCX,[RSP + 0x30]
+6bac1fab | 89 c6 | MOV | MOV ESI,EAX
+6bac1fad | ff 15 b1 72 00 00 | CALL | CALL qword ptr [0x6bac9264]
+6bac1fb3 | 4c 33 64 24 30 | XOR | XOR R12,qword ptr [RSP + 0x30]
+6bac1fb8 | 48 b8 ff ff ff ff ff ff 00 00 | MOV | MOV RAX,0xffffffffffff
+6bac1fc2 | 49 31 ec | XOR | XOR R12,RBP
+6bac1fc5 | 49 31 fc | XOR | XOR R12,RDI
+6bac1fc8 | 49 31 f4 | XOR | XOR R12,RSI
+6bac1fcb | 49 21 c4 | AND | AND R12,RAX
+6bac1fce | 4c 89 e0 | MOV | MOV RAX,R12
+6bac1fd1 | 49 39 dc | CMP | CMP R12,RBX
+6bac1fd4 | 48 f7 d0 | NOT | NOT RAX
+6bac1fd7 | 74 19 | JZ | JZ 0x6bac1ff2
+6bac1fd9 | 4c 89 25 70 14 00 00 | MOV | MOV qword ptr [0x6bac3450],R12
+6bac1fe0 | 48 89 05 79 14 00 00 | MOV | MOV qword ptr [0x6bac3460],RAX
+6bac1fe7 | 48 83 c4 40 | ADD | ADD RSP,0x40
+6bac1feb | 5b | POP | POP RBX
+6bac1fec | 5e | POP | POP RSI
+6bac1fed | 5f | POP | POP RDI
+6bac1fee | 5d | POP | POP RBP
+6bac1fef | 41 5c | POP | POP R12
+6bac1ff1 | c3 | RET | RET
+6bac1ff2 | 48 b8 cc 5d 20 d2 66 d4 ff ff | MOV | MOV RAX,-0x2b992ddfa234
+6bac1ffc | 49 bc 33 a2 df 2d 99 2b 00 00 | MOV | MOV R12,0x2b992ddfa233
+6bac2006 | eb d1 | JMP | JMP 0x6bac1fd9
+6bac2110 | 53 | PUSH | PUSH RBX
+6bac2111 | 48 83 ec 30 | SUB | SUB RSP,0x30
+6bac2115 | 8b 01 | MOV | MOV EAX,dword ptr [RCX]
+6bac2117 | 3d 91 00 00 c0 | CMP | CMP EAX,0xc0000091
+6bac211c | 77 42 | JA | JA 0x6bac2160
+6bac211e | 3d 8d 00 00 c0 | CMP | CMP EAX,0xc000008d
+6bac2123 | 72 6b | JC | JC 0x6bac2190
+6bac2125 | bb 01 00 00 00 | MOV | MOV EBX,0x1
+6bac212a | 31 d2 | XOR | XOR EDX,EDX
+6bac212c | b9 08 00 00 00 | MOV | MOV ECX,0x8
+6bac2131 | e8 92 0b 00 00 | CALL | CALL 0x6bac2cc8
+6bac2136 | 48 83 f8 01 | CMP | CMP RAX,0x1
+6bac213a | 48 89 c2 | MOV | MOV RDX,RAX
+6bac213d | 0f 84 1d 01 00 00 | JZ | JZ 0x6bac2260
+6bac2143 | 48 85 d2 | TEST | TEST RDX,RDX
+6bac2146 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac214b | 74 09 | JZ | JZ 0x6bac2156
+6bac214d | b9 08 00 00 00 | MOV | MOV ECX,0x8
+6bac2152 | ff d2 | CALL | CALL RDX
+6bac2154 | 31 c0 | XOR | XOR EAX,EAX
+6bac2156 | 48 83 c4 30 | ADD | ADD RSP,0x30
+6bac215a | 5b | POP | POP RBX
+6bac215b | c3 | RET | RET
+6bac2160 | 3d 94 00 00 c0 | CMP | CMP EAX,0xc0000094
+6bac2165 | 0f 84 c5 00 00 00 | JZ | JZ 0x6bac2230
+6bac216b | 77 77 | JA | JA 0x6bac21e4
+6bac216d | 3d 92 00 00 c0 | CMP | CMP EAX,0xc0000092
+6bac2172 | 0f 84 da 00 00 00 | JZ | JZ 0x6bac2252
+6bac2178 | 3d 93 00 00 c0 | CMP | CMP EAX,0xc0000093
+6bac217d | 74 a6 | JZ | JZ 0x6bac2125
+6bac217f | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac2184 | 48 83 c4 30 | ADD | ADD RSP,0x30
+6bac2188 | 5b | POP | POP RBX
+6bac2189 | c3 | RET | RET
+6bac2190 | 3d 08 00 00 c0 | CMP | CMP EAX,0xc0000008
+6bac2195 | 0f 84 b7 00 00 00 | JZ | JZ 0x6bac2252
+6bac219b | 0f 87 9f 00 00 00 | JA | JA 0x6bac2240
+6bac21a1 | 3d 02 00 00 80 | CMP | CMP EAX,0x80000002
+6bac21a6 | 0f 84 a6 00 00 00 | JZ | JZ 0x6bac2252
+6bac21ac | 3d 05 00 00 c0 | CMP | CMP EAX,0xc0000005
+6bac21b1 | 75 cc | JNZ | JNZ 0x6bac217f
+6bac21b3 | 31 d2 | XOR | XOR EDX,EDX
+6bac21b5 | b9 0b 00 00 00 | MOV | MOV ECX,0xb
+6bac21ba | e8 09 0b 00 00 | CALL | CALL 0x6bac2cc8
+6bac21bf | 48 83 f8 01 | CMP | CMP RAX,0x1
+6bac21c3 | 48 89 c2 | MOV | MOV RDX,RAX
+6bac21c6 | 0f 84 ba 00 00 00 | JZ | JZ 0x6bac2286
+6bac21cc | 48 85 d2 | TEST | TEST RDX,RDX
+6bac21cf | b8 04 00 00 00 | MOV | MOV EAX,0x4
+6bac21d4 | 74 80 | JZ | JZ 0x6bac2156
+6bac21d6 | b9 0b 00 00 00 | MOV | MOV ECX,0xb
+6bac21db | ff d2 | CALL | CALL RDX
+6bac21dd | 31 c0 | XOR | XOR EAX,EAX
+6bac21df | e9 72 ff ff ff | JMP | JMP 0x6bac2156
+6bac21e4 | 3d 95 00 00 c0 | CMP | CMP EAX,0xc0000095
+6bac21e9 | 74 67 | JZ | JZ 0x6bac2252
+6bac21eb | 3d 96 00 00 c0 | CMP | CMP EAX,0xc0000096
+6bac21f0 | 75 8d | JNZ | JNZ 0x6bac217f
+6bac21f2 | 31 d2 | XOR | XOR EDX,EDX
+6bac21f4 | b9 04 00 00 00 | MOV | MOV ECX,0x4
+6bac21f9 | e8 ca 0a 00 00 | CALL | CALL 0x6bac2cc8
+6bac21fe | 48 83 f8 01 | CMP | CMP RAX,0x1
+6bac2202 | 48 89 c2 | MOV | MOV RDX,RAX
+6bac2205 | 0f 84 8c 00 00 00 | JZ | JZ 0x6bac2297
+6bac220b | 48 85 d2 | TEST | TEST RDX,RDX
+6bac220e | b8 04 00 00 00 | MOV | MOV EAX,0x4
+6bac2213 | 0f 84 3d ff ff ff | JZ | JZ 0x6bac2156
+6bac2219 | b9 04 00 00 00 | MOV | MOV ECX,0x4
+6bac221e | ff d2 | CALL | CALL RDX
+6bac2220 | 31 c0 | XOR | XOR EAX,EAX
+6bac2222 | e9 2f ff ff ff | JMP | JMP 0x6bac2156
+6bac2230 | 31 db | XOR | XOR EBX,EBX
+6bac2232 | e9 f3 fe ff ff | JMP | JMP 0x6bac212a
+6bac2240 | 3d 1d 00 00 c0 | CMP | CMP EAX,0xc000001d
+6bac2245 | 74 ab | JZ | JZ 0x6bac21f2
+6bac2247 | 3d 8c 00 00 c0 | CMP | CMP EAX,0xc000008c
+6bac224c | 0f 85 2d ff ff ff | JNZ | JNZ 0x6bac217f
+6bac2252 | 31 c0 | XOR | XOR EAX,EAX
+6bac2254 | 48 83 c4 30 | ADD | ADD RSP,0x30
+6bac2258 | 5b | POP | POP RBX
+6bac2259 | c3 | RET | RET
+6bac2260 | b9 08 00 00 00 | MOV | MOV ECX,0x8
+6bac2265 | e8 5e 0a 00 00 | CALL | CALL 0x6bac2cc8
+6bac226a | 31 c0 | XOR | XOR EAX,EAX
+6bac226c | 85 db | TEST | TEST EBX,EBX
+6bac226e | 0f 84 e2 fe ff ff | JZ | JZ 0x6bac2156
+6bac2274 | 89 44 24 28 | MOV | MOV dword ptr [RSP + 0x28],EAX
+6bac2278 | e8 73 09 00 00 | CALL | CALL 0x6bac2bf0
+6bac227d | 8b 44 24 28 | MOV | MOV EAX,dword ptr [RSP + 0x28]
+6bac2281 | e9 d0 fe ff ff | JMP | JMP 0x6bac2156
+6bac2286 | b9 0b 00 00 00 | MOV | MOV ECX,0xb
+6bac228b | e8 38 0a 00 00 | CALL | CALL 0x6bac2cc8
+6bac2290 | 31 c0 | XOR | XOR EAX,EAX
+6bac2292 | e9 bf fe ff ff | JMP | JMP 0x6bac2156
+6bac2297 | b9 04 00 00 00 | MOV | MOV ECX,0x4
+6bac229c | e8 27 0a 00 00 | CALL | CALL 0x6bac2cc8
+6bac22a1 | 31 c0 | XOR | XOR EAX,EAX
+6bac22a3 | e9 ae fe ff ff | JMP | JMP 0x6bac2156
+6bac22b0 | 41 54 | PUSH | PUSH R12
+6bac22b2 | 55 | PUSH | PUSH RBP
+6bac22b3 | 57 | PUSH | PUSH RDI
+6bac22b4 | 56 | PUSH | PUSH RSI
+6bac22b5 | 53 | PUSH | PUSH RBX
+6bac22b6 | 48 83 ec 20 | SUB | SUB RSP,0x20
+6bac22ba | e8 51 07 00 00 | CALL | CALL 0x6bac2a10
+6bac22bf | 48 89 c3 | MOV | MOV RBX,RAX
+6bac22c2 | 8b 05 20 53 00 00 | MOV | MOV EAX,dword ptr [0x6bac75e8]
+6bac22c8 | 48 85 db | TEST | TEST RBX,RBX
+6bac22cb | 75 13 | JNZ | JNZ 0x6bac22e0
+6bac22cd | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac22d1 | 5b | POP | POP RBX
+6bac22d2 | 5e | POP | POP RSI
+6bac22d3 | 5f | POP | POP RDI
+6bac22d4 | 5d | POP | POP RBP
+6bac22d5 | 41 5c | POP | POP R12
+6bac22d7 | c3 | RET | RET
+6bac22e0 | 85 c0 | TEST | TEST EAX,EAX
+6bac22e2 | 75 e9 | JNZ | JNZ 0x6bac22cd
+6bac22e4 | 48 8d 0d 55 1e 00 00 | LEA | LEA RCX,[0x6bac4140]
+6bac22eb | c7 05 f3 52 00 00 01 00 00 00 | MOV | MOV dword ptr [0x6bac75e8],0x1
+6bac22f5 | e8 86 05 00 00 | CALL | CALL 0x6bac2880
+6bac22fa | 49 89 c0 | MOV | MOV R8,RAX
+6bac22fd | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac2302 | 4d 85 c0 | TEST | TEST R8,R8
+6bac2305 | 75 c6 | JNZ | JNZ 0x6bac22cd
+6bac2307 | 48 8d 15 f2 52 00 00 | LEA | LEA RDX,[0x6bac7600]
+6bac230e | 4c 89 c0 | MOV | MOV RAX,R8
+6bac2311 | b9 30 00 00 00 | MOV | MOV ECX,0x30
+6bac2316 | 48 8d 35 63 54 00 00 | LEA | LEA RSI,[0x6bac7780]
+6bac231d | 4c 8d 25 ec fd ff ff | LEA | LEA R12,[0x6bac2110]
+6bac2324 | 48 89 d7 | MOV | MOV RDI,RDX
+6bac2327 | 48 89 d5 | MOV | MOV RBP,RDX
+6bac232a | f3 48 ab | STOSQ.REP | STOSQ.REP RDI
+6bac232d | 48 89 f7 | MOV | MOV RDI,RSI
+6bac2330 | 49 29 dc | SUB | SUB R12,RBX
+6bac2333 | b1 20 | MOV | MOV CL,0x20
+6bac2335 | f3 48 ab | STOSQ.REP | STOSQ.REP RDI
+6bac2338 | 31 ff | XOR | XOR EDI,EDI
+6bac233a | eb 37 | JMP | JMP 0x6bac2373
+6bac2340 | 48 8d 15 3d 54 00 00 | LEA | LEA RDX,[0x6bac7784]
+6bac2347 | c6 04 fe 09 | MOV | MOV byte ptr [RSI + RDI*0x8],0x9
+6bac234b | 44 89 24 fa | MOV | MOV dword ptr [RDX + RDI*0x8],R12D
+6bac234f | 8b 50 0c | MOV | MOV EDX,dword ptr [RAX + 0xc]
+6bac2352 | 89 55 00 | MOV | MOV dword ptr [RBP],EDX
+6bac2355 | 03 50 08 | ADD | ADD EDX,dword ptr [RAX + 0x8]
+6bac2358 | 48 8d 04 fe | LEA | LEA RAX,[RSI + RDI*0x8]
+6bac235c | 48 83 c7 01 | ADD | ADD RDI,0x1
+6bac2360 | 48 29 d8 | SUB | SUB RAX,RBX
+6bac2363 | 89 45 08 | MOV | MOV dword ptr [RBP + 0x8],EAX
+6bac2366 | 89 55 04 | MOV | MOV dword ptr [RBP + 0x4],EDX
+6bac2369 | 48 83 c5 0c | ADD | ADD RBP,0xc
+6bac236d | 48 83 ff 20 | CMP | CMP RDI,0x20
+6bac2371 | 74 1d | JZ | JZ 0x6bac2390
+6bac2373 | 48 89 f9 | MOV | MOV RCX,RDI
+6bac2376 | e8 15 06 00 00 | CALL | CALL 0x6bac2990
+6bac237b | 48 85 c0 | TEST | TEST RAX,RAX
+6bac237e | 75 c0 | JNZ | JNZ 0x6bac2340
+6bac2380 | 48 85 ff | TEST | TEST RDI,RDI
+6bac2383 | 75 2a | JNZ | JNZ 0x6bac23af
+6bac2385 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac238a | e9 3e ff ff ff | JMP | JMP 0x6bac22cd
+6bac2390 | ba 20 00 00 00 | MOV | MOV EDX,0x20
+6bac2395 | 49 89 d8 | MOV | MOV R8,RBX
+6bac2398 | 48 8d 0d 61 52 00 00 | LEA | LEA RCX,[0x6bac7600]
+6bac239f | ff 15 c7 6e 00 00 | CALL | CALL qword ptr [0x6bac926c]
+6bac23a5 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac23aa | e9 1e ff ff ff | JMP | JMP 0x6bac22cd
+6bac23af | 89 fa | MOV | MOV EDX,EDI
+6bac23b1 | eb e2 | JMP | JMP 0x6bac2395
+6bac23b3 | 66 66 66 66 2e 0f 1f 84 00 00 00 00 00 | NOP | NOP dword ptr CS:[RAX + RAX*0x1]
+6bac23c0 | 56 | PUSH | PUSH RSI
+6bac23c1 | 53 | PUSH | PUSH RBX
+6bac23c2 | 48 83 ec 38 | SUB | SUB RSP,0x38
+6bac23c6 | 48 8b 11 | MOV | MOV RDX,qword ptr [RCX]
+6bac23c9 | 48 89 cb | MOV | MOV RBX,RCX
+6bac23cc | 8b 02 | MOV | MOV EAX,dword ptr [RDX]
+6bac23ce | 89 c1 | MOV | MOV ECX,EAX
+6bac23d0 | 81 e1 ff ff ff 20 | AND | AND ECX,0x20ffffff
+6bac23d6 | 81 f9 43 43 47 20 | CMP | CMP ECX,0x20474343
+6bac23dc | 0f 84 8e 00 00 00 | JZ | JZ 0x6bac2470
+6bac23e2 | 3d 91 00 00 c0 | CMP | CMP EAX,0xc0000091
+6bac23e7 | 76 47 | JBE | JBE 0x6bac2430
+6bac23e9 | 3d 94 00 00 c0 | CMP | CMP EAX,0xc0000094
+6bac23ee | 0f 84 31 01 00 00 | JZ | JZ 0x6bac2525
+6bac23f4 | 0f 87 e7 00 00 00 | JA | JA 0x6bac24e1
+6bac23fa | 3d 92 00 00 c0 | CMP | CMP EAX,0xc0000092
+6bac23ff | 74 7f | JZ | JZ 0x6bac2480
+6bac2401 | 3d 93 00 00 c0 | CMP | CMP EAX,0xc0000093
+6bac2406 | 74 2f | JZ | JZ 0x6bac2437
+6bac2408 | 0f 1f 84 00 00 00 00 00 | NOP | NOP dword ptr [RAX + RAX*0x1]
+6bac2410 | 48 8b 05 c9 51 00 00 | MOV | MOV RAX,qword ptr [0x6bac75e0]
+6bac2417 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac241a | 0f 84 30 01 00 00 | JZ | JZ 0x6bac2550
+6bac2420 | 48 89 d9 | MOV | MOV RCX,RBX
+6bac2423 | 48 83 c4 38 | ADD | ADD RSP,0x38
+6bac2427 | 5b | POP | POP RBX
+6bac2428 | 5e | POP | POP RSI
+6bac2429 | 48 ff e0 | JMP | JMP RAX
+6bac2430 | 3d 8d 00 00 c0 | CMP | CMP EAX,0xc000008d
+6bac2435 | 72 59 | JC | JC 0x6bac2490
+6bac2437 | be 01 00 00 00 | MOV | MOV ESI,0x1
+6bac243c | 31 d2 | XOR | XOR EDX,EDX
+6bac243e | b9 08 00 00 00 | MOV | MOV ECX,0x8
+6bac2443 | e8 80 08 00 00 | CALL | CALL 0x6bac2cc8
+6bac2448 | 48 83 f8 01 | CMP | CMP RAX,0x1
+6bac244c | 0f 84 0e 01 00 00 | JZ | JZ 0x6bac2560
+6bac2452 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac2455 | 74 b9 | JZ | JZ 0x6bac2410
+6bac2457 | b9 08 00 00 00 | MOV | MOV ECX,0x8
+6bac245c | ff d0 | CALL | CALL RAX
+6bac245e | b8 ff ff ff ff | MOV | MOV EAX,0xffffffff
+6bac2463 | 48 83 c4 38 | ADD | ADD RSP,0x38
+6bac2467 | 5b | POP | POP RBX
+6bac2468 | 5e | POP | POP RSI
+6bac2469 | c3 | RET | RET
+6bac2470 | f6 42 04 01 | TEST | TEST byte ptr [RDX + 0x4],0x1
+6bac2474 | 0f 85 68 ff ff ff | JNZ | JNZ 0x6bac23e2
+6bac247a | 66 0f 1f 44 00 00 | NOP | NOP word ptr [RAX + RAX*0x1]
+6bac2480 | b8 ff ff ff ff | MOV | MOV EAX,0xffffffff
+6bac2485 | 48 83 c4 38 | ADD | ADD RSP,0x38
+6bac2489 | 5b | POP | POP RBX
+6bac248a | 5e | POP | POP RSI
+6bac248b | c3 | RET | RET
+6bac2490 | 3d 08 00 00 c0 | CMP | CMP EAX,0xc0000008
+6bac2495 | 74 e9 | JZ | JZ 0x6bac2480
+6bac2497 | 0f 87 93 00 00 00 | JA | JA 0x6bac2530
+6bac249d | 3d 02 00 00 80 | CMP | CMP EAX,0x80000002
+6bac24a2 | 74 dc | JZ | JZ 0x6bac2480
+6bac24a4 | 3d 05 00 00 c0 | CMP | CMP EAX,0xc0000005
+6bac24a9 | 0f 85 61 ff ff ff | JNZ | JNZ 0x6bac2410
+6bac24af | 31 d2 | XOR | XOR EDX,EDX
+6bac24b1 | b9 0b 00 00 00 | MOV | MOV ECX,0xb
+6bac24b6 | e8 0d 08 00 00 | CALL | CALL 0x6bac2cc8
+6bac24bb | 48 83 f8 01 | CMP | CMP RAX,0x1
+6bac24bf | 0f 84 cb 00 00 00 | JZ | JZ 0x6bac2590
+6bac24c5 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac24c8 | 0f 84 42 ff ff ff | JZ | JZ 0x6bac2410
+6bac24ce | b9 0b 00 00 00 | MOV | MOV ECX,0xb
+6bac24d3 | ff d0 | CALL | CALL RAX
+6bac24d5 | b8 ff ff ff ff | MOV | MOV EAX,0xffffffff
+6bac24da | 48 83 c4 38 | ADD | ADD RSP,0x38
+6bac24de | 5b | POP | POP RBX
+6bac24df | 5e | POP | POP RSI
+6bac24e0 | c3 | RET | RET
+6bac24e1 | 3d 95 00 00 c0 | CMP | CMP EAX,0xc0000095
+6bac24e6 | 74 98 | JZ | JZ 0x6bac2480
+6bac24e8 | 3d 96 00 00 c0 | CMP | CMP EAX,0xc0000096
+6bac24ed | 0f 85 1d ff ff ff | JNZ | JNZ 0x6bac2410
+6bac24f3 | 31 d2 | XOR | XOR EDX,EDX
+6bac24f5 | b9 04 00 00 00 | MOV | MOV ECX,0x4
+6bac24fa | e8 c9 07 00 00 | CALL | CALL 0x6bac2cc8
+6bac24ff | 48 83 f8 01 | CMP | CMP RAX,0x1
+6bac2503 | 0f 84 a7 00 00 00 | JZ | JZ 0x6bac25b0
+6bac2509 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac250c | 0f 84 fe fe ff ff | JZ | JZ 0x6bac2410
+6bac2512 | b9 04 00 00 00 | MOV | MOV ECX,0x4
+6bac2517 | ff d0 | CALL | CALL RAX
+6bac2519 | b8 ff ff ff ff | MOV | MOV EAX,0xffffffff
+6bac251e | 48 83 c4 38 | ADD | ADD RSP,0x38
+6bac2522 | 5b | POP | POP RBX
+6bac2523 | 5e | POP | POP RSI
+6bac2524 | c3 | RET | RET
+6bac2525 | 31 f6 | XOR | XOR ESI,ESI
+6bac2527 | e9 10 ff ff ff | JMP | JMP 0x6bac243c
+6bac2530 | 3d 1d 00 00 c0 | CMP | CMP EAX,0xc000001d
+6bac2535 | 74 bc | JZ | JZ 0x6bac24f3
+6bac2537 | 3d 8c 00 00 c0 | CMP | CMP EAX,0xc000008c
+6bac253c | 0f 85 ce fe ff ff | JNZ | JNZ 0x6bac2410
+6bac2542 | e9 39 ff ff ff | JMP | JMP 0x6bac2480
+6bac2550 | 31 c0 | XOR | XOR EAX,EAX
+6bac2552 | e9 0c ff ff ff | JMP | JMP 0x6bac2463
+6bac2560 | ba 01 00 00 00 | MOV | MOV EDX,0x1
+6bac2565 | b9 08 00 00 00 | MOV | MOV ECX,0x8
+6bac256a | e8 59 07 00 00 | CALL | CALL 0x6bac2cc8
+6bac256f | 85 f6 | TEST | TEST ESI,ESI
+6bac2571 | b8 ff ff ff ff | MOV | MOV EAX,0xffffffff
+6bac2576 | 0f 84 e7 fe ff ff | JZ | JZ 0x6bac2463
+6bac257c | 89 44 24 28 | MOV | MOV dword ptr [RSP + 0x28],EAX
+6bac2580 | e8 6b 06 00 00 | CALL | CALL 0x6bac2bf0
+6bac2585 | 8b 44 24 28 | MOV | MOV EAX,dword ptr [RSP + 0x28]
+6bac2589 | e9 d5 fe ff ff | JMP | JMP 0x6bac2463
+6bac2590 | ba 01 00 00 00 | MOV | MOV EDX,0x1
+6bac2595 | b9 0b 00 00 00 | MOV | MOV ECX,0xb
+6bac259a | e8 29 07 00 00 | CALL | CALL 0x6bac2cc8
+6bac259f | b8 ff ff ff ff | MOV | MOV EAX,0xffffffff
+6bac25a4 | e9 ba fe ff ff | JMP | JMP 0x6bac2463
+6bac25b0 | ba 01 00 00 00 | MOV | MOV EDX,0x1
+6bac25b5 | b9 04 00 00 00 | MOV | MOV ECX,0x4
+6bac25ba | e8 09 07 00 00 | CALL | CALL 0x6bac2cc8
+6bac25bf | b8 ff ff ff ff | MOV | MOV EAX,0xffffffff
+6bac25c4 | e9 9a fe ff ff | JMP | JMP 0x6bac2463
+6bac25d0 | 55 | PUSH | PUSH RBP
+6bac25d1 | 57 | PUSH | PUSH RDI
+6bac25d2 | 56 | PUSH | PUSH RSI
+6bac25d3 | 53 | PUSH | PUSH RBX
+6bac25d4 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac25d8 | 48 8d 0d c1 52 00 00 | LEA | LEA RCX,[0x6bac78a0]
+6bac25df | ff 15 17 6c 00 00 | CALL | CALL qword ptr [0x6bac91fc]
+6bac25e5 | 48 8b 1d dc 52 00 00 | MOV | MOV RBX,qword ptr [0x6bac78c8]
+6bac25ec | 48 85 db | TEST | TEST RBX,RBX
+6bac25ef | 74 33 | JZ | JZ 0x6bac2624
+6bac25f1 | 48 8b 3d ac 6c 00 00 | MOV | MOV RDI,qword ptr [0x6bac92a4]
+6bac25f8 | 48 8b 35 25 6c 00 00 | MOV | MOV RSI,qword ptr [0x6bac9224]
+6bac25ff | 90 | NOP | NOP
+6bac2600 | 8b 0b | MOV | MOV ECX,dword ptr [RBX]
+6bac2602 | ff d7 | CALL | CALL RDI
+6bac2604 | 48 89 c5 | MOV | MOV RBP,RAX
+6bac2607 | ff d6 | CALL | CALL RSI
+6bac2609 | 85 c0 | TEST | TEST EAX,EAX
+6bac260b | 75 0e | JNZ | JNZ 0x6bac261b
+6bac260d | 48 85 ed | TEST | TEST RBP,RBP
+6bac2610 | 74 09 | JZ | JZ 0x6bac261b
+6bac2612 | 48 8b 43 08 | MOV | MOV RAX,qword ptr [RBX + 0x8]
+6bac2616 | 48 89 e9 | MOV | MOV RCX,RBP
+6bac2619 | ff d0 | CALL | CALL RAX
+6bac261b | 48 8b 5b 10 | MOV | MOV RBX,qword ptr [RBX + 0x10]
+6bac261f | 48 85 db | TEST | TEST RBX,RBX
+6bac2622 | 75 dc | JNZ | JNZ 0x6bac2600
+6bac2624 | 48 8b 05 29 6c 00 00 | MOV | MOV RAX,qword ptr [0x6bac9254]
+6bac262b | 48 8d 0d 6e 52 00 00 | LEA | LEA RCX,[0x6bac78a0]
+6bac2632 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac2636 | 5b | POP | POP RBX
+6bac2637 | 5e | POP | POP RSI
+6bac2638 | 5f | POP | POP RDI
+6bac2639 | 5d | POP | POP RBP
+6bac263a | 48 ff e0 | JMP | JMP RAX
+6bac263d | 0f 1f 00 | NOP | NOP dword ptr [RAX]
+6bac2640 | 55 | PUSH | PUSH RBP
+6bac2641 | 57 | PUSH | PUSH RDI
+6bac2642 | 56 | PUSH | PUSH RSI
+6bac2643 | 53 | PUSH | PUSH RBX
+6bac2644 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac2648 | 8b 05 32 52 00 00 | MOV | MOV EAX,dword ptr [0x6bac7880]
+6bac264e | 31 db | XOR | XOR EBX,EBX
+6bac2650 | 89 cf | MOV | MOV EDI,ECX
+6bac2652 | 48 89 d6 | MOV | MOV RSI,RDX
+6bac2655 | 85 c0 | TEST | TEST EAX,EAX
+6bac2657 | 75 0b | JNZ | JNZ 0x6bac2664
+6bac2659 | 89 d8 | MOV | MOV EAX,EBX
+6bac265b | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac265f | 5b | POP | POP RBX
+6bac2660 | 5e | POP | POP RSI
+6bac2661 | 5f | POP | POP RDI
+6bac2662 | 5d | POP | POP RBP
+6bac2663 | c3 | RET | RET
+6bac2664 | ba 18 00 00 00 | MOV | MOV EDX,0x18
+6bac2669 | b9 01 00 00 00 | MOV | MOV ECX,0x1
+6bac266e | e8 5d 06 00 00 | CALL | CALL 0x6bac2cd0
+6bac2673 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac2676 | 48 89 c5 | MOV | MOV RBP,RAX
+6bac2679 | 74 3d | JZ | JZ 0x6bac26b8
+6bac267b | 89 38 | MOV | MOV dword ptr [RAX],EDI
+6bac267d | 48 89 70 08 | MOV | MOV qword ptr [RAX + 0x8],RSI
+6bac2681 | 48 8d 0d 18 52 00 00 | LEA | LEA RCX,[0x6bac78a0]
+6bac2688 | ff 15 6e 6b 00 00 | CALL | CALL qword ptr [0x6bac91fc]
+6bac268e | 48 8b 05 33 52 00 00 | MOV | MOV RAX,qword ptr [0x6bac78c8]
+6bac2695 | 48 8d 0d 04 52 00 00 | LEA | LEA RCX,[0x6bac78a0]
+6bac269c | 48 89 2d 25 52 00 00 | MOV | MOV qword ptr [0x6bac78c8],RBP
+6bac26a3 | 48 89 45 10 | MOV | MOV qword ptr [RBP + 0x10],RAX
+6bac26a7 | ff 15 a7 6b 00 00 | CALL | CALL qword ptr [0x6bac9254]
+6bac26ad | 89 d8 | MOV | MOV EAX,EBX
+6bac26af | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac26b3 | 5b | POP | POP RBX
+6bac26b4 | 5e | POP | POP RSI
+6bac26b5 | 5f | POP | POP RDI
+6bac26b6 | 5d | POP | POP RBP
+6bac26b7 | c3 | RET | RET
+6bac26b8 | bb ff ff ff ff | MOV | MOV EBX,0xffffffff
+6bac26bd | eb 9a | JMP | JMP 0x6bac2659
+6bac26bf | 90 | NOP | NOP
+6bac26c0 | 53 | PUSH | PUSH RBX
+6bac26c1 | 48 83 ec 20 | SUB | SUB RSP,0x20
+6bac26c5 | 8b 05 b5 51 00 00 | MOV | MOV EAX,dword ptr [0x6bac7880]
+6bac26cb | 89 cb | MOV | MOV EBX,ECX
+6bac26cd | 85 c0 | TEST | TEST EAX,EAX
+6bac26cf | 75 0f | JNZ | JNZ 0x6bac26e0
+6bac26d1 | 31 c0 | XOR | XOR EAX,EAX
+6bac26d3 | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac26d7 | 5b | POP | POP RBX
+6bac26d8 | c3 | RET | RET
+6bac26e0 | 48 8d 0d b9 51 00 00 | LEA | LEA RCX,[0x6bac78a0]
+6bac26e7 | ff 15 0f 6b 00 00 | CALL | CALL qword ptr [0x6bac91fc]
+6bac26ed | 48 8b 05 d4 51 00 00 | MOV | MOV RAX,qword ptr [0x6bac78c8]
+6bac26f4 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac26f7 | 74 1a | JZ | JZ 0x6bac2713
+6bac26f9 | 8b 10 | MOV | MOV EDX,dword ptr [RAX]
+6bac26fb | 39 da | CMP | CMP EDX,EBX
+6bac26fd | 75 0b | JNZ | JNZ 0x6bac270a
+6bac26ff | eb 4b | JMP | JMP 0x6bac274c
+6bac2701 | 8b 11 | MOV | MOV EDX,dword ptr [RCX]
+6bac2703 | 39 da | CMP | CMP EDX,EBX
+6bac2705 | 74 29 | JZ | JZ 0x6bac2730
+6bac2707 | 48 89 c8 | MOV | MOV RAX,RCX
+6bac270a | 48 8b 48 10 | MOV | MOV RCX,qword ptr [RAX + 0x10]
+6bac270e | 48 85 c9 | TEST | TEST RCX,RCX
+6bac2711 | 75 ee | JNZ | JNZ 0x6bac2701
+6bac2713 | 48 8d 0d 86 51 00 00 | LEA | LEA RCX,[0x6bac78a0]
+6bac271a | ff 15 34 6b 00 00 | CALL | CALL qword ptr [0x6bac9254]
+6bac2720 | 31 c0 | XOR | XOR EAX,EAX
+6bac2722 | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac2726 | 5b | POP | POP RBX
+6bac2727 | c3 | RET | RET
+6bac2730 | 48 8b 51 10 | MOV | MOV RDX,qword ptr [RCX + 0x10]
+6bac2734 | 48 89 50 10 | MOV | MOV qword ptr [RAX + 0x10],RDX
+6bac2738 | e8 2b 05 00 00 | CALL | CALL 0x6bac2c68
+6bac273d | 48 8d 0d 5c 51 00 00 | LEA | LEA RCX,[0x6bac78a0]
+6bac2744 | ff 15 0a 6b 00 00 | CALL | CALL qword ptr [0x6bac9254]
+6bac274a | eb d4 | JMP | JMP 0x6bac2720
+6bac274c | 48 8b 50 10 | MOV | MOV RDX,qword ptr [RAX + 0x10]
+6bac2750 | 48 89 c1 | MOV | MOV RCX,RAX
+6bac2753 | 48 89 15 6e 51 00 00 | MOV | MOV qword ptr [0x6bac78c8],RDX
+6bac275a | eb dc | JMP | JMP 0x6bac2738
+6bac2760 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac2764 | 83 fa 01 | CMP | CMP EDX,0x1
+6bac2767 | 74 47 | JZ | JZ 0x6bac27b0
+6bac2769 | 72 15 | JC | JC 0x6bac2780
+6bac276b | 83 fa 03 | CMP | CMP EDX,0x3
+6bac276e | 74 60 | JZ | JZ 0x6bac27d0
+6bac2770 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac2775 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac2779 | c3 | RET | RET
+6bac2780 | 8b 05 fa 50 00 00 | MOV | MOV EAX,dword ptr [0x6bac7880]
+6bac2786 | 85 c0 | TEST | TEST EAX,EAX
+6bac2788 | 75 66 | JNZ | JNZ 0x6bac27f0
+6bac278a | 8b 05 f0 50 00 00 | MOV | MOV EAX,dword ptr [0x6bac7880]
+6bac2790 | 83 f8 01 | CMP | CMP EAX,0x1
+6bac2793 | 75 db | JNZ | JNZ 0x6bac2770
+6bac2795 | 48 8d 0d 04 51 00 00 | LEA | LEA RCX,[0x6bac78a0]
+6bac279c | c7 05 da 50 00 00 00 00 00 00 | MOV | MOV dword ptr [0x6bac7880],0x0
+6bac27a6 | ff 15 48 6a 00 00 | CALL | CALL qword ptr [0x6bac91f4]
+6bac27ac | eb c2 | JMP | JMP 0x6bac2770
+6bac27b0 | 8b 05 ca 50 00 00 | MOV | MOV EAX,dword ptr [0x6bac7880]
+6bac27b6 | 85 c0 | TEST | TEST EAX,EAX
+6bac27b8 | 74 27 | JZ | JZ 0x6bac27e1
+6bac27ba | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac27bf | c7 05 b7 50 00 00 01 00 00 00 | MOV | MOV dword ptr [0x6bac7880],0x1
+6bac27c9 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac27cd | c3 | RET | RET
+6bac27d0 | 8b 05 aa 50 00 00 | MOV | MOV EAX,dword ptr [0x6bac7880]
+6bac27d6 | 85 c0 | TEST | TEST EAX,EAX
+6bac27d8 | 74 96 | JZ | JZ 0x6bac2770
+6bac27da | e8 f1 fd ff ff | CALL | CALL 0x6bac25d0
+6bac27df | eb 8f | JMP | JMP 0x6bac2770
+6bac27e1 | 48 8d 0d b8 50 00 00 | LEA | LEA RCX,[0x6bac78a0]
+6bac27e8 | ff 15 5e 6a 00 00 | CALL | CALL qword ptr [0x6bac924c]
+6bac27ee | eb ca | JMP | JMP 0x6bac27ba
+6bac27f0 | e8 db fd ff ff | CALL | CALL 0x6bac25d0
+6bac27f5 | eb 93 | JMP | JMP 0x6bac278a
+6bac2800 | 31 c0 | XOR | XOR EAX,EAX
+6bac2802 | 66 81 39 4d 5a | CMP | CMP word ptr [RCX],0x5a4d
+6bac2807 | 74 07 | JZ | JZ 0x6bac2810
+6bac2809 | f3 c3 | RET | RET
+6bac2810 | 48 63 51 3c | MOVSXD | MOVSXD RDX,dword ptr [RCX + 0x3c]
+6bac2814 | 48 01 d1 | ADD | ADD RCX,RDX
+6bac2817 | 81 39 50 45 00 00 | CMP | CMP dword ptr [RCX],0x4550
+6bac281d | 75 ea | JNZ | JNZ 0x6bac2809
+6bac281f | 31 c0 | XOR | XOR EAX,EAX
+6bac2821 | 66 81 79 18 0b 02 | CMP | CMP word ptr [RCX + 0x18],0x20b
+6bac2827 | 0f 94 c0 | SETZ | SETZ AL
+6bac282a | c3 | RET | RET
+6bac282b | 0f 1f 44 00 00 | NOP | NOP dword ptr [RAX + RAX*0x1]
+6bac2830 | 48 63 41 3c | MOVSXD | MOVSXD RAX,dword ptr [RCX + 0x3c]
+6bac2834 | 48 01 c1 | ADD | ADD RCX,RAX
+6bac2837 | 31 c0 | XOR | XOR EAX,EAX
+6bac2839 | 44 0f b7 41 06 | MOVZX | MOVZX R8D,word ptr [RCX + 0x6]
+6bac283e | 44 0f b7 49 14 | MOVZX | MOVZX R9D,word ptr [RCX + 0x14]
+6bac2843 | 45 85 c0 | TEST | TEST R8D,R8D
+6bac2846 | 74 36 | JZ | JZ 0x6bac287e
+6bac2848 | 45 0f b7 c9 | MOVZX | MOVZX R9D,R9W
+6bac284c | 41 83 e8 01 | SUB | SUB R8D,0x1
+6bac2850 | 4a 8d 44 09 18 | LEA | LEA RAX,[RCX + R9*0x1 + 0x18]
+6bac2855 | 4b 8d 0c 80 | LEA | LEA RCX,[R8 + R8*0x4]
+6bac2859 | 4c 8d 4c c8 28 | LEA | LEA R9,[RAX + RCX*0x8 + 0x28]
+6bac285e | 66 90 | NOP | NOP
+6bac2860 | 8b 48 0c | MOV | MOV ECX,dword ptr [RAX + 0xc]
+6bac2863 | 41 89 c8 | MOV | MOV R8D,ECX
+6bac2866 | 49 39 d0 | CMP | CMP R8,RDX
+6bac2869 | 77 08 | JA | JA 0x6bac2873
+6bac286b | 03 48 08 | ADD | ADD ECX,dword ptr [RAX + 0x8]
+6bac286e | 48 39 ca | CMP | CMP RDX,RCX
+6bac2871 | 72 0b | JC | JC 0x6bac287e
+6bac2873 | 48 83 c0 28 | ADD | ADD RAX,0x28
+6bac2877 | 4c 39 c8 | CMP | CMP RAX,R9
+6bac287a | 75 e4 | JNZ | JNZ 0x6bac2860
+6bac287c | 31 c0 | XOR | XOR EAX,EAX
+6bac287e | f3 c3 | RET | RET
+6bac2880 | 57 | PUSH | PUSH RDI
+6bac2881 | 56 | PUSH | PUSH RSI
+6bac2882 | 53 | PUSH | PUSH RBX
+6bac2883 | 48 83 ec 20 | SUB | SUB RSP,0x20
+6bac2887 | 31 db | XOR | XOR EBX,EBX
+6bac2889 | 48 89 ce | MOV | MOV RSI,RCX
+6bac288c | e8 47 04 00 00 | CALL | CALL 0x6bac2cd8
+6bac2891 | 48 83 f8 08 | CMP | CMP RAX,0x8
+6bac2895 | 77 67 | JA | JA 0x6bac28fe
+6bac2897 | 48 8d 0d 62 d7 ff ff | LEA | LEA RCX,[0x6bac0000]
+6bac289e | e8 5d ff ff ff | CALL | CALL 0x6bac2800
+6bac28a3 | 85 c0 | TEST | TEST EAX,EAX
+6bac28a5 | 74 57 | JZ | JZ 0x6bac28fe
+6bac28a7 | 48 63 15 8e d7 ff ff | MOVSXD | MOVSXD RDX,dword ptr [0x6bac003c]
+6bac28ae | 48 8d 05 4b d7 ff ff | LEA | LEA RAX,[0x6bac0000]
+6bac28b5 | 48 01 d0 | ADD | ADD RAX,RDX
+6bac28b8 | 0f b7 50 06 | MOVZX | MOVZX EDX,word ptr [RAX + 0x6]
+6bac28bc | 0f b7 48 14 | MOVZX | MOVZX ECX,word ptr [RAX + 0x14]
+6bac28c0 | 85 d2 | TEST | TEST EDX,EDX
+6bac28c2 | 74 3a | JZ | JZ 0x6bac28fe
+6bac28c4 | 0f b7 c9 | MOVZX | MOVZX ECX,CX
+6bac28c7 | 83 ea 01 | SUB | SUB EDX,0x1
+6bac28ca | 48 8d 5c 08 18 | LEA | LEA RBX,[RAX + RCX*0x1 + 0x18]
+6bac28cf | 48 8d 04 92 | LEA | LEA RAX,[RDX + RDX*0x4]
+6bac28d3 | 48 8d 7c c3 28 | LEA | LEA RDI,[RBX + RAX*0x8 + 0x28]
+6bac28d8 | eb 0f | JMP | JMP 0x6bac28e9
+6bac28e0 | 48 83 c3 28 | ADD | ADD RBX,0x28
+6bac28e4 | 48 39 fb | CMP | CMP RBX,RDI
+6bac28e7 | 74 27 | JZ | JZ 0x6bac2910
+6bac28e9 | 41 b8 08 00 00 00 | MOV | MOV R8D,0x8
+6bac28ef | 48 89 f2 | MOV | MOV RDX,RSI
+6bac28f2 | 48 89 d9 | MOV | MOV RCX,RBX
+6bac28f5 | e8 e6 03 00 00 | CALL | CALL 0x6bac2ce0
+6bac28fa | 85 c0 | TEST | TEST EAX,EAX
+6bac28fc | 75 e2 | JNZ | JNZ 0x6bac28e0
+6bac28fe | 48 89 d8 | MOV | MOV RAX,RBX
+6bac2901 | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac2905 | 5b | POP | POP RBX
+6bac2906 | 5e | POP | POP RSI
+6bac2907 | 5f | POP | POP RDI
+6bac2908 | c3 | RET | RET
+6bac2910 | 31 db | XOR | XOR EBX,EBX
+6bac2912 | 48 89 d8 | MOV | MOV RAX,RBX
+6bac2915 | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac2919 | 5b | POP | POP RBX
+6bac291a | 5e | POP | POP RSI
+6bac291b | 5f | POP | POP RDI
+6bac291c | c3 | RET | RET
+6bac291d | 0f 1f 00 | NOP | NOP dword ptr [RAX]
+6bac2920 | 53 | PUSH | PUSH RBX
+6bac2921 | 48 83 ec 20 | SUB | SUB RSP,0x20
+6bac2925 | 48 89 cb | MOV | MOV RBX,RCX
+6bac2928 | 48 8d 0d d1 d6 ff ff | LEA | LEA RCX,[0x6bac0000]
+6bac292f | e8 cc fe ff ff | CALL | CALL 0x6bac2800
+6bac2934 | 85 c0 | TEST | TEST EAX,EAX
+6bac2936 | 74 18 | JZ | JZ 0x6bac2950
+6bac2938 | 48 8d 0d c1 d6 ff ff | LEA | LEA RCX,[0x6bac0000]
+6bac293f | 48 89 da | MOV | MOV RDX,RBX
+6bac2942 | 48 29 ca | SUB | SUB RDX,RCX
+6bac2945 | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac2949 | 5b | POP | POP RBX
+6bac294a | e9 e1 fe ff ff | JMP | JMP 0x6bac2830
+6bac2950 | 31 c0 | XOR | XOR EAX,EAX
+6bac2952 | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac2956 | 5b | POP | POP RBX
+6bac2957 | c3 | RET | RET
+6bac2958 | 0f 1f 84 00 00 00 00 00 | NOP | NOP dword ptr [RAX + RAX*0x1]
+6bac2960 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac2964 | 48 8d 0d 95 d6 ff ff | LEA | LEA RCX,[0x6bac0000]
+6bac296b | e8 90 fe ff ff | CALL | CALL 0x6bac2800
+6bac2970 | 31 d2 | XOR | XOR EDX,EDX
+6bac2972 | 85 c0 | TEST | TEST EAX,EAX
+6bac2974 | 74 13 | JZ | JZ 0x6bac2989
+6bac2976 | 48 63 05 bf d6 ff ff | MOVSXD | MOVSXD RAX,dword ptr [0x6bac003c]
+6bac297d | 48 8d 15 7c d6 ff ff | LEA | LEA RDX,[0x6bac0000]
+6bac2984 | 0f b7 54 02 06 | MOVZX | MOVZX EDX,word ptr [RDX + RAX*0x1 + 0x6]
+6bac2989 | 89 d0 | MOV | MOV EAX,EDX
+6bac298b | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac298f | c3 | RET | RET
+6bac2990 | 53 | PUSH | PUSH RBX
+6bac2991 | 48 83 ec 20 | SUB | SUB RSP,0x20
+6bac2995 | 48 89 cb | MOV | MOV RBX,RCX
+6bac2998 | 48 8d 0d 61 d6 ff ff | LEA | LEA RCX,[0x6bac0000]
+6bac299f | e8 5c fe ff ff | CALL | CALL 0x6bac2800
+6bac29a4 | 31 d2 | XOR | XOR EDX,EDX
+6bac29a6 | 85 c0 | TEST | TEST EAX,EAX
+6bac29a8 | 74 50 | JZ | JZ 0x6bac29fa
+6bac29aa | 48 63 0d 8b d6 ff ff | MOVSXD | MOVSXD RCX,dword ptr [0x6bac003c]
+6bac29b1 | 48 8d 05 48 d6 ff ff | LEA | LEA RAX,[0x6bac0000]
+6bac29b8 | 48 01 c8 | ADD | ADD RAX,RCX
+6bac29bb | 0f b7 48 06 | MOVZX | MOVZX ECX,word ptr [RAX + 0x6]
+6bac29bf | 44 0f b7 40 14 | MOVZX | MOVZX R8D,word ptr [RAX + 0x14]
+6bac29c4 | 85 c9 | TEST | TEST ECX,ECX
+6bac29c6 | 74 32 | JZ | JZ 0x6bac29fa
+6bac29c8 | 45 0f b7 c0 | MOVZX | MOVZX R8D,R8W
+6bac29cc | 83 e9 01 | SUB | SUB ECX,0x1
+6bac29cf | 4a 8d 54 00 18 | LEA | LEA RDX,[RAX + R8*0x1 + 0x18]
+6bac29d4 | 48 8d 04 89 | LEA | LEA RAX,[RCX + RCX*0x4]
+6bac29d8 | 48 8d 44 c2 28 | LEA | LEA RAX,[RDX + RAX*0x8 + 0x28]
+6bac29dd | 0f 1f 00 | NOP | NOP dword ptr [RAX]
+6bac29e0 | f6 42 27 20 | TEST | TEST byte ptr [RDX + 0x27],0x20
+6bac29e4 | 74 09 | JZ | JZ 0x6bac29ef
+6bac29e6 | 48 85 db | TEST | TEST RBX,RBX
+6bac29e9 | 74 0f | JZ | JZ 0x6bac29fa
+6bac29eb | 48 83 eb 01 | SUB | SUB RBX,0x1
+6bac29ef | 48 83 c2 28 | ADD | ADD RDX,0x28
+6bac29f3 | 48 39 c2 | CMP | CMP RDX,RAX
+6bac29f6 | 75 e8 | JNZ | JNZ 0x6bac29e0
+6bac29f8 | 31 d2 | XOR | XOR EDX,EDX
+6bac29fa | 48 89 d0 | MOV | MOV RAX,RDX
+6bac29fd | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac2a01 | 5b | POP | POP RBX
+6bac2a02 | c3 | RET | RET
+6bac2a03 | 66 66 66 66 2e 0f 1f 84 00 00 00 00 00 | NOP | NOP dword ptr CS:[RAX + RAX*0x1]
+6bac2a10 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac2a14 | 48 8d 0d e5 d5 ff ff | LEA | LEA RCX,[0x6bac0000]
+6bac2a1b | e8 e0 fd ff ff | CALL | CALL 0x6bac2800
+6bac2a20 | 31 d2 | XOR | XOR EDX,EDX
+6bac2a22 | 85 c0 | TEST | TEST EAX,EAX
+6bac2a24 | 48 8d 05 d5 d5 ff ff | LEA | LEA RAX,[0x6bac0000]
+6bac2a2b | 48 0f 45 d0 | CMOVNZ | CMOVNZ RDX,RAX
+6bac2a2f | 48 89 d0 | MOV | MOV RAX,RDX
+6bac2a32 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac2a36 | c3 | RET | RET
+6bac2a37 | 66 0f 1f 84 00 00 00 00 00 | NOP | NOP word ptr [RAX + RAX*0x1]
+6bac2a40 | 56 | PUSH | PUSH RSI
+6bac2a41 | 53 | PUSH | PUSH RBX
+6bac2a42 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac2a46 | 31 db | XOR | XOR EBX,EBX
+6bac2a48 | 48 89 ce | MOV | MOV RSI,RCX
+6bac2a4b | 48 8d 0d ae d5 ff ff | LEA | LEA RCX,[0x6bac0000]
+6bac2a52 | e8 a9 fd ff ff | CALL | CALL 0x6bac2800
+6bac2a57 | 85 c0 | TEST | TEST EAX,EAX
+6bac2a59 | 75 09 | JNZ | JNZ 0x6bac2a64
+6bac2a5b | 89 d8 | MOV | MOV EAX,EBX
+6bac2a5d | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac2a61 | 5b | POP | POP RBX
+6bac2a62 | 5e | POP | POP RSI
+6bac2a63 | c3 | RET | RET
+6bac2a64 | 48 8d 0d 95 d5 ff ff | LEA | LEA RCX,[0x6bac0000]
+6bac2a6b | 48 89 f2 | MOV | MOV RDX,RSI
+6bac2a6e | 48 29 ca | SUB | SUB RDX,RCX
+6bac2a71 | e8 ba fd ff ff | CALL | CALL 0x6bac2830
+6bac2a76 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac2a79 | 74 e0 | JZ | JZ 0x6bac2a5b
+6bac2a7b | 8b 58 24 | MOV | MOV EBX,dword ptr [RAX + 0x24]
+6bac2a7e | f7 d3 | NOT | NOT EBX
+6bac2a80 | c1 eb 1f | SHR | SHR EBX,0x1f
+6bac2a83 | 89 d8 | MOV | MOV EAX,EBX
+6bac2a85 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac2a89 | 5b | POP | POP RBX
+6bac2a8a | 5e | POP | POP RSI
+6bac2a8b | c3 | RET | RET
+6bac2a8c | 0f 1f 40 00 | NOP | NOP dword ptr [RAX]
+6bac2a90 | 55 | PUSH | PUSH RBP
+6bac2a91 | 57 | PUSH | PUSH RDI
+6bac2a92 | 56 | PUSH | PUSH RSI
+6bac2a93 | 53 | PUSH | PUSH RBX
+6bac2a94 | 48 83 ec 28 | SUB | SUB RSP,0x28
+6bac2a98 | 31 ed | XOR | XOR EBP,EBP
+6bac2a9a | 89 cb | MOV | MOV EBX,ECX
+6bac2a9c | 48 8d 0d 5d d5 ff ff | LEA | LEA RCX,[0x6bac0000]
+6bac2aa3 | e8 58 fd ff ff | CALL | CALL 0x6bac2800
+6bac2aa8 | 85 c0 | TEST | TEST EAX,EAX
+6bac2aaa | 74 53 | JZ | JZ 0x6bac2aff
+6bac2aac | 48 63 05 89 d5 ff ff | MOVSXD | MOVSXD RAX,dword ptr [0x6bac003c]
+6bac2ab3 | 48 8d 35 46 d5 ff ff | LEA | LEA RSI,[0x6bac0000]
+6bac2aba | 8b bc 06 90 00 00 00 | MOV | MOV EDI,dword ptr [RSI + RAX*0x1 + 0x90]
+6bac2ac1 | 85 ff | TEST | TEST EDI,EDI
+6bac2ac3 | 74 3a | JZ | JZ 0x6bac2aff
+6bac2ac5 | 48 89 fa | MOV | MOV RDX,RDI
+6bac2ac8 | 48 89 f1 | MOV | MOV RCX,RSI
+6bac2acb | e8 60 fd ff ff | CALL | CALL 0x6bac2830
+6bac2ad0 | 48 85 c0 | TEST | TEST RAX,RAX
+6bac2ad3 | 74 2a | JZ | JZ 0x6bac2aff
+6bac2ad5 | 48 01 f7 | ADD | ADD RDI,RSI
+6bac2ad8 | 75 0d | JNZ | JNZ 0x6bac2ae7
+6bac2ada | eb 23 | JMP | JMP 0x6bac2aff
+6bac2ae0 | 83 eb 01 | SUB | SUB EBX,0x1
+6bac2ae3 | 48 83 c7 14 | ADD | ADD RDI,0x14
+6bac2ae7 | 8b 57 04 | MOV | MOV EDX,dword ptr [RDI + 0x4]
+6bac2aea | 85 d2 | TEST | TEST EDX,EDX
+6bac2aec | 75 07 | JNZ | JNZ 0x6bac2af5
+6bac2aee | 8b 47 0c | MOV | MOV EAX,dword ptr [RDI + 0xc]
+6bac2af1 | 85 c0 | TEST | TEST EAX,EAX
+6bac2af3 | 74 1b | JZ | JZ 0x6bac2b10
+6bac2af5 | 85 db | TEST | TEST EBX,EBX
+6bac2af7 | 7f e7 | JG | JG 0x6bac2ae0
+6bac2af9 | 8b 6f 0c | MOV | MOV EBP,dword ptr [RDI + 0xc]
+6bac2afc | 48 01 f5 | ADD | ADD RBP,RSI
+6bac2aff | 48 89 e8 | MOV | MOV RAX,RBP
+6bac2b02 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac2b06 | 5b | POP | POP RBX
+6bac2b07 | 5e | POP | POP RSI
+6bac2b08 | 5f | POP | POP RDI
+6bac2b09 | 5d | POP | POP RBP
+6bac2b0a | c3 | RET | RET
+6bac2b10 | 31 ed | XOR | XOR EBP,EBP
+6bac2b12 | 48 89 e8 | MOV | MOV RAX,RBP
+6bac2b15 | 48 83 c4 28 | ADD | ADD RSP,0x28
+6bac2b19 | 5b | POP | POP RBX
+6bac2b1a | 5e | POP | POP RSI
+6bac2b1b | 5f | POP | POP RDI
+6bac2b1c | 5d | POP | POP RBP
+6bac2b1d | c3 | RET | RET
+6bac2b1e | 66 90 | NOP | NOP
+6bac2b20 | 53 | PUSH | PUSH RBX
+6bac2b21 | 48 83 ec 20 | SUB | SUB RSP,0x20
+6bac2b25 | 48 8b 05 c4 4d 00 00 | MOV | MOV RAX,qword ptr [0x6bac78f0]
+6bac2b2c | 48 85 c0 | TEST | TEST RAX,RAX
+6bac2b2f | 74 0f | JZ | JZ 0x6bac2b40
+6bac2b31 | 48 83 c4 20 | ADD | ADD RSP,0x20
+6bac2b35 | 5b | POP | POP RBX
+6bac2b36 | c3 | RET | RET
+6bac2b40 | 31 c9 | XOR | XOR ECX,ECX
+6bac2b42 | 8d 59 01 | LEA | LEA EBX,[RCX + 0x1]
+6bac2b45 | e8 46 ff ff ff | CALL | CALL 0x6bac2a90
+6bac2b4a | 48 85 c0 | TEST | TEST RAX,RAX
+6bac2b4d | 0f 84 7d 00 00 00 | JZ | JZ 0x6bac2bd0
+6bac2b53 | 0f b6 10 | MOVZX | MOVZX EDX,byte ptr [RAX]
+6bac2b56 | 80 fa 4d | CMP | CMP DL,0x4d
+6bac2b59 | 74 05 | JZ | JZ 0x6bac2b60
+6bac2b5b | 80 fa 6d | CMP | CMP DL,0x6d
+6bac2b5e | 75 50 | JNZ | JNZ 0x6bac2bb0
+6bac2b60 | 0f b6 50 01 | MOVZX | MOVZX EDX,byte ptr [RAX + 0x1]
+6bac2b64 | 80 fa 53 | CMP | CMP DL,0x53
+6bac2b67 | 74 05 | JZ | JZ 0x6bac2b6e
+6bac2b69 | 80 fa 73 | CMP | CMP DL,0x73
+6bac2b6c | 75 42 | JNZ | JNZ 0x6bac2bb0
+6bac2b6e | 0f b6 50 02 | MOVZX | MOVZX EDX,byte ptr [RAX + 0x2]
+6bac2b72 | 80 fa 56 | CMP | CMP DL,0x56
+6bac2b75 | 74 05 | JZ | JZ 0x6bac2b7c
+6bac2b77 | 80 fa 76 | CMP | CMP DL,0x76
+6bac2b7a | 75 34 | JNZ | JNZ 0x6bac2bb0
+6bac2b7c | 0f b6 50 03 | MOVZX | MOVZX EDX,byte ptr [RAX + 0x3]
+6bac2b80 | 80 fa 43 | CMP | CMP DL,0x43
+6bac2b83 | 74 05 | JZ | JZ 0x6bac2b8a
+6bac2b85 | 80 fa 63 | CMP | CMP DL,0x63
+6bac2b88 | 75 26 | JNZ | JNZ 0x6bac2bb0
+6bac2b8a | 0f b6 50 04 | MOVZX | MOVZX EDX,byte ptr [RAX + 0x4]
+6bac2b8e | 80 fa 52 | CMP | CMP DL,0x52
+6bac2b91 | 74 05 | JZ | JZ 0x6bac2b98
+6bac2b93 | 80 fa 72 | CMP | CMP DL,0x72
+6bac2b96 | 75 18 | JNZ | JNZ 0x6bac2bb0
+6bac2b98 | 0f b6 50 05 | MOVZX | MOVZX EDX,byte ptr [RAX + 0x5]
+6bac2b9c | 80 fa 54 | CMP | CMP DL,0x54
+6bac2b9f | 74 13 | JZ | JZ 0x6bac2bb4
+6bac2ba1 | 80 fa 74 | CMP | CMP DL,0x74
+6bac2ba4 | 74 0e | JZ | JZ 0x6bac2bb4
+6bac2ba6 | 83 ea 30 | SUB | SUB EDX,0x30
+6bac2ba9 | 80 fa 09 | CMP | CMP DL,0x9
+6bac2bac | 76 06 | JBE | JBE 0x6bac2bb4
+6bac2bae | 66 90 | NOP | NOP
+6bac2bb0 | 89 d9 | MOV | MOV ECX,EBX
+6bac2bb2 | eb 8e | JMP | JMP 0x6bac2b42
+6bac2bb4 | 48 89 c1 | MOV | MOV RCX,RAX
+6bac2bb7 | ff 15 6f 66 00 00 | CALL | CALL qword ptr [0x6bac922c]
+6bac2bbd | 48 85 c0 | TEST | TEST RAX,RAX
+6bac2bc0 | 48 89 05 29 4d 00 00 | MOV | MOV qword ptr [0x6bac78f0],RAX
+6bac2bc7 | 0f 85 64 ff ff ff | JNZ | JNZ 0x6bac2b31
+6bac2bcd | 0f 1f 00 | NOP | NOP dword ptr [RAX]
+6bac2bd0 | 48 8d 0d 79 15 00 00 | LEA | LEA RCX,[0x6bac4150]
+6bac2bd7 | ff 15 7f 66 00 00 | CALL | CALL qword ptr [0x6bac925c]
+6bac2bdd | 48 89 05 0c 4d 00 00 | MOV | MOV qword ptr [0x6bac78f0],RAX
+6bac2be4 | e9 48 ff ff ff | JMP | JMP 0x6bac2b31
+6bac2bf0 | db e3 | FNINIT | FNINIT
+6bac2bf2 | c3 | RET | RET
+6bac2c00 | 51 | PUSH | PUSH RCX
+6bac2c01 | 50 | PUSH | PUSH RAX
+6bac2c02 | 48 3d 00 10 00 00 | CMP | CMP RAX,0x1000
+6bac2c08 | 48 8d 4c 24 18 | LEA | LEA RCX,[RSP + 0x18]
+6bac2c0d | 72 19 | JC | JC 0x6bac2c28
+6bac2c0f | 48 81 e9 00 10 00 00 | SUB | SUB RCX,0x1000
+6bac2c16 | 48 83 09 00 | OR | OR qword ptr [RCX],0x0
+6bac2c1a | 48 2d 00 10 00 00 | SUB | SUB RAX,0x1000
+6bac2c20 | 48 3d 00 10 00 00 | CMP | CMP RAX,0x1000
+6bac2c26 | 77 e7 | JA | JA 0x6bac2c0f
+6bac2c28 | 48 29 c1 | SUB | SUB RCX,RAX
+6bac2c2b | 48 83 09 00 | OR | OR qword ptr [RCX],0x0
+6bac2c2f | 58 | POP | POP RAX
+6bac2c30 | 59 | POP | POP RCX
+6bac2c31 | c3 | RET | RET
+6bac2c40 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+6bac2c45 | c3 | RET | RET
+6bac2c50 | ff 25 ee 66 00 00 | JMP | JMP qword ptr [0x6bac9344]
+6bac2c58 | ff 25 8e 66 00 00 | JMP | JMP qword ptr [0x6bac92ec]
+6bac2c60 | ff 25 8e 66 00 00 | JMP | JMP qword ptr [0x6bac92f4]
+6bac2c68 | ff 25 c6 66 00 00 | JMP | JMP qword ptr [0x6bac9334]
+6bac2c70 | ff 25 b6 66 00 00 | JMP | JMP qword ptr [0x6bac932c]
+6bac2c88 | ff 25 6e 66 00 00 | JMP | JMP qword ptr [0x6bac92fc]
+6bac2c90 | ff 25 46 66 00 00 | JMP | JMP qword ptr [0x6bac92dc]
+6bac2c98 | ff 25 76 66 00 00 | JMP | JMP qword ptr [0x6bac9314]
+6bac2ca0 | ff 25 96 66 00 00 | JMP | JMP qword ptr [0x6bac933c]
+6bac2ca8 | ff 25 36 66 00 00 | JMP | JMP qword ptr [0x6bac92e4]
+6bac2cb0 | ff 25 b6 66 00 00 | JMP | JMP qword ptr [0x6bac936c]
+6bac2cb8 | ff 25 5e 66 00 00 | JMP | JMP qword ptr [0x6bac931c]
+6bac2cc0 | ff 25 86 66 00 00 | JMP | JMP qword ptr [0x6bac934c]
+6bac2cc8 | ff 25 86 66 00 00 | JMP | JMP qword ptr [0x6bac9354]
+6bac2cd0 | ff 25 4e 66 00 00 | JMP | JMP qword ptr [0x6bac9324]
+6bac2cd8 | ff 25 7e 66 00 00 | JMP | JMP qword ptr [0x6bac935c]
+6bac2ce0 | ff 25 7e 66 00 00 | JMP | JMP qword ptr [0x6bac9364]

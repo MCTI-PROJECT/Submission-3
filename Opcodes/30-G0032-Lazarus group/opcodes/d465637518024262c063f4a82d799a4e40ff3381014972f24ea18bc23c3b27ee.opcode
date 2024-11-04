@@ -1,0 +1,8 @@
+# Opcode extraction for malware analysis
+# APT Group: 30-G0032-Lazarus group
+# Malware Hash: d465637518024262c063f4a82d799a4e40ff3381014972f24ea18bc23c3b27ee
+# Executable format: Raw Binary
+# Processor: x86
+# Creation date: Mon Nov 04 03:35:10 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+

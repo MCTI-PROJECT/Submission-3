@@ -1,0 +1,9 @@
+# Opcode extraction for malware analysis
+# APT Group: 10 G0128 (ZIRCONIUM)
+# Malware Hash: 10b96290a17511ee7a772fcc254077f62a8045753129d73f0804f3da577d2793
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Sun Nov 03 22:43:12 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+004028be | ff 25 00 20 40 00 | JMP | JMP qword ptr [0x008048c4]

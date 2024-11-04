@@ -1,0 +1,166 @@
+# Opcode extraction for malware analysis
+# APT Group: 04 ROCKE (MITRE ID G0039)
+# Malware Hash: ece3cfdb75aaabc570bf38af6f4653f73101c1641ce78a4bb146e62d9ac0cd50
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Sun Nov 03 21:59:24 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+18008915f | 68 ae a2 08 80 | PUSH | PUSH -0x7ff75d52
+180089164 | e9 54 98 02 00 | JMP | JMP 0x1800b29bd
+18008b383 | e9 d7 dd ff ff | JMP | JMP 0x18008915f
+1800b29bd | 68 9a df 0e 61 | PUSH | PUSH 0x610edf9a
+1800b29c2 | e9 ec c0 00 00 | JMP | JMP 0x1800beab3
+1800b4a00 | e9 7e 69 fd ff | JMP | JMP 0x18008b383
+1800b98f6 | 51 | PUSH | PUSH RCX
+1800b98f7 | e9 9a 41 00 00 | JMP | JMP 0x1800bda96
+1800ba051 | 48 8d 34 d5 bd c7 8c e1 | LEA | LEA RSI,[-0x1e733843 + RDX*0x8]
+1800ba059 | 48 89 d8 | MOV | MOV RAX,RBX
+1800ba05c | f3 9c | PUSHFQ | PUSHFQ
+1800ba05e | 66 81 d5 60 c2 | ADC | ADC BP,0xc260
+1800ba063 | 66 0f ab f5 | BTS | BTS BP,SI
+1800ba067 | 48 81 ee 47 5e 11 c5 | SUB | SUB RSI,-0x3aeea1b9
+1800ba06e | ff 35 b9 46 00 00 | PUSH | PUSH qword ptr [0x1800be72d]
+1800ba074 | 29 f8 | SUB | SUB EAX,EDI
+1800ba076 | 48 b8 00 00 00 00 00 00 00 00 | MOV | MOV RAX,0x0
+1800ba080 | 0f be f0 | MOVSX | MOVSX ESI,AL
+1800ba083 | 66 44 0f bc ee | BSF | BSF R13W,SI
+1800ba088 | 49 89 c5 | MOV | MOV R13,RAX
+1800ba08b | 19 ff | SBB | SBB EDI,EDI
+1800ba08d | 48 0f c1 ef | XADD | XADD RDI,RBP
+1800ba091 | 50 | PUSH | PUSH RAX
+1800ba092 | 0f ce | BSWAP | BSWAP ESI
+1800ba094 | 66 87 f5 | XCHG | XCHG BP,SI
+1800ba097 | 8b b4 24 a0 00 00 00 | MOV | MOV ESI,dword ptr [RSP + 0xa0]
+1800ba09e | 0f 98 c4 | SETS | SETS AH
+1800ba0a1 | 66 0f ba f5 07 | BTR | BTR BP,0x7
+1800ba0a6 | 66 41 d3 f4 | SHL | SHL R12W,CL
+1800ba0aa | 30 d0 | XOR | XOR AL,DL
+1800ba0ac | f7 d6 | NOT | NOT ESI
+1800ba0ae | 66 0f bc ee | BSF | BSF BP,SI
+1800ba0b2 | f7 de | NEG | NEG ESI
+1800ba0b4 | 0f 92 c4 | SETC | SETC AH
+1800ba0b7 | 0f be ea | MOVSX | MOVSX EBP,DL
+1800ba0ba | ff ce | DEC | DEC ESI
+1800ba0bc | 66 d1 c1 | ROL | ROL CX,0x1
+1800ba0bf | 66 0f ba e7 06 | BT | BT DI,0x6
+1800ba0c4 | 66 0f ba ef 0e | BTS | BTS DI,0xe
+1800ba0c9 | 48 81 df a0 d6 49 9e | SBB | SBB RDI,-0x61b62960
+1800ba0d0 | 48 89 e5 | MOV | MOV RBP,RSP
+1800ba0d3 | 66 0f a5 e7 | SHLD | SHLD DI,SP,CL
+1800ba0d7 | 66 41 31 cc | XOR | XOR R12W,CX
+1800ba0db | 66 41 bc a3 31 | MOV | MOV R12W,0x31a3
+1800ba0e0 | 0f bb cf | BTC | BTC EDI,ECX
+1800ba0e3 | 48 81 ec 40 01 00 00 | SUB | SUB RSP,0x140
+1800ba0ea | d3 c7 | ROL | ROL EDI,CL
+1800ba0ec | 66 0f bd c7 | BSR | BSR AX,DI
+1800ba0f0 | 66 c1 ef 0f | SHR | SHR DI,0xf
+1800ba0f4 | 48 0f b6 fa | MOVZX | MOVZX RDI,DL
+1800ba0f8 | 48 83 e4 f0 | AND | AND RSP,-0x10
+1800ba0fc | 66 c1 c8 04 | ROR | ROR AX,0x4
+1800ba100 | 66 41 f7 d4 | NOT | NOT R12W
+1800ba104 | f9 | STC | STC
+1800ba105 | 48 89 e7 | MOV | MOV RDI,RSP
+1800ba108 | 49 0f ad e4 | SHRD | SHRD R12,RSP,CL
+1800ba10c | 41 c1 cc 08 | ROR | ROR R12D,0x8
+1800ba110 | d2 d0 | RCL | RCL AL,CL
+1800ba112 | 4c 8d 25 50 0b 00 00 | LEA | LEA R12,[0x1800bac69]
+1800ba119 | 66 0f c9 | BSWAP | BSWAP ECX
+1800ba11c | f8 | CLC | CLC
+1800ba11d | 48 b8 00 00 00 00 01 00 00 00 | MOV | MOV RAX,0x100000000
+1800ba127 | e9 e8 48 00 00 | JMP | JMP 0x1800bea14
+1800ba370 | 52 | PUSH | PUSH RDX
+1800ba371 | e9 9e 21 00 00 | JMP | JMP 0x1800bc514
+1800ba701 | e9 0e 31 00 00 | JMP | JMP 0x1800bd814
+1800baa37 | e9 78 37 00 00 | JMP | JMP 0x1800be1b4
+1800bb5b5 | e9 c0 18 00 00 | JMP | JMP 0x1800bce7a
+1800bb6ab | 41 57 | PUSH | PUSH R15
+1800bb6ad | e9 4f f0 ff ff | JMP | JMP 0x1800ba701
+1800bb84d | 56 | PUSH | PUSH RSI
+1800bb84e | e9 eb 05 00 00 | JMP | JMP 0x1800bbe3e
+1800bbcc0 | e9 ab e6 ff ff | JMP | JMP 0x1800ba370
+1800bbe3e | e9 1e 03 00 00 | JMP | JMP 0x1800bc161
+1800bbf9f | 41 53 | PUSH | PUSH R11
+1800bbfa1 | e9 7b 22 00 00 | JMP | JMP 0x1800be221
+1800bc161 | 57 | PUSH | PUSH RDI
+1800bc162 | e9 a5 05 00 00 | JMP | JMP 0x1800bc70c
+1800bc2e1 | 41 56 | PUSH | PUSH R14
+1800bc2e3 | e9 54 18 00 00 | JMP | JMP 0x1800bdb3c
+1800bc514 | e9 11 0f 00 00 | JMP | JMP 0x1800bd42a
+1800bc700 | e9 d6 02 00 00 | JMP | JMP 0x1800bc9db
+1800bc70c | e9 e5 d1 ff ff | JMP | JMP 0x1800b98f6
+1800bc7ca | 41 52 | PUSH | PUSH R10
+1800bc7cc | e9 f3 10 00 00 | JMP | JMP 0x1800bd8c4
+1800bc9db | 57 | PUSH | PUSH RDI
+1800bc9dc | e9 00 f9 ff ff | JMP | JMP 0x1800bc2e1
+1800bcdad | e9 6c 15 00 00 | JMP | JMP 0x1800be31e
+1800bce7a | 50 | PUSH | PUSH RAX
+1800bce7b | e9 2d ff ff ff | JMP | JMP 0x1800bcdad
+1800bd16a | f6 d0 | NOT | NOT AL
+1800bd16c | 66 f7 d1 | NOT | NOT CX
+1800bd16f | f6 d5 | NOT | NOT CH
+1800bd171 | 66 0f b6 c8 | MOVZX | MOVZX CX,AL
+1800bd175 | 0f b6 c8 | MOVZX | MOVZX ECX,AL
+1800bd178 | fe c0 | INC | INC AL
+1800bd17a | 48 0f c9 | BSWAP | BSWAP RCX
+1800bd17d | 66 0f bc cc | BSF | BSF CX,SP
+1800bd181 | d2 fd | SAR | SAR CH,CL
+1800bd183 | 66 0f a4 f1 08 | SHLD | SHLD CX,SI,0x8
+1800bd188 | 00 c3 | ADD | ADD BL,AL
+1800bd18a | f5 | CMC | CMC
+1800bd18b | 48 0f b6 c0 | MOVZX | MOVZX RAX,AL
+1800bd18f | 66 0f ba f9 0c | BTC | BTC CX,0xc
+1800bd194 | 0f be cb | MOVSX | MOVSX ECX,BL
+1800bd197 | 49 8b 0c c4 | MOV | MOV RCX,qword ptr [R12 + RAX*0x8]
+1800bd19b | f9 | STC | STC
+1800bd19c | 66 0f ba e7 0e | BT | BT DI,0xe
+1800bd1a1 | e9 45 03 00 00 | JMP | JMP 0x1800bd4eb
+1800bd42a | 41 51 | PUSH | PUSH R9
+1800bd42c | e9 06 d6 ff ff | JMP | JMP 0x1800baa37
+1800bd4eb | 48 81 f1 07 a3 7a 0f | XOR | XOR RCX,0xf7aa307
+1800bd4f2 | 66 0f ba e0 04 | BT | BT AX,0x4
+1800bd4f7 | 4c 01 e9 | ADD | ADD RCX,R13
+1800bd4fa | ff e1 | JMP | JMP RCX
+1800bd814 | 55 | PUSH | PUSH RBP
+1800bd815 | e9 9b dd ff ff | JMP | JMP 0x1800bb5b5
+1800bd8c4 | e9 d6 e6 ff ff | JMP | JMP 0x1800bbf9f
+1800bda96 | e9 31 0b 00 00 | JMP | JMP 0x1800be5cc
+1800bdb3c | e9 89 ec ff ff | JMP | JMP 0x1800bc7ca
+1800be1b4 | 41 50 | PUSH | PUSH R8
+1800be1b6 | e9 f0 d4 ff ff | JMP | JMP 0x1800bb6ab
+1800be221 | 41 55 | PUSH | PUSH R13
+1800be223 | e9 29 be ff ff | JMP | JMP 0x1800ba051
+1800be31e | 53 | PUSH | PUSH RBX
+1800be31f | e9 dc e3 ff ff | JMP | JMP 0x1800bc700
+1800be5cc | 41 54 | PUSH | PUSH R12
+1800be5ce | e9 ed d6 ff ff | JMP | JMP 0x1800bbcc0
+1800bea14 | c0 cd 02 | ROR | ROR CH,0x2
+1800bea17 | 0f c0 ef | XADD | XADD BH,CH
+1800bea1a | 66 19 eb | SBB | SBB BX,BP
+1800bea1d | 48 01 c6 | ADD | ADD RSI,RAX
+1800bea20 | b3 64 | MOV | MOV BL,0x64
+1800bea22 | 48 89 f3 | MOV | MOV RBX,RSI
+1800bea25 | c0 f0 06 | SHL | SHL AL,0x6
+1800bea28 | 48 03 75 00 | ADD | ADD RSI,qword ptr [RBP]
+1800bea2c | f9 | STC | STC
+1800bea2d | c0 c8 06 | ROR | ROR AL,0x6
+1800bea30 | 8a 06 | MOV | MOV AL,byte ptr [RSI]
+1800bea32 | d2 d9 | RCR | RCR CL,CL
+1800bea34 | 66 a9 90 9e | TEST | TEST AX,0x9e90
+1800bea38 | 66 d3 c9 | ROR | ROR CX,CL
+1800bea3b | 66 ff c9 | DEC | DEC CX
+1800bea3e | 00 d8 | ADD | ADD AL,BL
+1800bea40 | 66 0f ba e1 0a | BT | BT CX,0xa
+1800bea45 | 66 81 e9 b9 3f | SUB | SUB CX,0x3fb9
+1800bea4a | 66 0f be cb | MOVSX | MOVSX CX,BL
+1800bea4e | 48 0f c9 | BSWAP | BSWAP RCX
+1800bea51 | 48 81 ee ff ff ff ff | SUB | SUB RSI,-0x1
+1800bea58 | c0 c5 06 | ROL | ROL CH,0x6
+1800bea5b | f9 | STC | STC
+1800bea5c | 66 11 c1 | ADC | ADC CX,AX
+1800bea5f | d2 dd | RCR | RCR CH,CL
+1800bea61 | 2c 7f | SUB | SUB AL,0x7f
+1800bea63 | 66 0f b6 ca | MOVZX | MOVZX CX,DL
+1800bea67 | 66 ff c9 | DEC | DEC CX
+1800bea6a | e9 fb e6 ff ff | JMP | JMP 0x1800bd16a
+1800beab3 | e9 95 cd ff ff | JMP | JMP 0x1800bb84d

@@ -1,0 +1,8 @@
+# Opcode extraction for malware analysis
+# APT Group: 14-G0031-DustStorm
+# Malware Hash: 38238f14d63d14075824cc9afd9a3b84df9b9c2f1408ac440458196a9e690db6
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Mon Nov 04 00:58:32 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+

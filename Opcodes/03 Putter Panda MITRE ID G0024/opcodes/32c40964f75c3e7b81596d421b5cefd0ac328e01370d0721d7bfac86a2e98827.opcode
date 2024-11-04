@@ -1,0 +1,9 @@
+# Opcode extraction for malware analysis
+# APT Group: 03 Putter Panda MITRE ID G0024
+# Malware Hash: 32c40964f75c3e7b81596d421b5cefd0ac328e01370d0721d7bfac86a2e98827
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Sun Nov 03 21:19:54 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+0042ade2 | ff 25 00 20 40 00 | JMP | JMP qword ptr [0x0082cde8]

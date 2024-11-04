@@ -1,0 +1,182 @@
+# Opcode extraction for malware analysis
+# APT Group: 02 PITTYTIGER (MITRE ID G0011)
+# Malware Hash: 8df17aa2a351c09c3e331fdb6cb3947eb06f057b2ff17eed5d89b148d1380a4a
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Sun Nov 03 21:04:20 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+00402fdc | 55 | PUSH | PUSH RBP
+00402fdd | 8b ec | MOV | MOV EBP,ESP
+00402fdf | 6a ff | PUSH | PUSH -0x1
+00402fe1 | 68 70 71 40 00 | PUSH | PUSH 0x407170
+00402fe6 | 68 78 3e 40 00 | PUSH | PUSH 0x403e78
+00402feb | 64 a1 00 00 00 00 50 64 89 25 | MOV | MOV EAX,FS:[0x2589645000000000]
+00402ff5 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402ff7 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402ff9 | 83 ec 58 | SUB | SUB ESP,0x58
+00402ffc | 53 | PUSH | PUSH RBX
+00402ffd | 56 | PUSH | PUSH RSI
+00402ffe | 57 | PUSH | PUSH RDI
+00402fff | 89 65 e8 | MOV | MOV dword ptr [RBP + -0x18],ESP
+00403002 | ff 15 b8 70 40 00 | CALL | CALL qword ptr [0x0080a0c0]
+00403008 | 33 d2 | XOR | XOR EDX,EDX
+0040300a | 8a d4 | MOV | MOV DL,AH
+0040300c | 89 15 a4 cd 60 00 | MOV | MOV dword ptr [0x00a0fdb6],EDX
+00403012 | 8b c8 | MOV | MOV ECX,EAX
+00403014 | 81 e1 ff 00 00 00 | AND | AND ECX,0xff
+0040301a | 89 0d a0 cd 60 00 | MOV | MOV dword ptr [0x00a0fdc0],ECX
+00403020 | c1 e1 08 | SHL | SHL ECX,0x8
+00403023 | 03 ca | ADD | ADD ECX,EDX
+00403025 | 89 0d 9c cd 60 00 | MOV | MOV dword ptr [0x00a0fdc7],ECX
+0040302b | c1 e8 10 | SHR | SHR EAX,0x10
+0040302e | a3 98 cd 60 00 6a 01 e8 e9 | MOV | MOV [0xe9e8016a0060cd98],EAX
+00403037 | 0c 00 | OR | OR AL,0x0
+00403039 | 00 59 85 | ADD | ADD byte ptr [RCX + -0x7b],BL
+0040303c | c0 75 08 6a | SHL | SHL byte ptr [RBP + 0x8],0x6a
+00403040 | 1c e8 | SBB | SBB AL,0xe8
+00403042 | c3 | RET | RET
+00403d80 | 55 | PUSH | PUSH RBP
+00403d81 | 8b ec | MOV | MOV EBP,ESP
+00403d83 | 53 | PUSH | PUSH RBX
+00403d84 | 56 | PUSH | PUSH RSI
+00403d85 | 57 | PUSH | PUSH RDI
+00403d86 | 55 | PUSH | PUSH RBP
+00403d87 | 6a 00 | PUSH | PUSH 0x0
+00403d89 | 6a 00 | PUSH | PUSH 0x0
+00403d8b | 68 98 3d 40 00 | PUSH | PUSH 0x403d98
+00403d90 | ff 75 08 | PUSH | PUSH qword ptr [RBP + 0x8]
+00403d93 | e8 8c 2c 00 00 | CALL | CALL 0x00406a24
+00403d98 | 5d | POP | POP RBP
+00403d99 | 5f | POP | POP RDI
+00403d9a | 5e | POP | POP RSI
+00403d9b | 5b | POP | POP RBX
+00403d9c | 8b e5 | MOV | MOV ESP,EBP
+00403d9e | 5d | POP | POP RBP
+00403d9f | c3 | RET | RET
+00403da0 | 8b 4c 24 04 | MOV | MOV ECX,dword ptr [RSP + 0x4]
+00403da4 | f7 41 04 06 00 00 00 | TEST | TEST dword ptr [RCX + 0x4],0x6
+00403dab | b8 01 00 00 00 | MOV | MOV EAX,0x1
+00403db0 | 74 0f | JZ | JZ 0x00403dc1
+00403db2 | 8b 44 24 08 | MOV | MOV EAX,dword ptr [RSP + 0x8]
+00403db6 | 8b 54 24 10 | MOV | MOV EDX,dword ptr [RSP + 0x10]
+00403dba | 89 02 | MOV | MOV dword ptr [RDX],EAX
+00403dbc | b8 03 00 00 00 | MOV | MOV EAX,0x3
+00403dc1 | c3 | RET | RET
+00403dc2 | 53 | PUSH | PUSH RBX
+00403dc3 | 56 | PUSH | PUSH RSI
+00403dc4 | 57 | PUSH | PUSH RDI
+00403dc5 | 8b 44 24 10 | MOV | MOV EAX,dword ptr [RSP + 0x10]
+00403dc9 | 50 | PUSH | PUSH RAX
+00403dca | 6a fe | PUSH | PUSH -0x2
+00403dcc | 68 a0 3d 40 00 | PUSH | PUSH 0x403da0
+00403dd1 | 64 ff 35 00 00 00 00 | PUSH | PUSH qword ptr FS:[0x403dd8]
+00403dd8 | 64 89 25 00 00 00 00 | MOV | MOV dword ptr FS:[0x403ddf],ESP
+00403ddf | 8b 44 24 20 | MOV | MOV EAX,dword ptr [RSP + 0x20]
+00403de3 | 8b 58 08 | MOV | MOV EBX,dword ptr [RAX + 0x8]
+00403de6 | 8b 70 0c | MOV | MOV ESI,dword ptr [RAX + 0xc]
+00403de9 | 83 fe ff | CMP | CMP ESI,-0x1
+00403dec | 74 2e | JZ | JZ 0x00403e1c
+00403dee | 3b 74 24 24 | CMP | CMP ESI,dword ptr [RSP + 0x24]
+00403df2 | 74 28 | JZ | JZ 0x00403e1c
+00403df4 | 8d 34 76 | LEA | LEA ESI,[RSI + RSI*0x2]
+00403df7 | 8b 0c b3 | MOV | MOV ECX,dword ptr [RBX + RSI*0x4]
+00403dfa | 89 4c 24 08 | MOV | MOV dword ptr [RSP + 0x8],ECX
+00403dfe | 89 48 0c | MOV | MOV dword ptr [RAX + 0xc],ECX
+00403e01 | 83 7c b3 04 00 | CMP | CMP dword ptr [RBX + RSI*0x4 + 0x4],0x0
+00403e06 | 75 12 | JNZ | JNZ 0x00403e1a
+00403e08 | 68 01 01 00 00 | PUSH | PUSH 0x101
+00403e0d | 8b 44 b3 08 | MOV | MOV EAX,dword ptr [RBX + RSI*0x4 + 0x8]
+00403e11 | e8 40 00 00 00 | CALL | CALL 0x00403e56
+00403e16 | ff 54 b3 08 | CALL | CALL qword ptr [RBX + RSI*0x4 + 0x8]
+00403e1a | eb c3 | JMP | JMP 0x00403ddf
+00403e1c | 64 8f 05 00 00 00 00 | POP | POP qword ptr FS:[0x403e23]
+00403e23 | 83 c4 0c | ADD | ADD ESP,0xc
+00403e26 | 5f | POP | POP RDI
+00403e27 | 5e | POP | POP RSI
+00403e28 | 5b | POP | POP RBX
+00403e29 | c3 | RET | RET
+00403e56 | 53 | PUSH | PUSH RBX
+00403e57 | 51 | PUSH | PUSH RCX
+00403e58 | bb 64 91 40 00 | MOV | MOV EBX,0x409164
+00403e5d | 8b 4d 08 | MOV | MOV ECX,dword ptr [RBP + 0x8]
+00403e60 | 89 4b 08 | MOV | MOV dword ptr [RBX + 0x8],ECX
+00403e63 | 89 43 04 | MOV | MOV dword ptr [RBX + 0x4],EAX
+00403e66 | 89 6b 0c | MOV | MOV dword ptr [RBX + 0xc],EBP
+00403e69 | 59 | POP | POP RCX
+00403e6a | 5b | POP | POP RBX
+00403e6b | c2 04 00 | RET | RET 0x4
+00403e78 | 55 | PUSH | PUSH RBP
+00403e79 | 8b ec | MOV | MOV EBP,ESP
+00403e7b | 83 ec 08 | SUB | SUB ESP,0x8
+00403e7e | 53 | PUSH | PUSH RBX
+00403e7f | 56 | PUSH | PUSH RSI
+00403e80 | 57 | PUSH | PUSH RDI
+00403e81 | 55 | PUSH | PUSH RBP
+00403e82 | fc | CLD | CLD
+00403e83 | 8b 5d 0c | MOV | MOV EBX,dword ptr [RBP + 0xc]
+00403e86 | 8b 45 08 | MOV | MOV EAX,dword ptr [RBP + 0x8]
+00403e89 | f7 40 04 06 00 00 00 | TEST | TEST dword ptr [RAX + 0x4],0x6
+00403e90 | 0f 85 82 00 00 00 | JNZ | JNZ 0x00403f18
+00403e96 | 89 45 f8 | MOV | MOV dword ptr [RBP + -0x8],EAX
+00403e99 | 8b 45 10 | MOV | MOV EAX,dword ptr [RBP + 0x10]
+00403e9c | 89 45 fc | MOV | MOV dword ptr [RBP + -0x4],EAX
+00403e9f | 8d 45 f8 | LEA | LEA EAX,[RBP + -0x8]
+00403ea2 | 89 43 fc | MOV | MOV dword ptr [RBX + -0x4],EAX
+00403ea5 | 8b 73 0c | MOV | MOV ESI,dword ptr [RBX + 0xc]
+00403ea8 | 8b 7b 08 | MOV | MOV EDI,dword ptr [RBX + 0x8]
+00403eab | 83 fe ff | CMP | CMP ESI,-0x1
+00403eae | 74 61 | JZ | JZ 0x00403f11
+00403eb0 | 8d 0c 76 | LEA | LEA ECX,[RSI + RSI*0x2]
+00403eb3 | 83 7c 8f 04 00 | CMP | CMP dword ptr [RDI + RCX*0x4 + 0x4],0x0
+00403eb8 | 74 45 | JZ | JZ 0x00403eff
+00403eba | 56 | PUSH | PUSH RSI
+00403ebb | 55 | PUSH | PUSH RBP
+00403ebc | 8d 6b 10 | LEA | LEA EBP,[RBX + 0x10]
+00403ebf | ff 54 8f 04 | CALL | CALL qword ptr [RDI + RCX*0x4 + 0x4]
+00403ec3 | 5d | POP | POP RBP
+00403ec4 | 5e | POP | POP RSI
+00403ec5 | 8b 5d 0c | MOV | MOV EBX,dword ptr [RBP + 0xc]
+00403ec8 | 0b c0 | OR | OR EAX,EAX
+00403eca | 74 33 | JZ | JZ 0x00403eff
+00403ecc | 78 3c | JS | JS 0x00403f0a
+00403ece | 8b 7b 08 | MOV | MOV EDI,dword ptr [RBX + 0x8]
+00403ed1 | 53 | PUSH | PUSH RBX
+00403ed2 | e8 a9 fe ff ff | CALL | CALL 0x00403d80
+00403ed7 | 83 c4 04 | ADD | ADD ESP,0x4
+00403eda | 8d 6b 10 | LEA | LEA EBP,[RBX + 0x10]
+00403edd | 56 | PUSH | PUSH RSI
+00403ede | 53 | PUSH | PUSH RBX
+00403edf | e8 de fe ff ff | CALL | CALL 0x00403dc2
+00403ee4 | 83 c4 08 | ADD | ADD ESP,0x8
+00403ee7 | 8d 0c 76 | LEA | LEA ECX,[RSI + RSI*0x2]
+00403eea | 6a 01 | PUSH | PUSH 0x1
+00403eec | 8b 44 8f 08 | MOV | MOV EAX,dword ptr [RDI + RCX*0x4 + 0x8]
+00403ef0 | e8 61 ff ff ff | CALL | CALL 0x00403e56
+00403ef5 | 8b 04 8f | MOV | MOV EAX,dword ptr [RDI + RCX*0x4]
+00403ef8 | 89 43 0c | MOV | MOV dword ptr [RBX + 0xc],EAX
+00403efb | ff 54 8f 08 | CALL | CALL qword ptr [RDI + RCX*0x4 + 0x8]
+00403eff | 8b 7b 08 | MOV | MOV EDI,dword ptr [RBX + 0x8]
+00403f02 | 8d 0c 76 | LEA | LEA ECX,[RSI + RSI*0x2]
+00403f05 | 8b 34 8f | MOV | MOV ESI,dword ptr [RDI + RCX*0x4]
+00403f08 | eb a1 | JMP | JMP 0x00403eab
+00403f0a | b8 00 00 00 00 | MOV | MOV EAX,0x0
+00403f0f | eb 1c | JMP | JMP 0x00403f2d
+00403f11 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+00403f16 | eb 15 | JMP | JMP 0x00403f2d
+00403f18 | 55 | PUSH | PUSH RBP
+00403f19 | 8d 6b 10 | LEA | LEA EBP,[RBX + 0x10]
+00403f1c | 6a ff | PUSH | PUSH -0x1
+00403f1e | 53 | PUSH | PUSH RBX
+00403f1f | e8 9e fe ff ff | CALL | CALL 0x00403dc2
+00403f24 | 83 c4 08 | ADD | ADD ESP,0x8
+00403f27 | 5d | POP | POP RBP
+00403f28 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+00403f2d | 5d | POP | POP RBP
+00403f2e | 5f | POP | POP RDI
+00403f2f | 5e | POP | POP RSI
+00403f30 | 5b | POP | POP RBX
+00403f31 | 8b e5 | MOV | MOV ESP,EBP
+00403f33 | 5d | POP | POP RBP
+00403f34 | c3 | RET | RET
+00406a24 | ff 25 08 71 40 00 | JMP | JMP qword ptr [0x0080db32]

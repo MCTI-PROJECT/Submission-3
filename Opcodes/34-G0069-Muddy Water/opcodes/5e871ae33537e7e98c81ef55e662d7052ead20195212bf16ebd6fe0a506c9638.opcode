@@ -1,0 +1,9 @@
+# Opcode extraction for malware analysis
+# APT Group: 34-G0069-Muddy Water
+# Malware Hash: 5e871ae33537e7e98c81ef55e662d7052ead20195212bf16ebd6fe0a506c9638
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Mon Nov 04 05:17:36 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+0043010e | ff 25 00 20 40 00 | JMP | JMP qword ptr [0x00832114]

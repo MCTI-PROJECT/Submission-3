@@ -1,0 +1,8 @@
+# Opcode extraction for malware analysis
+# APT Group: 04 ROCKE (MITRE ID G0039)
+# Malware Hash: 28ea5d2e44538cd7fec11a28cce7c86fe208b2e8f53d57bf8a18957adb90c5ab
+# Executable format: Raw Binary
+# Processor: x86
+# Creation date: Sun Nov 03 21:39:34 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+

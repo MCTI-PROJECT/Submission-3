@@ -1,0 +1,888 @@
+# Opcode extraction for malware analysis
+# APT Group: 33-G0059 - Magic Hound
+# Malware Hash: cd2ba296828660ecd07a36e8931b851dda0802069ed926b3161745aae9aa6daa
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Mon Nov 04 05:13:40 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+004020a8 | 38 a4 00 00 00 7b 02 | CMP | CMP byte ptr [RAX + RAX*0x1 + 0x27b0000],AH
+004020af | 00 00 | ADD | ADD byte ptr [RAX],AL
+004020b1 | 04 7e | ADD | ADD AL,0x7e
+004020b3 | 67 02 00 | ADD | ADD AL,byte ptr [EAX]
+004020b6 | 04 38 | ADD | ADD AL,0x38
+004020b8 | 9b | WAIT | WAIT
+004020b9 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004020bb | 00 7b 05 | ADD | ADD byte ptr [RBX + 0x5],BH
+004020be | 00 00 | ADD | ADD byte ptr [RAX],AL
+004020c0 | 04 38 | ADD | ADD AL,0x38
+004020c2 | 97 | XCHG | XCHG EAX,EDI
+004020c3 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004020c5 | 00 38 | ADD | ADD byte ptr [RAX],BH
+004020c7 | 9c | PUSHFQ | PUSHFQ
+004020c8 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004020ca | 00 2c 2f | ADD | ADD byte ptr [RDI + RBP*0x1],CH
+004020cd | 38 9f 00 00 00 7e | CMP | CMP byte ptr [RDI + 0x7e000000],BL
+004020d3 | 67 02 00 | ADD | ADD AL,byte ptr [EAX]
+004020d6 | 04 38 | ADD | ADD AL,0x38
+004020d8 | 9b | WAIT | WAIT
+004020d9 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004020db | 00 7b 05 | ADD | ADD byte ptr [RBX + 0x5],BH
+004020de | 00 00 | ADD | ADD byte ptr [RAX],AL
+004020e0 | 04 38 | ADD | ADD AL,0x38
+004020e2 | 97 | XCHG | XCHG EAX,EDI
+004020e3 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004020e5 | 00 38 | ADD | ADD byte ptr [RAX],BH
+004020e7 | 9c | PUSHFQ | PUSHFQ
+004020e8 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004020ea | 00 7e a0 | ADD | ADD byte ptr [RSI + -0x60],BH
+004020ed | 02 00 | ADD | ADD AL,byte ptr [RAX]
+004020ef | 04 38 | ADD | ADD AL,0x38
+004020f1 | 9c | PUSHFQ | PUSHFQ
+004020f2 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004020f4 | 00 17 | ADD | ADD byte ptr [RDI],DL
+004020f6 | 28 f4 | SUB | SUB AH,DH
+004020f8 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00402149 | 10 28 | ADC | ADC byte ptr [RAX],CH
+0040214b | f7 01 00 06 26 2a | TEST | TEST dword ptr [RCX],0x2a260600
+00402151 | 02 38 | ADD | ADD BH,byte ptr [RAX]
+00402153 | 56 | PUSH | PUSH RSI
+004021a4 | 7e a3 | JLE | JLE 0x00402149
+004021a6 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+004021a8 | 04 7e | ADD | ADD AL,0x7e
+004021aa | 69 02 00 04 7e 67 | IMUL | IMUL EAX,dword ptr [RDX],0x677e0400
+004021b0 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+004021b2 | 04 2b | ADD | ADD AL,0x2b
+004021b4 | 56 | PUSH | PUSH RSI
+004021b5 | 7b 05 | JNP | JNP 0x004021bc
+004021b7 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004021b9 | 04 2b | ADD | ADD AL,0x2b
+004021bb | 52 | PUSH | PUSH RDX
+004021bc | 2b 57 72 | SUB | SUB EDX,dword ptr [RDI + 0x72]
+004021bf | 55 | PUSH | PUSH RBP
+004021c0 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004021c2 | 70 2b | JO | JO 0x004021ef
+004021c4 | 57 | PUSH | PUSH RDI
+004021c5 | 2c 32 | SUB | SUB AL,0x32
+004021c7 | 7e a6 | JLE | JLE 0x0040216f
+004021c9 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+004021cb | 04 7e | ADD | ADD AL,0x7e
+004021cd | 69 02 00 04 7e 67 | IMUL | IMUL EAX,dword ptr [RDX],0x677e0400
+004021d3 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+004021d5 | 04 2b | ADD | ADD AL,0x2b
+004021d7 | 4b 7b 05 | JNP | JNP 0x004021df
+004021da | 00 00 | ADD | ADD byte ptr [RAX],AL
+004021dc | 04 2b | ADD | ADD AL,0x2b
+004021de | 47 2b 4c 2b 51 | SUB | SUB R9D,dword ptr [R11 + R13*0x1 + 0x51]
+004021e3 | 1c 31 | SBB | SBB AL,0x31
+004021e5 | 13 7e ae | ADC | ADC EDI,dword ptr [RSI + -0x52]
+004021e8 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+004021ea | 04 2b | ADD | ADD AL,0x2b
+004021ec | 4e 7b 07 | JNP | JNP 0x004021f6
+004021ef | 00 00 | ADD | ADD byte ptr [RAX],AL
+004021f1 | 04 17 | ADD | ADD AL,0x17
+004021f3 | 28 00 | SUB | SUB byte ptr [RAX],AL
+004021f5 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00402610 | 02 28 | ADD | ADD CH,byte ptr [RAX]
+00402612 | 76 00 | JBE | JBE 0x00402614
+00402614 | 00 0a | ADD | ADD byte ptr [RDX],CL
+00402616 | 7d 0c | JGE | JGE 0x00402624
+00402618 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040261a | 04 02 | ADD | ADD AL,0x2
+00402624 | 28 76 00 | SUB | SUB byte ptr [RSI],DH
+00402627 | 00 0a | ADD | ADD byte ptr [RDX],CL
+00402629 | 7d 12 | JGE | JGE 0x0040263d
+0040262b | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040262d | 04 02 | ADD | ADD AL,0x2
+0040262f | 28 58 01 | SUB | SUB byte ptr [RAX + 0x1],BL
+00402632 | 00 0a | ADD | ADD byte ptr [RDX],CL
+00402634 | 02 28 | ADD | ADD CH,byte ptr [RAX]
+00402636 | 21 00 | AND | AND dword ptr [RAX],EAX
+00402638 | 00 06 | ADD | ADD byte ptr [RSI],AL
+0040263a | 02 03 | ADD | ADD AL,byte ptr [RBX]
+0040263c | 7d 0e | JGE | JGE 0x0040264c
+0040263e | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402640 | 04 02 | ADD | ADD AL,0x2
+00402642 | 04 7d | ADD | ADD AL,0x7d
+00402644 | 0f 00 00 | SLDT | SLDT dword ptr [RAX]
+00402647 | 04 02 | ADD | ADD AL,0x2
+00402649 | 02 7b 16 | ADD | ADD BH,byte ptr [RBX + 0x16]
+0040264c | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040264e | 04 73 | ADD | ADD AL,0x73
+00402650 | bb 00 00 06 7d | MOV | MOV EBX,0x7d060000
+00402655 | 09 00 | OR | OR dword ptr [RAX],EAX
+00402657 | 00 04 02 | ADD | ADD byte ptr [RDX + RAX*0x1],AL
+0040265a | 7b 16 | JNP | JNP 0x00402672
+0040265c | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040265e | 04 28 | ADD | ADD AL,0x28
+00402660 | 70 00 | JO | JO 0x00402662
+00402662 | 00 06 | ADD | ADD byte ptr [RSI],AL
+00402664 | 28 60 01 | SUB | SUB byte ptr [RAX + 0x1],AH
+00402667 | 00 0a | ADD | ADD byte ptr [RDX],CL
+00402669 | 72 c9 | JC | JC 0x00402634
+0040266b | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040266d | 70 28 | JO | JO 0x00402697
+0040266f | 21 00 | AND | AND dword ptr [RAX],EAX
+00402671 | 00 0a | ADD | ADD byte ptr [RDX],CL
+00402673 | 26 02 fe | ADD | ADD BH,DH
+00402697 | 04 16 | ADD | ADD AL,0x16
+00402699 | 6f | OUTSD | OUTSD DX,RSI
+0040269a | 2d 00 00 0a 02 | SUB | SUB EAX,0x20a0000
+0040269f | 7b 1e | JNP | JNP 0x004026bf
+004026a1 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004026a3 | 04 16 | ADD | ADD AL,0x16
+004026a5 | 6f | OUTSD | OUTSD DX,RSI
+004026a6 | 2d 00 00 0a 02 | SUB | SUB EAX,0x20a0000
+004026ab | 05 28 0a 00 00 | ADD | ADD EAX,0xa28
+004026bf | fe 06 | INC | INC byte ptr [RSI]
+004026c1 | 22 00 | AND | AND AL,byte ptr [RAX]
+004026c3 | 00 06 | ADD | ADD byte ptr [RSI],AL
+004026c5 | 73 63 | JNC | JNC 0x0040272a
+004026c7 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+004026c9 | 0a 73 64 | OR | OR DH,byte ptr [RBX + 0x64]
+004026cc | 01 00 | ADD | ADD dword ptr [RAX],EAX
+004026ce | 0a 28 | OR | OR CH,byte ptr [RAX]
+004026d0 | 42 00 00 | ADD | ADD byte ptr [RAX],AL
+004026d3 | 0a 2a | OR | OR CH,byte ptr [RDX]
+004026d5 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402759 | 7e 36 | JLE | JLE 0x00402791
+0040275b | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040275d | 04 2b | ADD | ADD AL,0x2b
+00402794 | 38 08 | CMP | CMP byte ptr [RAX],CL
+00402796 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00402798 | 00 7b 65 | ADD | ADD byte ptr [RBX + 0x65],BH
+0040279b | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040279d | 0a 7e a8 | OR | OR BH,byte ptr [RSI + -0x58]
+004027a0 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+004027a2 | 04 38 | ADD | ADD AL,0x38
+004027a4 | ff 00 | INC | INC dword ptr [RAX]
+004027a6 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004027a8 | 7b 14 | JNP | JNP 0x004027be
+004027aa | 00 00 | ADD | ADD byte ptr [RAX],AL
+004027ac | 04 38 | ADD | ADD AL,0x38
+004027ae | fb | STI | STI
+004027af | 00 00 | ADD | ADD byte ptr [RAX],AL
+004027b1 | 00 6a 31 | ADD | ADD byte ptr [RDX + 0x31],CH
+004027b4 | 23 7e 18 | AND | AND EDI,dword ptr [RSI + 0x18]
+004027b7 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+004027b9 | 04 38 | ADD | ADD AL,0x38
+004027bb | f8 | CLC | CLC
+004027bc | 00 00 | ADD | ADD byte ptr [RAX],AL
+004027be | 00 7b 14 | ADD | ADD byte ptr [RBX + 0x14],BH
+004027c1 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004027c3 | 04 38 | ADD | ADD AL,0x38
+004027c5 | f4 | HLT | HLT
+00402c35 | 2b 07 | SUB | SUB EAX,dword ptr [RDI]
+00402c45 | 2a 00 | SUB | SUB AL,byte ptr [RAX]
+00402c49 | 2b 07 | SUB | SUB EAX,dword ptr [RDI]
+00402c64 | 1a 2c 68 | SBB | SBB CH,byte ptr [RAX + RBP*0x2]
+00402c67 | 7e 6d | JLE | JLE 0x00402cd6
+00402c69 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00402c6b | 04 7e | ADD | ADD AL,0x7e
+00402c6d | 4b 03 00 | ADD | ADD RAX,qword ptr [R8]
+00402c70 | 04 7e | ADD | ADD AL,0x7e
+00402c72 | 49 03 00 | ADD | ADD RAX,qword ptr [R8]
+00402c75 | 04 38 | ADD | ADD AL,0x38
+00402c77 | 85 00 | TEST | TEST dword ptr [RAX],EAX
+00402c79 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402c7b | 7b 16 | JNP | JNP 0x00402c93
+00402c7d | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402c7f | 04 38 | ADD | ADD AL,0x38
+00402c81 | 81 00 00 00 38 86 | ADD | ADD dword ptr [RAX],0x86380000
+00402c87 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402c89 | 00 74 13 00 | ADD | ADD byte ptr [RBX + RDX*0x1],DH
+00402c8d | 00 01 | ADD | ADD byte ptr [RCX],AL
+00402c8f | 38 86 00 00 00 38 | CMP | CMP byte ptr [RSI + 0x38000000],AL
+00402c95 | 8b 00 | MOV | MOV EAX,dword ptr [RAX]
+00402c97 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402c99 | 38 8c 00 00 00 38 91 | CMP | CMP byte ptr [RAX + RAX*0x1 + -0x6ec80000],CL
+00402ca0 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402ca2 | 00 7e fa | ADD | ADD byte ptr [RSI + -0x6],BH
+00402ca5 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00402ca7 | 04 38 | ADD | ADD AL,0x38
+00402ca9 | 8d 00 | LEA | LEA EAX,[RAX]
+00402cab | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402cad | 72 4f | JC | JC 0x00402cfe
+00402caf | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00402cb1 | 70 38 | JO | JO 0x00402ceb
+00402cb3 | 89 00 | MOV | MOV dword ptr [RAX],EAX
+00402cb5 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00402cb7 | 1a 2c 45 7e fc 02 00 | SBB | SBB CH,byte ptr [0x2fc7e + RAX*0x2]
+00402cbe | 04 07 | ADD | ADD AL,0x7
+00402cc0 | 7e 4e | JLE | JLE 0x00402d10
+00402cc2 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+00402cc4 | 04 28 | ADD | ADD AL,0x28
+00402cc6 | 45 02 00 | ADD | ADD R8B,byte ptr [R8]
+00402cd6 | 28 00 | SUB | SUB byte ptr [RAX],AL
+00402cd8 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00402ceb | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+00402ced | 04 7e | ADD | ADD AL,0x7e
+00402cef | 6f | OUTSD | OUTSD DX,RSI
+00402cf0 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00402cf2 | 04 07 | ADD | ADD AL,0x7
+00402cf4 | 28 f1 | SUB | SUB CL,DH
+00402cf6 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00402d10 | 28 42 02 | SUB | SUB byte ptr [RDX + 0x2],AL
+00402d13 | 00 06 | ADD | ADD byte ptr [RSI],AL
+00402d15 | 38 70 ff | CMP | CMP byte ptr [RAX + -0x1],DH
+00402da9 | 2a 00 | SUB | SUB AL,byte ptr [RAX]
+00402f75 | 2b 0f | SUB | SUB ECX,dword ptr [RDI]
+00402f77 | 2b 10 | SUB | SUB EDX,dword ptr [RAX]
+00402f79 | 81 02 00 00 1b 2b | ADD | ADD dword ptr [RDX],0x2b1b0000
+00402f7f | 0c 71 | OR | OR AL,0x71
+00402f81 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00402f83 | 00 1b | ADD | ADD byte ptr [RBX],BL
+00402f85 | 2a 02 | SUB | SUB AL,byte ptr [RDX]
+00402f87 | 2b ee | SUB | SUB EBP,ESI
+00402f89 | 03 2b | ADD | ADD EBP,dword ptr [RBX]
+00402f8b | ed | IN | IN EAX,DX
+00402f8c | 02 2b | ADD | ADD CH,byte ptr [RBX]
+00402f8e | f1 | INT1 | INT1
+00402f9c | 7e 75 | JLE | JLE 0x00403013
+00402f9e | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00402fa0 | 04 2b | ADD | ADD AL,0x2b
+00402fa2 | 2b 7b 6f | SUB | SUB EDI,dword ptr [RBX + 0x6f]
+00402fa5 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00402fa7 | 0a 2b | OR | OR CH,byte ptr [RBX]
+00402ff9 | 2b 09 | SUB | SUB ECX,dword ptr [RCX]
+0040301c | 7e 6a | JLE | JLE 0x00403088
+0040301e | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+00403020 | 04 7e | ADD | ADD AL,0x7e
+00403022 | 45 03 00 | ADD | ADD R8D,dword ptr [R8]
+00403025 | 04 2b | ADD | ADD AL,0x2b
+00403037 | 00 2b | ADD | ADD byte ptr [RBX],CH
+00403039 | 31 23 | XOR | XOR dword ptr [RBX],ESP
+0040303b | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040303d | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040303f | 00 00 | ADD | ADD byte ptr [RAX],AL
+00403079 | 7e bc | JLE | JLE 0x00403037
+0040307b | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0040307d | 04 2b | ADD | ADD AL,0x2b
+0040307f | 09 7b 1e | OR | OR dword ptr [RBX + 0x1e],EDI
+00403082 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00403084 | 04 16 | ADD | ADD AL,0x16
+00403088 | 2a 02 | SUB | SUB AL,byte ptr [RDX]
+0040308a | 2b f4 | SUB | SUB ESI,ESP
+0040308c | 28 00 | SUB | SUB byte ptr [RAX],AL
+0040308e | 02 00 | ADD | ADD AL,byte ptr [RAX]
+004030a0 | 7e 6e | JLE | JLE 0x00403110
+004030a2 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+004030a4 | 04 7e | ADD | ADD AL,0x7e
+004030a6 | 6c | INSB | INSB RDI,DX
+004030a7 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+004030a9 | 04 2b | ADD | ADD AL,0x2b
+004030ab | 1c 2b | SBB | SBB AL,0x2b
+004030ad | 1d 7e 71 01 00 | SBB | SBB EAX,0x1717e
+004030b2 | 0a 2b | OR | OR CH,byte ptr [RBX]
+004030b4 | 1d 2c 0d 16 2d | SBB | SBB EAX,0x2d160d2c
+004030b9 | e6 7e | OUT | OUT 0x7e,AL
+004030bb | 76 03 | JBE | JBE 0x004030c0
+004030bd | 00 04 2b | ADD | ADD byte ptr [RBX + RBP*0x1],AL
+004030c0 | 18 18 | SBB | SBB byte ptr [RAX],BL
+004030c2 | 2b 18 | SUB | SUB EBX,dword ptr [RAX]
+004030f0 | 7e 78 | JLE | JLE 0x0040316a
+004030f2 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+004030f4 | 04 7e | ADD | ADD AL,0x7e
+004030f6 | 6c | INSB | INSB RDI,DX
+004030f7 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+004030f9 | 04 2b | ADD | ADD AL,0x2b
+004030fb | 54 | PUSH | PUSH RSP
+004030fc | 2b 55 7e | SUB | SUB EDX,dword ptr [RBP + 0x7e]
+004030ff | 71 01 | JNO | JNO 0x00403102
+00403101 | 00 0a | ADD | ADD byte ptr [RDX],CL
+00403103 | 2b 55 74 | SUB | SUB EDX,dword ptr [RBP + 0x74]
+00403106 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+00403108 | 00 1b | ADD | ADD byte ptr [RBX],BL
+0040310a | 2b 55 7e | SUB | SUB EDX,dword ptr [RBP + 0x7e]
+00403110 | 04 2b | ADD | ADD AL,0x2b
+00403112 | 51 | PUSH | PUSH RCX
+00403113 | 7b 21 | JNP | JNP 0x00403136
+00403115 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00403117 | 04 16 | ADD | ADD AL,0x16
+00403119 | 2b 4c 7e bc | SUB | SUB ECX,dword ptr [RSI + RDI*0x2 + -0x44]
+0040311d | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0040311f | 04 2b | ADD | ADD AL,0x2b
+00403121 | 4c 7b 1e | JNP | JNP 0x00403142
+00403124 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00403126 | 04 16 | ADD | ADD AL,0x16
+00403128 | 2b 47 2b | SUB | SUB EAX,dword ptr [RDI + 0x2b]
+00403142 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040316a | 00 06 | ADD | ADD byte ptr [RSI],AL
+0040316c | 2b ad 02 2b b1 28 | SUB | SUB EBP,dword ptr [RBP + 0x28b12b02]
+00403172 | 00 02 | ADD | ADD byte ptr [RDX],AL
+00403174 | 00 06 | ADD | ADD byte ptr [RSI],AL
+00403176 | 2b b2 02 2b b1 00 | SUB | SUB ESI,dword ptr [RDX + 0xb12b02]
+0040466d | 2b 0f | SUB | SUB ECX,dword ptr [RDI]
+0040466f | 7e ce | JLE | JLE 0x0040463f
+00404671 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+00404673 | 04 2b | ADD | ADD AL,0x2b
+00404675 | 0b 2b | OR | OR EBP,dword ptr [RBX]
+00404677 | 0c 16 | OR | OR AL,0x16
+00404679 | 2b 10 | SUB | SUB EDX,dword ptr [RAX]
+0040467b | 2b 15 2a 02 2b ee | SUB | SUB EDX,dword ptr [0xffffffffee6b48ab]
+00404681 | 03 2b | ADD | ADD EBP,dword ptr [RBX]
+00404683 | f2 28 e4 | SUB | SUB AH,AH
+00404686 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+004046a8 | 7e a3 | JLE | JLE 0x0040464d
+004046aa | 02 00 | ADD | ADD AL,byte ptr [RAX]
+004046ac | 04 7e | ADD | ADD AL,0x7e
+004046ae | 79 02 | JNS | JNS 0x004046b2
+004046b0 | 00 04 7e | ADD | ADD byte ptr [RSI + RDI*0x2],AL
+004046b3 | d0 03 | ROL | ROL byte ptr [RBX],0x1
+004046b5 | 00 04 38 | ADD | ADD byte ptr [RAX + RDI*0x1],AL
+004046b8 | cf | IRETD | IRETD
+00404b28 | 7e 5a | JLE | JLE 0x00404b84
+00404b2a | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+00404b2c | 04 7e | ADD | ADD AL,0x7e
+00404b2e | 71 02 | JNO | JNO 0x00404b32
+00404b30 | 00 04 38 | ADD | ADD byte ptr [RAX + RDI*0x1],AL
+00404b33 | 1d 01 00 00 38 | SBB | SBB EAX,0x38000001
+00404b84 | 44 03 00 | ADD | ADD R8D,dword ptr [RAX]
+00404b87 | 04 07 | ADD | ADD AL,0x7
+00404b89 | 72 99 | JC | JC 0x00404b24
+00404b8b | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00404b8d | 70 7e | JO | JO 0x00404c0d
+00404b8f | 73 02 | JNC | JNC 0x00404b93
+00404b91 | 00 04 04 | ADD | ADD byte ptr [RSP + RAX*0x1],AL
+00404b94 | 28 f1 | SUB | SUB CL,DH
+00404b96 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00404c0d | 11 04 11 | ADC | ADC dword ptr [RCX + RDX*0x1],EAX
+00404c10 | 05 28 5d 02 00 | ADD | ADD EAX,0x25d28
+00404cbc | 38 82 00 00 00 7b | CMP | CMP byte ptr [RDX + 0x7b000000],AL
+00404cc2 | 98 | CWDE | CWDE
+00404cc3 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00404cc5 | 0a 38 | OR | OR BH,byte ptr [RAX]
+00404cc7 | 7e 00 | JLE | JLE 0x00404cc9
+00404cc9 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00404ccb | 38 7f 00 | CMP | CMP byte ptr [RDI],BH
+00404cce | 00 00 | ADD | ADD byte ptr [RAX],AL
+00404cd0 | 7b 08 | JNP | JNP 0x00404cda
+00404cd2 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00404cd4 | 04 2c | ADD | ADD AL,0x2c
+00404cda | 00 04 38 | ADD | ADD byte ptr [RAX + RDI*0x1],AL
+00404cdd | 74 00 | JZ | JZ 0x00404cdf
+00404cdf | 00 00 | ADD | ADD byte ptr [RAX],AL
+00404ce1 | 7b 0c | JNP | JNP 0x00404cef
+00404ce3 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00404ce5 | 04 2b | ADD | ADD AL,0x2b
+00404ce7 | 73 38 | JNC | JNC 0x00404d21
+00404ce9 | 74 00 | JZ | JZ 0x00404ceb
+00404ceb | 00 00 | ADD | ADD byte ptr [RAX],AL
+00404ced | 7e c8 | JLE | JLE 0x00404cb7
+00404cef | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00404cf1 | 04 38 | ADD | ADD AL,0x38
+00404cf3 | 74 00 | JZ | JZ 0x00404cf5
+00404cf5 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00404d21 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+00404d81 | 7e 36 | JLE | JLE 0x00404db9
+00404d83 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+00404d85 | 04 2b | ADD | ADD AL,0x2b
+00404dbc | 38 df | CMP | CMP BH,BL
+00404dbe | 00 00 | ADD | ADD byte ptr [RAX],AL
+00404dc0 | 00 7b 65 | ADD | ADD byte ptr [RBX + 0x65],BH
+00404dc3 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00404dc5 | 0a 16 | OR | OR DL,byte ptr [RSI]
+00404dc7 | 3a 9d 00 00 00 7e | CMP | CMP BL,byte ptr [RBP + 0x7e000000]
+00404dcd | a8 02 | TEST | TEST AL,0x2
+00404dcf | 00 04 38 | ADD | ADD byte ptr [RAX + RDI*0x1],AL
+00404dd2 | d0 00 | ROL | ROL byte ptr [RAX],0x1
+00404dd4 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00404dd6 | 7b 0a | JNP | JNP 0x00404de2
+00404dd8 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00404dda | 04 38 | ADD | ADD AL,0x38
+00404ddc | cc | INT3 | INT3
+00404ef0 | 2b 61 2b | SUB | SUB ESP,dword ptr [RCX + 0x2b]
+00404ef3 | 69 2b 6d 38 6e 00 | IMUL | IMUL EBP,dword ptr [RBX],0x6e386d
+00404ef9 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00404efb | 7d 16 | JGE | JGE 0x00404f13
+00404efd | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00404eff | 04 7e | ADD | ADD AL,0x7e
+00404f01 | e1 03 | LOOPZ | LOOPZ 0x00404f06
+00404f03 | 00 04 2b | ADD | ADD byte ptr [RBX + RBP*0x1],AL
+00404f06 | 68 2b 69 2b 71 | PUSH | PUSH 0x712b692b
+00404f0b | fe 06 | INC | INC byte ptr [RSI]
+00404f0d | 5f | POP | POP RDI
+00404f0e | 00 00 | ADD | ADD byte ptr [RAX],AL
+00404f13 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00404f15 | 0a 2b | OR | OR CH,byte ptr [RBX]
+00404f17 | 6a 2c | PUSH | PUSH 0x2c
+00404fa5 | 2b 03 | SUB | SUB EAX,dword ptr [RBX]
+00404fa7 | 2b 04 2a | SUB | SUB EAX,dword ptr [RDX + RBP*0x1]
+00404faa | 02 2b | ADD | ADD CH,byte ptr [RBX]
+00404fac | fa | CLI | CLI
+00404fad | 28 4d 00 | SUB | SUB byte ptr [RBP],CL
+00404fb0 | 00 06 | ADD | ADD byte ptr [RSI],AL
+00404fb2 | 2b f5 | SUB | SUB ESI,EBP
+00404fb5 | 7e d8 | JLE | JLE 0x00404f8f
+00404fb7 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00404fb9 | 04 2b | ADD | ADD AL,0x2b
+00404fbb | 08 7b 0e | OR | OR byte ptr [RBX + 0xe],BH
+00404fbe | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00404fc0 | 04 2b | ADD | ADD AL,0x2b
+00404fc2 | 04 2a | ADD | ADD AL,0x2a
+00404fc4 | 02 2b | ADD | ADD CH,byte ptr [RBX]
+00404fc6 | f5 | CMC | CMC
+00404fc7 | 28 03 | SUB | SUB byte ptr [RBX],AL
+00404fc9 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00404ff0 | 1d 2c 27 16 2d | SBB | SBB EAX,0x2d16272c
+00404ff5 | 24 2b | AND | AND AL,0x2b
+00404ff7 | 56 | PUSH | PUSH RSI
+00405081 | 2b 01 | SUB | SUB EAX,dword ptr [RCX]
+00405083 | 2a 28 | SUB | SUB CH,byte ptr [RAX]
+00405085 | 6a 00 | PUSH | PUSH 0x0
+00405087 | 00 06 | ADD | ADD byte ptr [RSI],AL
+00405089 | 2b f8 | SUB | SUB EDI,EAX
+00405091 | 2b 03 | SUB | SUB EAX,dword ptr [RBX]
+00405093 | 2b 04 2a | SUB | SUB EAX,dword ptr [RDX + RBP*0x1]
+00405096 | 02 2b | ADD | ADD CH,byte ptr [RBX]
+00405098 | fa | CLI | CLI
+00405099 | 28 58 00 | SUB | SUB byte ptr [RAX],BL
+0040509c | 00 06 | ADD | ADD byte ptr [RSI],AL
+0040509e | 2b f5 | SUB | SUB ESI,EBP
+004050d8 | 7e e5 | JLE | JLE 0x004050bf
+004050da | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+004050dc | 04 38 | ADD | ADD AL,0x38
+004050de | 45 01 00 | ADD | ADD dword ptr [R8],R8D
+004050e1 | 00 38 | ADD | ADD byte ptr [RAX],BH
+004050e3 | 46 01 00 | ADD | ADD dword ptr [RAX],R8D
+004050e6 | 00 38 | ADD | ADD byte ptr [RAX],BH
+004050e8 | 4b 01 00 | ADD | ADD qword ptr [R8],RAX
+004050eb | 00 2d 01 2a 7e e7 | ADD | ADD byte ptr [0xffffffffe7be7af2],CH
+004050f1 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+004050f3 | 04 7e | ADD | ADD AL,0x7e
+004050f5 | 49 03 00 | ADD | ADD RAX,qword ptr [R8]
+004050f8 | 04 38 | ADD | ADD AL,0x38
+004050fa | 43 01 00 | ADD | ADD dword ptr [R8],EAX
+004050fd | 00 7b 0c | ADD | ADD byte ptr [RBX + 0xc],BH
+00405100 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00405102 | 04 38 | ADD | ADD AL,0x38
+00405279 | 2b 01 | SUB | SUB EAX,dword ptr [RCX]
+0040527b | 2a 28 | SUB | SUB CH,byte ptr [RAX]
+0040527d | 67 00 00 | ADD | ADD byte ptr [EAX],AL
+00405765 | 02 28 | ADD | ADD CH,byte ptr [RAX]
+00405b5c | 38 51 01 | CMP | CMP byte ptr [RCX + 0x1],DL
+00405b5f | 00 00 | ADD | ADD byte ptr [RAX],AL
+00405b61 | 38 52 01 | CMP | CMP byte ptr [RDX + 0x1],DL
+00405b64 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00405b66 | 38 57 01 | CMP | CMP byte ptr [RDI + 0x1],DL
+00405b69 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00405b6b | 38 58 01 | CMP | CMP byte ptr [RAX + 0x1],BL
+00405b6e | 00 00 | ADD | ADD byte ptr [RAX],AL
+00405b70 | 38 59 01 | CMP | CMP byte ptr [RCX + 0x1],BL
+00405b73 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00405d20 | 38 32 | CMP | CMP byte ptr [RDX],DH
+00405d22 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00405d24 | 00 38 | ADD | ADD byte ptr [RAX],BH
+00405d26 | 33 01 | XOR | XOR EAX,dword ptr [RCX]
+00405d28 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00405d2a | 38 38 | CMP | CMP byte ptr [RAX],BH
+00405d2c | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00405d2e | 00 38 | ADD | ADD byte ptr [RAX],BH
+00405d30 | 39 01 | CMP | CMP dword ptr [RCX],EAX
+00405d32 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00405d34 | 38 3a | CMP | CMP byte ptr [RDX],BH
+00405d36 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00405d38 | 00 38 | ADD | ADD byte ptr [RAX],BH
+00406865 | 7e 56 | JLE | JLE 0x004068bd
+00406867 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+00406869 | 04 72 | ADD | ADD AL,0x72
+0040686b | 8d 04 00 | LEA | LEA EAX,[RAX + RAX*0x1]
+0040686e | 70 7e | JO | JO 0x004068ee
+004091e8 | 2b 3a | SUB | SUB EDI,dword ptr [RDX]
+004091ea | 18 5b 18 | SBB | SBB byte ptr [RBX + 0x18],BL
+004091ed | 59 | POP | POP RCX
+004091ee | 2b 37 | SUB | SUB ESI,dword ptr [RDI]
+004091f0 | 7e 44 | JLE | JLE 0x00409236
+004091f2 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+004091f4 | 04 7e | ADD | ADD AL,0x7e
+004091f6 | 45 04 00 | ADD | ADD AL,0x0
+004091f9 | 04 2b | ADD | ADD AL,0x2b
+00409236 | ca 02 2b | RETF | RETF 0x2b02
+00409404 | 1b fe | SBB | SBB EDI,ESI
+00409406 | 0f e0 38 | PAVGB | PAVGB MM7,qword ptr [RAX]
+00409409 | 72 02 | JC | JC 0x0040940d
+0040940b | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040940d | 38 73 02 | CMP | CMP byte ptr [RBX + 0x2],DH
+00409410 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00409412 | 7b 51 | JNP | JNP 0x00409465
+00409414 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+00409416 | 04 20 | ADD | ADD AL,0x20
+00409418 | c8 00 00 00 | ENTER | ENTER 0x0,0x0
+0040941c | 32 0b | XOR | XOR CL,byte ptr [RBX]
+0040941e | 72 07 | JC | JC 0x00409427
+00409420 | 05 00 70 38 63 | ADD | ADD EAX,0x63387000
+00409425 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00409427 | 00 7a 38 | ADD | ADD byte ptr [RDX + 0x38],BH
+0040942a | 67 02 00 | ADD | ADD AL,byte ptr [EAX]
+0040942d | 00 1a | ADD | ADD byte ptr [RDX],BL
+0040942f | 58 | POP | POP RAX
+00409465 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040a020 | 7e e5 | JLE | JLE 0x0040a007
+0040a022 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040a024 | 04 38 | ADD | ADD AL,0x38
+0040a026 | 44 01 00 | ADD | ADD dword ptr [RAX],R8D
+0040a029 | 00 38 | ADD | ADD byte ptr [RAX],BH
+0040a02b | 45 01 00 | ADD | ADD dword ptr [R8],R8D
+0040a02e | 00 38 | ADD | ADD byte ptr [RAX],BH
+0040a030 | 4a 01 00 | ADD | ADD qword ptr [RAX],RAX
+0040a033 | 00 2d 01 2a 7e e7 | ADD | ADD byte ptr [0xffffffffe7beca3a],CH
+0040a039 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040a03b | 04 7e | ADD | ADD AL,0x7e
+0040a03d | 49 03 00 | ADD | ADD RAX,qword ptr [R8]
+0040a040 | 04 38 | ADD | ADD AL,0x38
+0040a042 | 42 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040a045 | 00 7b 46 | ADD | ADD byte ptr [RBX + 0x46],BH
+0040a048 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040a04a | 04 38 | ADD | ADD AL,0x38
+0040a04c | 3e 01 00 | ADD | ADD dword ptr DS:[RAX],EAX
+0040a04f | 00 72 39 | ADD | ADD byte ptr [RDX + 0x39],DH
+0040a052 | 05 00 70 38 3e | ADD | ADD EAX,0x3e387000
+0040a057 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040a059 | 00 38 | ADD | ADD byte ptr [RAX],BH
+0040a05b | 43 01 00 | ADD | ADD dword ptr [R8],EAX
+0040a05e | 00 7e e9 | ADD | ADD byte ptr [RSI + -0x17],BH
+0040a061 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040a063 | 04 7e | ADD | ADD AL,0x7e
+0040a065 | de 03 | FIADD | FIADD word ptr [RBX]
+0040a067 | 00 04 38 | ADD | ADD byte ptr [RAX + RDI*0x1],AL
+0040a06a | 3a 01 | CMP | CMP AL,byte ptr [RCX]
+0040a06c | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040a06e | 7b 46 | JNP | JNP 0x0040a0b6
+0040a070 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040a072 | 04 38 | ADD | ADD AL,0x38
+0040a074 | 36 01 00 | ADD | ADD dword ptr SS:[RAX],EAX
+0040a077 | 00 28 | ADD | ADD byte ptr [RAX],CH
+0040a0b6 | 28 23 | SUB | SUB byte ptr [RBX],AH
+0040a0b8 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040a358 | 7e e7 | JLE | JLE 0x0040a341
+0040a35a | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040a35c | 04 7e | ADD | ADD AL,0x7e
+0040a35e | 49 03 00 | ADD | ADD RAX,qword ptr [R8]
+0040a361 | 04 2b | ADD | ADD AL,0x2b
+0040a404 | 2b 61 2b | SUB | SUB ESP,dword ptr [RCX + 0x2b]
+0040a407 | 69 2b 6d 38 6e 00 | IMUL | IMUL EBP,dword ptr [RBX],0x6e386d
+0040a40d | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040a40f | 7d 91 | JGE | JGE 0x0040a3a2
+0040a411 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040a413 | 04 7e | ADD | ADD AL,0x7e
+0040a415 | e1 03 | LOOPZ | LOOPZ 0x0040a41a
+0040a417 | 00 04 2b | ADD | ADD byte ptr [RBX + RBP*0x1],AL
+0040a41a | 68 2b 69 2b 71 | PUSH | PUSH 0x712b692b
+0040a41f | fe 06 | INC | INC byte ptr [RSI]
+0040a421 | 36 01 00 | ADD | ADD dword ptr SS:[RAX],EAX
+0040a4ac | 38 90 00 00 00 38 | CMP | CMP byte ptr [RAX + 0x38000000],DL
+0040a4b2 | 95 | XCHG | XCHG EAX,EBP
+0040a4b3 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040a4b5 | 00 38 | ADD | ADD byte ptr [RAX],BH
+0040a4b7 | 96 | XCHG | XCHG EAX,ESI
+0040a4b8 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040a4ba | 00 38 | ADD | ADD byte ptr [RAX],BH
+0040a4bc | 97 | XCHG | XCHG EAX,EDI
+0040a4bd | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040a4bf | 00 7d 92 | ADD | ADD byte ptr [RBP + -0x6e],BH
+0040a4c2 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040a4c4 | 04 7e | ADD | ADD AL,0x7e
+0040a4c6 | e1 03 | LOOPZ | LOOPZ 0x0040a4cb
+0040a4c8 | 00 04 38 | ADD | ADD byte ptr [RAX + RDI*0x1],AL
+0040a4cb | 8e 00 | MOV | MOV ES,word ptr [RAX]
+0040a4cd | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040a4cf | 38 8f 00 00 00 38 | CMP | CMP byte ptr [RDI + 0x38000000],CL
+0040a4d5 | 94 | XCHG | XCHG EAX,ESP
+0040a4d6 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040a4d8 | 00 fe | ADD | ADD DH,BH
+0040a58c | 7e 57 | JLE | JLE 0x0040a5e5
+0040a58e | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040a590 | 04 2b | ADD | ADD AL,0x2b
+0040bcd2 | 00 0f | ADD | ADD byte ptr [RDI],CL
+0040bcd4 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040bcd6 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040bcd8 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0040bcda | 5e | POP | POP RSI
+0040bcdb | 00 46 a4 | ADD | ADD byte ptr [RSI + -0x5c],AL
+0040bcde | 00 0f | ADD | ADD byte ptr [RDI],CL
+0040bce0 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040bce2 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040bce4 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0040bce6 | 52 | PUSH | PUSH RDX
+0040bce7 | 00 61 b3 | ADD | ADD byte ptr [RCX + -0x4d],AH
+0040bcea | 00 0f | ADD | ADD byte ptr [RDI],CL
+0040bcec | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040bcee | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040bcfc | 7e 60 | JLE | JLE 0x0040bd5e
+0040bcfe | 04 00 | ADD | ADD AL,0x0
+0040bd00 | 04 38 | ADD | ADD AL,0x38
+0040bd02 | 39 01 | CMP | CMP dword ptr [RCX],EAX
+0040bd04 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040bd06 | 38 3a | CMP | CMP byte ptr [RDX],BH
+0040bd08 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040bd0a | 00 74 ae 00 | ADD | ADD byte ptr [RSI + RBP*0x4],DH
+0040bd0e | 00 01 | ADD | ADD byte ptr [RCX],AL
+0040bd10 | 38 3a | CMP | CMP byte ptr [RDX],BH
+0040bd12 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040bd14 | 00 7e 62 | ADD | ADD byte ptr [RSI + 0x62],BH
+0040bd17 | 04 00 | ADD | ADD AL,0x0
+0040bd19 | 04 38 | ADD | ADD AL,0x38
+0040bd1b | 36 01 00 | ADD | ADD dword ptr SS:[RAX],EAX
+0040bd1e | 00 17 | ADD | ADD byte ptr [RDI],DL
+0040bd20 | 38 36 | CMP | CMP byte ptr [RSI],DH
+0040bd22 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040bd24 | 00 7e 08 | ADD | ADD byte ptr [RSI + 0x8],BH
+0040bd27 | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040bd29 | 04 38 | ADD | ADD AL,0x38
+0040bd2b | 36 01 00 | ADD | ADD dword ptr SS:[RAX],EAX
+0040bd2e | 00 72 83 | ADD | ADD byte ptr [RDX + -0x7d],DH
+0040bd31 | 10 00 | ADC | ADC byte ptr [RAX],AL
+0040bd33 | 70 38 | JO | JO 0x0040bd6d
+0040bd35 | 32 01 | XOR | XOR AL,byte ptr [RCX]
+0040bd37 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040bd39 | 7e 0a | JLE | JLE 0x0040bd45
+0040bd3b | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040bd3d | 04 38 | ADD | ADD AL,0x38
+0040bd3f | 32 01 | XOR | XOR AL,byte ptr [RCX]
+0040bd41 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040bd43 | 72 8d | JC | JC 0x0040bcd2
+0040bd45 | 10 00 | ADC | ADC byte ptr [RAX],AL
+0040bd47 | 70 38 | JO | JO 0x0040bd81
+0040bd49 | 2e 01 00 | ADD | ADD dword ptr CS:[RAX],EAX
+0040bd4c | 00 1d 39 e1 00 00 | ADD | ADD byte ptr [0x00419e8b],BL
+0040bd52 | 00 7e 26 | ADD | ADD byte ptr [RSI + 0x26],BH
+0040bd55 | 04 00 | ADD | ADD AL,0x0
+0040bd57 | 04 06 | ADD | ADD AL,0x6
+0040bd59 | 28 6e 03 | SUB | SUB byte ptr [RSI + 0x3],CH
+0040bd5c | 00 06 | ADD | ADD byte ptr [RSI],AL
+0040bd5e | 0b 16 | OR | OR EDX,dword ptr [RSI]
+0040bd60 | 3a cf | CMP | CMP CL,BH
+0040bd62 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040bd64 | 00 7e 3c | ADD | ADD byte ptr [RSI + 0x3c],BH
+0040bd67 | 04 00 | ADD | ADD AL,0x0
+0040bd69 | 04 7e | ADD | ADD AL,0x7e
+0040bd6b | bf 03 00 04 28 | MOV | MOV EDI,0x28040003
+0040bd70 | cf | IRETD | IRETD
+0040bd81 | 00 04 28 | ADD | ADD byte ptr [RAX + RBP*0x1],AL
+0040bd84 | cf | IRETD | IRETD
+0040bebc | 7e 44 | JLE | JLE 0x0040bf02
+0040bebe | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040bec0 | 04 2b | ADD | ADD AL,0x2b
+0040bec2 | 10 72 d1 | ADC | ADC byte ptr [RDX + -0x2f],DH
+0040bec5 | 10 00 | ADC | ADC byte ptr [RAX],AL
+0040bec7 | 70 2b | JO | JO 0x0040bef4
+0040bec9 | 0c 2b | OR | OR AL,0x2b
+0040becb | 0d 2b 12 2b 13 | OR | OR EAX,0x132b122b
+0040bed0 | 2b 14 2a | SUB | SUB EDX,dword ptr [RDX + RBP*0x1]
+0040bed3 | 02 2b | ADD | ADD CH,byte ptr [RBX]
+0040bed5 | ed | IN | IN EAX,DX
+0040bed6 | 03 2b | ADD | ADD EBP,dword ptr [RBX]
+0040bed8 | f1 | INT1 | INT1
+0040befc | 2b 42 16 | SUB | SUB EAX,dword ptr [RDX + 0x16]
+0040beff | 2c 46 | SUB | SUB AL,0x46
+0040c07c | 7e 44 | JLE | JLE 0x0040c0c2
+0040c07e | 03 00 | ADD | ADD EAX,dword ptr [RAX]
+0040c080 | 04 2b | ADD | ADD AL,0x2b
+0040c082 | 10 72 e1 | ADC | ADC byte ptr [RDX + -0x1f],DH
+0040c085 | 10 00 | ADC | ADC byte ptr [RAX],AL
+0040c087 | 70 2b | JO | JO 0x0040c0b4
+0040c089 | 0c 2b | OR | OR AL,0x2b
+0040c08b | 0d 2b 12 2b 13 | OR | OR EAX,0x132b122b
+0040c090 | 2b 14 2a | SUB | SUB EDX,dword ptr [RDX + RBP*0x1]
+0040c093 | 02 2b | ADD | ADD CH,byte ptr [RBX]
+0040c095 | ed | IN | IN EAX,DX
+0040c096 | 03 2b | ADD | ADD EBP,dword ptr [RBX]
+0040c098 | f1 | INT1 | INT1
+0040da9a | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040da9c | 01 10 | ADD | ADD dword ptr [RAX],EDX
+0040da9e | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040daa0 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040daa2 | a7 | CMPSD | CMPSD RDI,RSI
+0040daa3 | 00 60 07 | ADD | ADD byte ptr [RAX + 0x7],AH
+0040daa6 | 01 09 | ADD | ADD dword ptr [RCX],ECX
+0040daa8 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0040daaa | 00 01 | ADD | ADD byte ptr [RCX],AL
+0040dab8 | 7e cb | JLE | JLE 0x0040da85
+0040daba | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040dabc | 04 2b | ADD | ADD AL,0x2b
+0040dabe | 3d 16 2d f6 7e | CMP | CMP EAX,0x7ef62d16
+0040dac3 | 89 04 00 | MOV | MOV dword ptr [RAX + RAX*0x1],EAX
+0040dac6 | 04 2b | ADD | ADD AL,0x2b
+0040dac8 | 36 2b 37 | SUB | SUB ESI,dword ptr SS:[RDI]
+0040dacb | 1a 2c 0b | SBB | SBB CH,byte ptr [RBX + RCX*0x1]
+0040dace | 7e ca | JLE | JLE 0x0040da9a
+0040dad0 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040dad2 | 04 2b | ADD | ADD AL,0x2b
+0040dad4 | 09 2b | OR | OR dword ptr [RBX],EBP
+0040dad6 | 0a 2b | OR | OR CH,byte ptr [RBX]
+0040dad8 | 0b 16 | OR | OR EDX,dword ptr [RSI]
+0040dada | 2d ef de 1c 02 | SUB | SUB EAX,0x21cdeef
+0040dadf | 2b f4 | SUB | SUB ESI,ESP
+0040dae1 | 03 2b | ADD | ADD EBP,dword ptr [RBX]
+0040dae3 | f3 6f | OUTSD.REP | OUTSD.REP DX,RSI
+0040dae5 | 3e 02 00 | ADD | ADD AL,byte ptr DS:[RAX]
+0040dae8 | 0a 2b | OR | OR CH,byte ptr [RBX]
+0040daea | ee | OUT | OUT DX,AL
+0040dc98 | 2b 54 38 59 | SUB | SUB EDX,dword ptr [RAX + RDI*0x1 + 0x59]
+0040dc9c | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040dc9e | 00 16 | ADD | ADD byte ptr [RSI],DL
+0040dca0 | 2d 11 2b 1f 2d | SUB | SUB EAX,0x2d1f2b11
+0040dca5 | 0d 16 2d f6 2b | OR | OR EAX,0x2bf62d16
+0040dcaa | 1b 2b | SBB | SBB EBP,dword ptr [RBX]
+0040dcac | 1c 2b | SBB | SBB AL,0x2b
+0040dcae | 1d 2b 1e 2b 0a | SBB | SBB EAX,0xa2b1e2b
+0040dcb3 | 2b 21 | SUB | SUB ESP,dword ptr [RCX]
+0040dcb5 | 2b 22 | SUB | SUB ESP,dword ptr [RDX]
+0040dcb7 | 03 6f 41 | ADD | ADD EBP,dword ptr [RDI + 0x41]
+0040dcba | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0040dcbc | 0a 0b | OR | OR CL,byte ptr [RBX]
+0040dcbe | 19 2c f2 | SBB | SBB dword ptr [RDX + RSI*0x8],EBP
+0040dcc1 | de 29 | FISUBR | FISUBR word ptr [RCX]
+0040dcc3 | 04 2b | ADD | ADD AL,0x2b
+0040dcc5 | de 06 | FIADD | FIADD word ptr [RSI]
+0040dcc7 | 2b e2 | SUB | SUB ESP,EDX
+0040dcc9 | 02 2b | ADD | ADD CH,byte ptr [RBX]
+0040dccb | e1 03 | LOOPZ | LOOPZ 0x0040dcd0
+0040dccd | 2b e0 | SUB | SUB ESP,EAX
+0040dccf | 6f | OUTSD | OUTSD DX,RSI
+0040dcd0 | 42 02 00 | ADD | ADD AL,byte ptr [RAX]
+0040dcd3 | 0a 2b | OR | OR CH,byte ptr [RBX]
+0040dcd5 | db 06 | FILD | FILD dword ptr [RSI]
+0040dcd7 | 2b dc | SUB | SUB EBX,ESP
+0040dcd9 | 02 2b | ADD | ADD CH,byte ptr [RBX]
+0040dcdb | db 1c 2c | FISTP | FISTP dword ptr [RSP + RBP*0x1]
+0040dcde | 0c 06 | OR | OR AL,0x6
+0040dce0 | 2c 09 | SUB | SUB AL,0x9
+0040dd1c | 2b 54 38 59 | SUB | SUB EDX,dword ptr [RAX + RDI*0x1 + 0x59]
+0040dd20 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040dd22 | 00 16 | ADD | ADD byte ptr [RSI],DL
+0040dd24 | 2d 11 2b 1f 2d | SUB | SUB EAX,0x2d1f2b11
+0040dd29 | 0d 16 2d f6 2b | OR | OR EAX,0x2bf62d16
+0040dd2e | 1b 2b | SBB | SBB EBP,dword ptr [RBX]
+0040dd30 | 1c 2b | SBB | SBB AL,0x2b
+0040dd32 | 1d 2b 1e 2b 0a | SBB | SBB EAX,0xa2b1e2b
+0040dd37 | 2b 21 | SUB | SUB ESP,dword ptr [RCX]
+0040dd39 | 2b 22 | SUB | SUB ESP,dword ptr [RDX]
+0040dd3b | 03 6f 41 | ADD | ADD EBP,dword ptr [RDI + 0x41]
+0040dd3e | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0040dd40 | 0a 0b | OR | OR CL,byte ptr [RBX]
+0040dd42 | 19 2c f2 | SBB | SBB dword ptr [RDX + RSI*0x8],EBP
+0040dd45 | de 29 | FISUBR | FISUBR word ptr [RCX]
+0040dd47 | 04 2b | ADD | ADD AL,0x2b
+0040dd49 | de 06 | FIADD | FIADD word ptr [RSI]
+0040dd4b | 2b e2 | SUB | SUB ESP,EDX
+0040dd4d | 02 2b | ADD | ADD CH,byte ptr [RBX]
+0040dd4f | e1 03 | LOOPZ | LOOPZ 0x0040dd54
+0040dd51 | 2b e0 | SUB | SUB ESP,EAX
+0040dd53 | 6f | OUTSD | OUTSD DX,RSI
+0040dd54 | 42 02 00 | ADD | ADD AL,byte ptr [RAX]
+0040dd57 | 0a 2b | OR | OR CH,byte ptr [RBX]
+0040dd59 | db 06 | FILD | FILD dword ptr [RSI]
+0040dd5b | 2b dc | SUB | SUB EBX,ESP
+0040dd5d | 02 2b | ADD | ADD CH,byte ptr [RBX]
+0040dd5f | db 1c 2c | FISTP | FISTP dword ptr [RSP + RBP*0x1]
+0040dd62 | 0c 06 | OR | OR AL,0x6
+0040dd64 | 2c 09 | SUB | SUB AL,0x9
+0040e1d1 | 2b 08 | SUB | SUB ECX,dword ptr [RAX]
+0040e1d3 | 18 2b | SBB | SBB byte ptr [RBX],CH
+0040e1d5 | 08 2b | OR | OR byte ptr [RBX],CH
+0040e1d7 | 09 2b | OR | OR dword ptr [RBX],EBP
+0040e1d9 | 0a 2a | OR | OR CH,byte ptr [RDX]
+0040e1db | 02 2b | ADD | ADD CH,byte ptr [RBX]
+0040e1dd | f5 | CMC | CMC
+0040e1de | 03 2b | ADD | ADD EBP,dword ptr [RBX]
+0040e1e0 | f5 | CMC | CMC
+0040e1e1 | 04 2b | ADD | ADD AL,0x2b
+0040e1e3 | f4 | HLT | HLT
+0040e1ed | 2b 08 | SUB | SUB ECX,dword ptr [RAX]
+0040e1ef | 19 2b | SBB | SBB dword ptr [RBX],EBP
+0040e1f1 | 08 2b | OR | OR byte ptr [RBX],CH
+0040e1f3 | 09 2b | OR | OR dword ptr [RBX],EBP
+0040e1f5 | 0a 2a | OR | OR CH,byte ptr [RDX]
+0040e1f7 | 02 2b | ADD | ADD CH,byte ptr [RBX]
+0040e1f9 | f5 | CMC | CMC
+0040e1fa | 03 2b | ADD | ADD EBP,dword ptr [RBX]
+0040e1fc | f5 | CMC | CMC
+0040e1fd | 04 2b | ADD | ADD AL,0x2b
+0040e1ff | f4 | HLT | HLT
+0040f2f8 | 15 2c 5f 2b 4e | ADC | ADC EAX,0x4e2b5f2c
+0040f2fd | 1b 2c 5a | SBB | SBB EBP,dword ptr [RDX + RBX*0x2]
+0040f300 | 2b 59 7b | SUB | SUB EBX,dword ptr [RCX + 0x7b]
+0040f303 | f7 01 00 04 2b 55 | TEST | TEST dword ptr [RCX],0x552b0400
+0040f309 | 2b 56 7b | SUB | SUB EDX,dword ptr [RSI + 0x7b]
+0040f30c | f8 | CLC | CLC
+0040f30d | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040f30f | 04 2b | ADD | ADD AL,0x2b
+0040f311 | 52 | PUSH | PUSH RDX
+0040f312 | 2b 53 17 | SUB | SUB EDX,dword ptr [RBX + 0x17]
+0040f315 | 58 | POP | POP RAX
+0040f316 | 7d f8 | JGE | JGE 0x0040f310
+0040f318 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040f31a | 04 2b | ADD | ADD AL,0x2b
+0040f31c | 4d 2b 4e 7b | SUB | SUB R9,qword ptr [R14 + 0x7b]
+0040f320 | f7 01 00 04 03 25 | TEST | TEST dword ptr [RCX],0x25030400
+0040f384 | 38 c1 | CMP | CMP CL,AL
+0040f386 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040f388 | 00 38 | ADD | ADD byte ptr [RAX],BH
+0040f38a | c2 00 00 | RET | RET 0x0
+0040f5ac | 2b 58 7b | SUB | SUB EBX,dword ptr [RAX + 0x7b]
+0040f5af | f9 | STC | STC
+0040f5b0 | 01 00 | ADD | ADD dword ptr [RAX],EAX
+0040f5b2 | 04 16 | ADD | ADD AL,0x16
+0040f5b4 | 31 03 | XOR | XOR dword ptr [RBX],EAX
+0040f5b6 | 2b 54 7a 2b | SUB | SUB EDX,dword ptr [RDX + RDI*0x2 + 0x2b]
+0040f5ba | 5b | POP | POP RBX
+0040f5bb | 20 00 | AND | AND byte ptr [RAX],AL
+0040f5bd | 80 00 00 | ADD | ADD byte ptr [RAX],0x0
+0040f5c0 | 31 22 | XOR | XOR dword ptr [RDX],ESP
+0040f5c2 | 2b 58 19 | SUB | SUB EBX,dword ptr [RAX + 0x19]
+0040f5c5 | 2c f4 | SUB | SUB AL,0xf4
+0040f5c7 | 2b 56 1e | SUB | SUB EDX,dword ptr [RSI + 0x1e]
+0040f5ca | 2c f4 | SUB | SUB AL,0xf4
+004109c0 | 2b 47 7b | SUB | SUB EAX,dword ptr [RDI + 0x7b]
+004109c3 | 26 02 00 | ADD | ADD AL,byte ptr ES:[RAX]
+004109c6 | 04 2b | ADD | ADD AL,0x2b
+004109c8 | 43 2d 03 16 2b 01 | SUB | SUB EAX,0x12b1603
+00410e89 | 02 28 | ADD | ADD CH,byte ptr [RAX]
+00410f01 | 2b 11 | SUB | SUB EDX,dword ptr [RCX]
+00410f03 | 2b 12 | SUB | SUB EDX,dword ptr [RDX]
+00410f05 | 7d 36 | JGE | JGE 0x00410f3d
+00410f07 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00410f09 | 04 2b | ADD | ADD AL,0x2b
+00412400 | 2b 47 2b | SUB | SUB EAX,dword ptr [RDI + 0x2b]
+00412403 | 48 2b 50 1a | SUB | SUB RDX,qword ptr [RAX + 0x1a]
+00412407 | 2c 12 | SUB | SUB AL,0x12
+00412409 | 2c 12 | SUB | SUB AL,0x12
+0041240b | 2b 4f 7b | SUB | SUB ECX,dword ptr [RDI + 0x7b]
+0041240e | 50 | PUSH | PUSH RAX
+0041240f | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00412411 | 04 2b | ADD | ADD AL,0x2b
+00412413 | 4b 7b 51 | JNP | JNP 0x00412467
+00412416 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00412418 | 04 fe | ADD | ADD AL,0xfe
+0041241a | 01 2b | ADD | ADD dword ptr [RBX],EBP
+0041241c | 04 15 | ADD | ADD AL,0x15
+0041241e | 2c e0 | SUB | SUB AL,0xe0
+00412467 | c6 07 2b | MOV | MOV byte ptr [RDI],0x2b
+00412530 | 2b 2c 2b | SUB | SUB EBP,dword ptr [RBX + RBP*0x1]
+00412533 | 2d 2b 2e 7b 54 | SUB | SUB EAX,0x547b2e2b
+00412538 | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0041253a | 04 2b | ADD | ADD AL,0x2b
+0041253c | 2a 7b 56 | SUB | SUB BH,byte ptr [RBX + 0x56]
+0041253f | 02 00 | ADD | ADD AL,byte ptr [RAX]
+00412541 | 04 2b | ADD | ADD AL,0x2b
+00412543 | 26 2b 27 | SUB | SUB ESP,dword ptr ES:[RDI]
+00412630 | 38 ba 00 00 00 38 | CMP | CMP byte ptr [RDX + 0x38000000],BH
+00412636 | bb 00 00 00 7b | MOV | MOV EBX,0x7b000000
+0041263b | 57 | PUSH | PUSH RDI
+0041263c | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0041263e | 04 38 | ADD | ADD AL,0x38
+00412640 | b7 00 | MOV | MOV BH,0x0
+00412642 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00412644 | 38 b8 00 00 00 7b | CMP | CMP byte ptr [RAX + 0x7b000000],BH
+0041264a | 58 | POP | POP RAX
+0041264b | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0041264d | 04 1f | ADD | ADD AL,0x1f
+00412744 | 38 d6 | CMP | CMP DH,DL
+00412746 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00412748 | 00 7b 58 | ADD | ADD byte ptr [RBX + 0x58],BH
+0041274b | 02 00 | ADD | ADD AL,byte ptr [RAX]
+0041274d | 04 1e | ADD | ADD AL,0x1e
+0041274f | 32 61 38 | XOR | XOR AH,byte ptr [RCX + 0x38]
+00412752 | cf | IRETD | IRETD
+00424e52 | ff 25 00 20 40 00 | JMP | JMP qword ptr [0x00826e58]

@@ -1,0 +1,16 @@
+# Opcode extraction for malware analysis
+# APT Group: 08 G0027 EMISSARY PANDA THREAT GROUP 3390)
+# Malware Hash: ef049339f1eb091cda335b51939f91e784e1ab1e006056d5a6bb526743b6cbc7
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Sun Nov 03 22:30:16 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+002687b7 | 9c | PUSHFQ | PUSHFQ
+002687b8 | c7 44 24 04 f0 58 04 22 | MOV | MOV dword ptr [RSP + 0x4],0x220458f0
+002687c0 | e9 05 24 00 00 | JMP | JMP 0x0026abca
+0026abca | 88 14 24 | MOV | MOV byte ptr [RSP],DL
+0026abcd | c7 04 24 cc 6f 79 fc | MOV | MOV dword ptr [RSP],0xfc796fcc
+002c9cd3 | e8 df ea f9 ff | CALL | CALL 0x002687b7
+002c9cd8 | 04 c6 | ADD | ADD AL,0xc6
+002c9cda | f1 | INT1 | INT1

@@ -1,0 +1,75 @@
+# Opcode extraction for malware analysis
+# APT Group: 12 G0098 BLACKTECH)
+# Malware Hash: eed2ab9f2c09e47c7689204ad7f91e5aef3cb25a41ea524004a48bb7dc59f969
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Mon Nov 04 00:57:06 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+00401000 | 53 | PUSH | PUSH RBX
+00401001 | 8b 1d 4c 40 40 00 | MOV | MOV EBX,dword ptr [0x00805053]
+00401007 | 55 | PUSH | PUSH RBP
+00401008 | 56 | PUSH | PUSH RSI
+00401009 | 8b 74 24 10 | MOV | MOV ESI,dword ptr [RSP + 0x10]
+0040100d | 57 | PUSH | PUSH RDI
+0040100e | 8b 7c 24 18 | MOV | MOV EDI,dword ptr [RSP + 0x18]
+00401012 | 8b ee | MOV | MOV EBP,ESI
+00401014 | c7 07 00 00 00 00 | MOV | MOV dword ptr [RDI],0x0
+0040101a | a1 48 40 40 00 83 38 01 7e | MOV | MOV EAX,[0x7e01388300404048]
+00401023 | 0d 0f be 0e 6a | OR | OR EAX,0x6a0ebe0f
+00401028 | 04 51 | ADD | ADD AL,0x51
+0040102a | ff d3 | CALL | CALL RBX
+0040102c | 83 c4 08 | ADD | ADD ESP,0x8
+0040102f | eb 10 | JMP | JMP 0x00401041
+00401041 | 85 c0 | TEST | TEST EAX,EAX
+00401043 | 74 12 | JZ | JZ 0x00401057
+00401045 | 8b 07 | MOV | MOV EAX,dword ptr [RDI]
+00401047 | 46 8d 14 80 | LEA | LEA R10D,[RAX + R8*0x4]
+0040104b | 0f be 46 ff | MOVSX | MOVSX EAX,byte ptr [RSI + -0x1]
+0040104f | 8d 4c 50 d0 | LEA | LEA ECX,[RAX + RDX*0x2 + -0x30]
+00401053 | 89 0f | MOV | MOV dword ptr [RDI],ECX
+00401055 | eb c3 | JMP | JMP 0x0040101a
+00401057 | 80 3e 00 | CMP | CMP byte ptr [RSI],0x0
+0040105a | 75 10 | JNZ | JNZ 0x0040106c
+0040105c | 3b f5 | CMP | CMP ESI,EBP
+0040105e | 76 0c | JBE | JBE 0x0040106c
+00401060 | 5f | POP | POP RDI
+00401061 | 5e | POP | POP RSI
+00401062 | 5d | POP | POP RBP
+00401063 | b8 01 00 00 00 | MOV | MOV EAX,0x1
+00401068 | 5b | POP | POP RBX
+00401069 | c2 08 00 | RET | RET 0x8
+0040106c | 5f | POP | POP RDI
+0040106d | 5e | POP | POP RSI
+0040106e | 5d | POP | POP RBP
+0040106f | 33 c0 | XOR | XOR EAX,EAX
+00401071 | 5b | POP | POP RBX
+00401072 | c2 08 00 | RET | RET 0x8
+00403a4f | 55 | PUSH | PUSH RBP
+00403a50 | 8b ec | MOV | MOV EBP,ESP
+00403a52 | 6a ff | PUSH | PUSH -0x1
+00403a54 | 68 a0 41 40 00 | PUSH | PUSH 0x4041a0
+00403a59 | 68 90 3b 40 00 | PUSH | PUSH 0x403b90
+00403a5e | 64 a1 00 00 00 00 50 64 89 25 | MOV | MOV EAX,FS:[0x2589645000000000]
+00403a68 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00403a6a | 00 00 | ADD | ADD byte ptr [RAX],AL
+00403a6c | 83 ec 20 | SUB | SUB ESP,0x20
+00403a6f | 53 | PUSH | PUSH RBX
+00403a70 | 56 | PUSH | PUSH RSI
+00403a71 | 57 | PUSH | PUSH RDI
+00403a72 | 89 65 e8 | MOV | MOV dword ptr [RBP + -0x18],ESP
+00403a75 | 83 65 fc 00 | AND | AND dword ptr [RBP + -0x4],0x0
+00403a79 | 6a 01 | PUSH | PUSH 0x1
+00403a7b | ff 15 14 40 40 00 | CALL | CALL qword ptr [0x00807a95]
+00403a81 | 59 | POP | POP RCX
+00403a82 | 83 0d 7c 5d 40 00 ff | OR | OR dword ptr [0x00809805],0xffffffff
+00403a89 | 83 0d 80 5d 40 00 ff | OR | OR dword ptr [0x00809810],0xffffffff
+00403a90 | ff 15 18 40 40 00 | CALL | CALL qword ptr [0x00807aae]
+00403a96 | 8b 0d 78 5d 40 00 | MOV | MOV ECX,dword ptr [0x00809814]
+00403a9c | 89 08 | MOV | MOV dword ptr [RAX],ECX
+00403a9e | ff 15 1c 40 40 00 | CALL | CALL qword ptr [0x00807ac0]
+00403aa4 | 8b 0d 74 5d 40 00 | MOV | MOV ECX,dword ptr [0x0080981e]
+00403aaa | 89 08 | MOV | MOV dword ptr [RAX],ECX
+00403aac | a1 20 40 40 00 8b 00 a3 84 | MOV | MOV EAX,[0x84a3008b00404020]
+00403ab5 | 5d | POP | POP RBP
+00403ab6 | 40 00 e8 | ADD | ADD AL,BPL

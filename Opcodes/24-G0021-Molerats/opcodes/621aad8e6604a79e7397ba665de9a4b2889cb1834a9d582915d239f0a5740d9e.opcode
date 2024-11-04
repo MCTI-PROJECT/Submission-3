@@ -1,0 +1,58 @@
+# Opcode extraction for malware analysis
+# APT Group: 24-G0021-Molerats
+# Malware Hash: 621aad8e6604a79e7397ba665de9a4b2889cb1834a9d582915d239f0a5740d9e
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Mon Nov 04 02:40:43 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+004034e8 | 7e 12 | JLE | JLE 0x004034fc
+004034ea | 00 00 | ADD | ADD byte ptr [RAX],AL
+004034ec | 04 2d | ADD | ADD AL,0x2d
+004034ee | 46 7e 13 | JLE | JLE 0x00403504
+004034f1 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004034f3 | 04 25 | ADD | ADD AL,0x25
+004034f5 | 38 96 00 00 00 38 | CMP | CMP byte ptr [RSI + 0x38000000],DL
+004034fb | 97 | XCHG | XCHG EAX,EDI
+004034fc | 00 00 | ADD | ADD byte ptr [RAX],AL
+004034fe | 00 72 dd | ADD | ADD byte ptr [RDX + -0x23],DH
+00403501 | 00 00 | ADD | ADD byte ptr [RAX],AL
+00403503 | 70 2b | JO | JO 0x00403530
+00403505 | 1a 80 12 00 00 04 | SBB | SBB AL,byte ptr [RAX + 0x4000012]
+0040350b | 7e 12 | JLE | JLE 0x0040351f
+0040350d | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040350f | 04 2c | ADD | ADD AL,0x2c
+00403511 | 0c 7e | OR | OR AL,0x7e
+00403513 | 12 00 | ADC | ADC AL,byte ptr [RAX]
+00403515 | 00 04 2b | ADD | ADD byte ptr [RBX + RBP*0x1],AL
+0040351f | 15 28 89 00 00 | ADC | ADC EAX,0x8928
+00403524 | 0a 2b | OR | OR CH,byte ptr [RBX]
+00403526 | df 6f 8a | FILD | FILD qword ptr [RDI + -0x76]
+00403529 | 00 00 | ADD | ADD byte ptr [RAX],AL
+0040352b | 0a 2b | OR | OR CH,byte ptr [RBX]
+0040352d | eb 08 | JMP | JMP 0x00403537
+00403530 | 8b 00 | MOV | MOV EAX,dword ptr [RAX]
+00403532 | 00 0a | ADD | ADD byte ptr [RDX],CL
+00403534 | dc 2b | FSUBR | FSUBR qword ptr [RBX]
+00403536 | 69 38 6a 00 00 00 | IMUL | IMUL EDI,dword ptr [RAX],0x6a
+0040353c | 38 6f 00 | CMP | CMP byte ptr [RDI],CH
+0040353f | 00 00 | ADD | ADD byte ptr [RAX],AL
+004043d0 | 2b 5c 2b 60 | SUB | SUB EBX,dword ptr [RBX + RBP*0x1 + 0x60]
+004043d4 | 38 65 00 | CMP | CMP byte ptr [RBP],AH
+004043d7 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004043d9 | 38 6a 00 | CMP | CMP byte ptr [RDX],CH
+004043dc | 00 00 | ADD | ADD byte ptr [RAX],AL
+004043de | 38 6b 00 | CMP | CMP byte ptr [RBX],CH
+004043e1 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004043e3 | 38 6c 00 00 | CMP | CMP byte ptr [RAX + RAX*0x1],CH
+004043e7 | 00 38 | ADD | ADD byte ptr [RAX],BH
+004043e9 | 71 00 | JNO | JNO 0x004043eb
+004043eb | 00 00 | ADD | ADD byte ptr [RAX],AL
+004043ed | 38 76 00 | CMP | CMP byte ptr [RSI],DH
+004043f0 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004043f2 | 38 77 00 | CMP | CMP byte ptr [RDI],DH
+004043f5 | 00 00 | ADD | ADD byte ptr [RAX],AL
+004043f7 | 14 fe | ADC | ADC AL,0xfe
+004043f9 | 01 17 | ADD | ADD dword ptr [RDI],EDX
+004043fb | 2c 28 | SUB | SUB AL,0x28
+0048230e | ff 25 00 20 40 00 | JMP | JMP qword ptr [0x00884314]

@@ -1,0 +1,19 @@
+# Opcode extraction for malware analysis
+# APT Group: 32-G0078-Gorgon Group
+# Malware Hash: 0a1c3fb9d7e168e9bcc4d48464bc89058d64cd88d3034e81ec0d8b132fcec50f
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Mon Nov 04 03:52:15 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+0040601c | 53 | PUSH | PUSH RBX
+0040601d | 8b d8 | MOV | MOV EBX,EAX
+0040601f | 33 c0 | XOR | XOR EAX,EAX
+00406021 | a3 9c 00 48 00 6a 00 e8 2b | MOV | MOV [0x2be8006a0048009c],EAX
+0047fea0 | 55 | PUSH | PUSH RBP
+0047fea1 | 8b ec | MOV | MOV EBP,ESP
+0047fea3 | 83 c4 f0 | ADD | ADD ESP,-0x10
+0047fea6 | b8 80 fc 47 00 | MOV | MOV EAX,0x47fc80
+0047feab | e8 6c 61 f8 ff | CALL | CALL 0x0040601c
+0047feb0 | a1 94 8c 48 00 8b 00 e8 a8 | MOV | MOV EAX,[0xa8e8008b00488c94]
+0047feb9 | 59 | POP | POP RCX

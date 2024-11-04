@@ -1,0 +1,9 @@
+# Opcode extraction for malware analysis
+# APT Group: 32-G0078-Gorgon Group
+# Malware Hash: 0125b8f29f335a9ae6ed3f190dcfb920537515d4f1f9a0270862672e39f9e0ef
+# Executable format: Portable Executable (PE)
+# Processor: x86
+# Creation date: Mon Nov 04 03:47:33 EST 2024
+# Format: <Address> | <Bytes> | <Mnemonic> | <Full Instruction>
+
+0040abae | ff 25 00 20 40 00 | JMP | JMP qword ptr [0x0080cbb4]
